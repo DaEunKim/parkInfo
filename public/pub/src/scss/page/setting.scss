@@ -1,0 +1,21 @@
+
+
+
+.setting-msg{
+    .msg{
+        margin-bottom:28px;
+        font-size:16px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        .highlight{
+            color:#eea430;
+            font-weight:bold;
+        }
+    }
+    .input-txt{
+        width:100%;
+    }
+    .txt{
+        font-size:12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+}

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+$page-prefix: 'library';
+$tab-height: 50px;
+
+.#{$page-prefix}__menuItem {
+    padding: 20px 10px;
+}
+.#{$page-prefix}__menuItem__list__item {
+    display: inline-block;
+    vertical-align: top;
+
+    & + & {
+        margin-left: 4px;
+    }
+
+    &--select {
+        a {
+            border-color: #28b6f6; 
+            color: #28b6f6;
+        }
+    }
+}
+.#{$page-prefix}__menuItem__list__item__link {
+    overflow: hidden;
+    display: block;
+    height: 27px;
+    padding: 0 10px;
+    border: 1px solid #999;
+    color: #666;
+    line-height: 27px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}

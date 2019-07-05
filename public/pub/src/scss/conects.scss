@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+
+// utils
+@import 'utils/variables';
+@import 'utils/mixin';
+@import 'utils/easing';
+
+// vendors
+@import 'vendors/slick/slick';
+@import 'vendors/slick/slick-theme';
+
+// common
+@import 'common/reset';
+@import 'common/sprite';
+@import 'common/sprite_conects';
+
+// layout
+// @import 'layout/header.scss';  // header 진행 시 사용
+// @import 'layout/footer.scss';  // footer 진행 시 사용
+@import 'layout/layout.scss';
+@import 'layout/list.scss';
+@import 'layout/tab.scss';
+
+// components
+@import "components/box";
+@import "components/button";
+// @import "components/card";  // pc웹 모듈 확인 용
+@import "components/comment";
+// @import "components/feed";  // pc웹 모듈 확인 용
+@import "components/editorconts";
+@import "components/form";
+@import "components/heading";
+@import "components/icon";
+@import "components/interestings";
+// @import "components/live";  // pc웹 모듈 확인 용
+@import "components/grade";
+@import "components/loading";
+@import "components/table";
+@import "components/thumb";
+@import "components/paging";
+
+// pages
+// @import "page/notice";  // (알림) 앱으로 진행
+@import 'page/discover';
+@import 'page/home';
+@import 'page/library';
+@import 'page/membership';
+@import 'page/post';
+@import 'page/profile';
+@import 'page/secret';
+@import 'page/question';
+@import 'page/payment';
+@import 'page/challenge_pay';
+@import 'page/challenge-result';
+@import 'page/error-page';

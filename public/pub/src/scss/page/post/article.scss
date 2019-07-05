@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+$page-post-article: 'post-article';
+
+.#{$page-post-article} {
+    padding: 0 15px;
+    font-size: 14px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+}

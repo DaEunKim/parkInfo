@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>conects_app</title>
+    <link rel="stylesheet" href="/pub/src/css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+
+<div class="profile__user profile__user-another">
+    <!-- top -->
+    <div class="profile__user-top">
+         <!-- slide -->
+         <div class="slide-box">
+            <ul>
+                <li><img src="https://placehold.it/224x111/CCCCCC" alt=""></li>
+                <li><img src="https://placehold.it/224x111" alt=""></li>
+                <li><img src="https://placehold.it/224x111" alt=""></li>
+            </ul>
+            <ul class="pager">
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <!-- // slide -->
+        <span class="ico-viewer"> 916,136회</span>
+        <a href="#" class="btn-write">편집</a>
+        <div class="main-info">
+            <div class="thumb">
+                <div class="img"><img src="https://placehold.it/224x111/0000FF" alt=""></div>
+                <div class="name">하영민</div>
+            </div>
+            <p>-</p>
+            <div class="btn blue"><a href="">팔로우</a></div>
+            <ul class="follow">
+                <li><a href=""><span>팔로워</span><strong>112k</strong></a></li>
+                <li><a href=""><span>팔로잉</span><strong>551</strong></a></li>
+                <li><a href=""><span>모임스터디</span><strong>13</strong></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- // top -->
+
+    <!-- 챌린지 -->
+    <div class="profile__user-challenge">
+        <div class="profile__user-tit-t1">
+            <strong class="tit-t1">나의 챌린지 <span class="sub">(3)</span></strong>
+        </div>
+        <!-- <div class="nodata">도전중인 챌린지가 없습니다.</div> -->
+        <div class="list_scroll130-x5">
+            <ul class="list">
+                <li>
+                    <div class="component_challenge-cont">
+                        <a href="#" class="lbl">
+                            <strong class="tit">UI개념 뽀개기UI개념 뽀개기</strong>
+                            <span class="desc">15일차/340명 도전중</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="component_challenge-cont">
+                        <a href="#" class="lbl">
+                            <strong class="tit">UI개념 뽀개기</strong>
+                            <span class="desc">15일차/340명 도전중</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="component_challenge-cont">
+                        <a href="#" class="lbl">
+                            <strong class="tit">UI개념 뽀개기</strong>
+                            <span class="desc">15일차/340명 도전중</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //챌린지 -->
+
+    <!-- tab -->
+    <div class="tab-cont-box">
+        <ul class="tab">
+            <li class=""><div>라이브러리<div class="bubble">나의 라이브러리를 공개설정해야<br>다른사람의 라이브러리를 볼 수 있어요</div></div></li> <!-- 말풍선 class="on" 추가 시 노출됨 -->
+            <li class="on"><span>타임라인</span></li>
+        </ul>
+         <!-- 타임라인 -->
+         <div class="profile_tab-timeline">
+            <!-- 없을경우 -->
+            <div class="no-data">등록된 포스트가 없습니다.</div>
+            <!-- // 없을경우 -->
+
+            <ul class="list_column01-10">
+                <li>
+                    <!-- post type -->
+                    <div class="post-type">
+                        <!-- title -->
+                        <div class="post-type__notice" w3-include-HTML="/pub/src/html/pages/post/notice.html"></div>
+                        <!-- //title -->
+
+                        <!-- type text -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/type_text.html"></div>
+                        <!-- //type text -->
+
+                        <!-- type image -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/type_image.html"></div>
+                        <!-- //type image -->
+
+                            <!-- type article -->
+                            <div w3-include-HTML="/pub/src/html/pages/post/type_article.html"></div>
+                            <!-- //type article -->
+
+                        <!-- type Link -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/type_link.html"></div>
+                        <!-- //type Link -->
+
+                        <!-- toolbar -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/toolbar.html"></div>
+                        <!-- //toolbar -->
+
+                        <!-- article -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/article.html"></div>
+                        <!-- //article -->
+
+                        <!-- comment -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/comment.html"></div>
+                        <!-- //comment -->
+                    </div>
+                    <!-- // post type -->
+                </li>
+            </ul>
+        </div>
+        <!-- // 타임라인 -->
+    </div>
+    <!-- // tab -->
+</div>
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

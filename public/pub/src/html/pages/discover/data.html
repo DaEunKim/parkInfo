@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>conects_app</title>
+    <link rel="stylesheet" href="/pub/src/css/conects.css">
+</head>
+<body>
+
+<!-- container내 산출물 -->
+<div class="discover">
+    <!-- header -->
+    <div class="component_headeline">
+        <div>
+            <div class="thumb_circle-40" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');">
+                <span class="num">999</span>
+            </div>
+            <h1 class="title">디스커버</h1>
+        </div>
+    </div>
+    <!-- //header -->
+
+    <!-- 검색 -->
+    <div class="search_wrap">
+        <p class="component_search-description">
+            <strong class="word">한동글동글동글</strong>
+            님의 관심분야를 검색해 보세요
+        </p>
+        <div class="component_searchbox"><!-- 검색어 입력 시 class="active" -->
+            <a href="#" class="link-back">뒤로가기</a>
+            <div>
+                <input type="text" placeholder="세상의 모든 지식을 찾아 보세요" class="input-search" />
+                <button type="button" class="btn-submit-search">검색</button>
+                <button type="button" class="btn-del-search">검색어 지우기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //검색 -->
+
+    <!-- tab -->
+    <div class="tab_scroll-01 add">
+        <ul class="tab">
+            <li class="active"><a href="#">전체</a></li><!-- 활성화 시 class="active" -->
+            <li><a href="#">공무원·임용</a></li>
+        </ul>
+        <button type="button" class="btn-add-interesting">관심사 추가</button>
+    </div>
+    <div class="tab_scroll-02">
+        <ul class="tab">
+            <li class="active"><a href="#">챌린지</a></li><!-- 활성화 시 class="active" -->
+            <li><a href="#">노하우·자료</a></li>
+            <li><a href="#">Q&amp;A</a></li>
+            <li><a href="#">스터디</a></li>
+            <li><a href="#">자습</a></li>
+            <li><a href="#">클래스</a></li>
+        </ul>
+    </div>
+    <!-- //tab -->
+
+    <!-- 최근 본 노하우·자료  -->
+    <!-- <div class="discover_title">
+        <h2 class="title">최근 본 노하우·자료</h2>
+        <a href="#" class="link-more">전체보기</a>
+    </div>
+    <ul class="list_column02-10-30">
+        <li>
+            <a href="#" class="component_thumb-04">
+                <div class="thumb_rect-round-full-h100" style="background-image:url('https://placehold.it/224x111');"></div>
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">자료</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name">홍길동</span>
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="component_thumb-04">
+                <div class="thumb_rect-round-full-h100" style="background-image:url('https://placehold.it/224x111');"></div>
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">노하우</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name check">홍길동</span>
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="component_thumb-04">
+                <div class="thumb_rect-round-full-h100" style="background-image:url('https://placehold.it/224x111');"></div>
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">자료</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name">홍길동</span>
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="component_thumb-04">
+                <div class="thumb_rect-round-full-h100" style="background-image:url('https://placehold.it/224x111');"></div>
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">노하우</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name check">홍길동</span>
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul> -->
+    <!-- //최근 본 노하우·자료  -->
+
+    <!-- 실시가 조회수 TOP 유료자료 -->
+    <div class="discover_title">
+        <h2 class="title">실시간 조회수 TOP 유료자료</h2>
+    </div>
+    <ul class="list_column01-0">
+        <li>
+            <a href="#" class="component_thumb-01">
+                <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">자료</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name">홍길동</span>
+                        <!-- <span class="name check">홍길동</span> -->
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="component_thumb-01">
+                <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">자료</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <!-- <span class="name">홍길동</span> -->
+                        <span class="name check">홍길동</span>
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="component_thumb-01">
+                <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">자료</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name">홍길동</span>
+                        <!-- <span class="name check">홍길동</span> -->
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!-- //실시간 조회수 TOP 유료자료 -->
+
+    <!-- 오늘 딱 하루만 무료 -->
+    <div class="box_rect-round-shadow">
+        <a href="#" class="thumb_rect-full-h140" style="background-image:url('https://placehold.it/224x111');">
+            <div class="txt-cover">
+                <div>
+                    <strong class="tit">오늘 딱 하루만<br />무료!</strong>
+                    <em class="description">남은시간 08:34:53</em>
+                </div>
+            </div>
+        </a>
+
+        <ul class="list_column01-0">
+            <li>
+                <a href="#" class="component_thumb-01">
+                    <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                    <div class="wrap-info">
+                        <div class="wrap-title">
+                            <span class="ico-group-primary">자료</span>
+                            <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                        </div>
+                        <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                        <div class="price">
+                            <span class="value"><span>22,500원</span></span>
+                            <em class="benefit">[15% 할인]</em>
+                            <strong class="final">22,500원</strong>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="component_thumb-01">
+                    <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                    <div class="wrap-info">
+                        <div class="wrap-title">
+                            <span class="ico-group-primary">자료</span>
+                            <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                        </div>
+                        <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                        <div class="price">
+                            <span class="value"><span>22,500원</span></span>
+                            <em class="benefit">[15% 할인]</em>
+                            <strong class="final">22,500원</strong>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="component_thumb-01">
+                    <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                    <div class="wrap-info">
+                        <div class="wrap-title">
+                            <span class="ico-group-primary">자료</span>
+                            <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                        </div>
+                        <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                        <div class="price">
+                            <span class="value"><span>22,500원</span></span>
+                            <em class="benefit">[15% 할인]</em>
+                            <strong class="final">22,500원</strong>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <!-- <a href="#" class="btn-rect-round-default btn-transparent-lightest">더보기</a> -->
+    </div>
+    <!-- //오늘 딱 하루만 무료 -->
+
+    <!-- 내 친구들이 가장 많이 본 무료 노하우 -->
+    <div class="discover_title">
+        <h2 class="title">내 친구들이 가장 많이 본<br>무료 노하우</h2>
+    </div>
+    <div class="list_scroll260-x40">
+        <div class="list">
+            <ul class="list_column01-0"><!-- 3배수에서 추가 wrap > class="list_column01-0" -->
+                <li>
+                    <a href="#" class="component_thumb-01">
+                        <div class="thumb_rect-round-55 left" style="background-image:url('https://placehold.it/224x111');">
+                            <span class="rank">1</span>
+                        </div>
+
+                        <div class="wrap-info">
+                            <div class="wrap-title">
+                                <span class="ico-group-primary">자료</span>
+                                <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                            </div>
+                            <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                            <div class="infos">
+                                <span class="name">홍길동</span>
+                                <!-- <span class="name check">홍길동</span> -->
+
+                                <dl class="txt">
+                                    <dt>조회</dt>
+                                    <dd>24k</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="component_thumb-01">
+                        <div class="thumb_rect-round-55 left" style="background-image:url('https://placehold.it/224x111');">
+                            <span class="rank">2</span>
+                        </div>
+
+                        <div class="wrap-info">
+                            <div class="wrap-title">
+                                <span class="ico-group-primary">자료</span>
+                                <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                            </div>
+                            <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                            <div class="infos">
+                                <span class="name">홍길동</span>
+                                <!-- <span class="name check">홍길동</span> -->
+
+                                <dl class="txt">
+                                    <dt>조회</dt>
+                                    <dd>24k</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="component_thumb-01">
+                        <div class="thumb_rect-round-55 left" style="background-image:url('https://placehold.it/224x111');">
+                            <span class="rank">3</span>
+                        </div>
+
+                        <div class="wrap-info">
+                            <div class="wrap-title">
+                                <span class="ico-group-primary">자료</span>
+                                <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                            </div>
+                            <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                            <div class="infos">
+                                <span class="name">홍길동</span>
+                                <!-- <span class="name check">홍길동</span> -->
+
+                                <dl class="txt">
+                                    <dt>조회</dt>
+                                    <dd>24k</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list_column01-0">
+                <li>
+                    <a href="#" class="component_thumb-01">
+                        <div class="thumb_rect-round-55 left" style="background-image:url('https://placehold.it/224x111');">
+                            <span class="rank">4</span>
+                        </div>
+
+                        <div class="wrap-info">
+                            <div class="wrap-title">
+                                <span class="ico-group-primary">자료</span>
+                                <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                            </div>
+                            <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                            <div class="infos">
+                                <span class="name">홍길동</span>
+                                <!-- <span class="name check">홍길동</span> -->
+
+                                <dl class="txt">
+                                    <dt>조회</dt>
+                                    <dd>24k</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="component_thumb-01">
+                        <div class="thumb_rect-round-55 left" style="background-image:url('https://placehold.it/224x111');">
+                            <span class="rank">5</span>
+                        </div>
+
+                        <div class="wrap-info">
+                            <div class="wrap-title">
+                                <span class="ico-group-primary">자료</span>
+                                <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                            </div>
+                            <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                            <div class="infos">
+                                <span class="name">홍길동</span>
+                                <!-- <span class="name check">홍길동</span> -->
+
+                                <dl class="txt">
+                                    <dt>조회</dt>
+                                    <dd>24k</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="component_thumb-01">
+                        <div class="thumb_rect-round-55 left" style="background-image:url('https://placehold.it/224x111');">
+                            <span class="rank">6</span>
+                        </div>
+
+                        <div class="wrap-info">
+                            <div class="wrap-title">
+                                <span class="ico-group-primary">자료</span>
+                                <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                            </div>
+                            <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                            <div class="infos">
+                                <span class="name">홍길동</span>
+                                <!-- <span class="name check">홍길동</span> -->
+
+                                <dl class="txt">
+                                    <dt>조회</dt>
+                                    <dd>24k</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //내 친구들이 가장 많이 본 무료 노하우 -->
+
+    <!-- UPDATE! 신규 노하우·자료 -->
+    <div class="discover_title">
+        <h2 class="title">UPDATE! 신규 노하우·자료</h2>
+        <a href="#" class="link-more">전체보기</a>
+    </div>
+    <ul class="list_column01-0">
+        <li>
+            <a href="#" class="component_thumb-01">
+                <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">노하우</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name">홍길동</span>
+                        <!-- <span class="name check">홍길동</span> -->
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="component_thumb-01">
+                <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">노하우</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name">홍길동</span>
+                        <!-- <span class="name check">홍길동</span> -->
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+        <!-- 누적후기 -->
+        <!-- <div class="box_rect-round-shadow">
+            <strong class="title">누적 후기 1천 개가<br>보증하는 엄선 자료</strong>
+
+            <div class="box_rect-round-gray">
+                <div class="component_thumb-txt">
+                    <div class="thumb_circle-24 left" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                    <div class="wrap-info">
+                        <strong class="major">김두루미</strong>
+                        <em class="minor">8월 30일</em>
+                    </div>
+                </div>
+
+                <div class="star-score-b">
+                    <div class="bg-star">
+                        <span class="star-grade" style="width:30%;"></span>
+                    </div>
+                    <span class="txt-score">강추</span>
+                </div>
+
+                <div class="description">Adipisicing ipsum consectetur adipisicing veniam commodo voluptate id do duis. Elit Lorem ex exercitation ad. Eu labore deserunt et nisi excepteur aute velit. Dolore veniam sint ad voluptate deserunt laboris ad voluptate et tempor sit reprehenderit nostrud. Sint esse sunt enim elit quis.Commodo occaecat magna quis cillum ea aliqua amet. Magna dolore ullamco amet sit dolore amet esse ut nostrud quis elit. Sint exercitation Lorem proident consectetur ut deserunt irure deserunt in est pariatur deserunt reprehenderit.</div>
+            </div>
+
+            <ul class="list_column01-0">
+                <li>
+                    <a href="#" class="component_thumb-01">
+                        <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                        <div class="wrap-info">
+                            <div class="wrap-title">
+                                <span class="ico-group-primary">자료</span>
+                                <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                            </div>
+                            <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                            <div class="price">
+                                <span class="value"><span>22,500원</span></span>
+                                <em class="benefit">[15% 할인]</em>
+                                <strong class="final">22,500원</strong>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#" class="btn-rect-round-default btn-transparent-lightest">더보기</a>
+        </div> -->
+        <!-- //누적후기 -->
+
+    <ul class="list_column01-0">
+        <li>
+            <a href="#" class="component_thumb-01">
+                <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">노하우</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name">홍길동</span>
+                        <!-- <span class="name check">홍길동</span> -->
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="component_thumb-01">
+                <div class="thumb_rect-round-55 right" style="background-image:url('https://placehold.it/224x111');"></div>
+
+                <div class="wrap-info">
+                    <div class="wrap-title">
+                        <span class="ico-group-primary">노하우</span>
+                        <strong class="tit">Elit voluptate dolor dolor nisi id pariatur non.</strong>
+                    </div>
+                    <p class="description">Et ex mollit in ut enim tempor elit Lorem.Et ex mollit in ut enim tempor elit Lorem.</p>
+                    <div class="infos">
+                        <span class="name">홍길동</span>
+                        <!-- <span class="name check">홍길동</span> -->
+
+                        <dl class="txt">
+                            <dt>조회</dt>
+                            <dd>24k</dd>
+                        </dl>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <!-- //UPDATE! 신규 노하우·자료 -->
+</div>
+<!-- //container내 산출물 -->
+
+</body>
+</html>

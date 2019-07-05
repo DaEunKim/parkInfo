@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>conects_app</title>
+    <link rel="stylesheet" href="/pub/src/css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+
+<div class="profile__user">
+    <!-- top -->
+    <div class="profile__user-top">
+        <!-- slide -->
+        <div class="slide-box">
+            <ul>
+                <li><img src="https://placehold.it/224x111" alt=""></li>
+                <li><img src="https://placehold.it/224x111" alt=""></li>
+                <li><img src="https://placehold.it/224x111" alt=""></li>
+            </ul>
+            <ul class="pager">
+                <li class="on">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <!-- // slide -->
+        <span class="ico-viewer"> 916,136회</span>
+        <a href="#" class="btn-write">편집</a>
+        <div class="main-info">
+            <div class="thumb">
+                <div class="img"><img src="https://placehold.it/224x111/0000FF" alt=""></div>
+                <div class="name">하영민</div>
+            </div>
+            <p>커넥츠 스카이에듀 수학 강사<br>열심히 해서 우리 모두 서울대 가자!<br>오늘도 열심히!</p>
+            <ul class="follow">
+                <li><a href=""><span>팔로워</span><strong>112k</strong></a></li>
+                <li><a href=""><span>팔로잉</span><strong>551</strong></a></li>
+                <li><a href=""><span>모임스터디</span><strong>13</strong></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- // top -->
+
+    <!-- tab -->
+    <div class="tab-cont-box">
+        <ul class="tab">
+            <li class=""><span>라이브러리</span></li>
+            <li class="on"><span>타임라인</span></li>
+        </ul>
+        <!-- 타임라인 -->
+        <div class="profile_tab-timeline">
+            <!-- 없을경우 -->
+            <div class="no-data">등록된 포스트가 없습니다.</div>
+            <!-- // 없을경우 -->
+
+            <ul class="list_column01-10">
+                <li>
+                    <!-- post type -->
+                    <div class="post-type">
+                        <!-- title -->
+                        <div class="post-type__notice" w3-include-HTML="/pub/src/html/pages/post/notice.html"></div>
+                        <!-- //title -->
+
+                        <!-- type text -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/type_text.html"></div>
+                        <!-- //type text -->
+
+                        <!-- type image -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/type_image.html"></div>
+                        <!-- //type image -->
+
+                            <!-- type article -->
+                            <div w3-include-HTML="/pub/src/html/pages/post/type_article.html"></div>
+                            <!-- //type article -->
+
+                        <!-- type Link -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/type_link.html"></div>
+                        <!-- //type Link -->
+
+                        <!-- toolbar -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/toolbar.html"></div>
+                        <!-- //toolbar -->
+
+                        <!-- article -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/article.html"></div>
+                        <!-- //article -->
+
+                        <!-- comment -->
+                        <div w3-include-HTML="/pub/src/html/pages/post/comment.html"></div>
+                        <!-- //comment -->
+                    </div>
+                    <!-- // post type -->
+                </li>
+            </ul>
+        </div>
+        <!-- // 타임라인 -->
+    </div>
+    <!-- // tab -->
+</div>
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

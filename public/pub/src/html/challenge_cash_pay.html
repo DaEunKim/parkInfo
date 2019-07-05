@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>챌린지 결제하기</title>
+    <link rel="stylesheet" type="text/css" href="../css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+    <div class="challenge-cash">
+
+        <div class="challenge-cash__notice">
+            <h2 class="challenge-cash__notice__title">30일 동안 만랩 집사되기 프로젝트</h2>
+            <ul class="challenge-cash__notice__info">
+                <li class="date"><span class="blind">참가기간</span> 2019.05.01 ~ 2019.05.30</li>
+                <li class="join"><span class="title">참가자</span> 5명 / 100명</li>
+                <li class="fee"><span class="title">모인 참가비</span> 180,000 원</li>
+            </ul>
+        </div>
+
+        <div class="challenge-cash__payment">
+            <h3 class="challenge-cash__payment__title">참가비</h3>
+            <p class="challenge-cash__payment__description">이 챌린지의 참가비는 최소 1만원, 최대 20만원입니다.</p>
+            <div class="challenge-cash__enter">
+                <input type="text" value="200,000" title="출금할 금액">
+                <span class="label">원</span>
+            </div>
+            <div class="challenge-cash__payment__my">
+                <div class="inner type1">
+                    <strong class="title">보유 개시</strong>
+                    <span class="cash">5,000 캐시</span>
+                </div>
+                <div class="inner type2">
+                    <strong class="title">사용 캐시</strong>
+                    <input type="text" value="2,000 캐시" title="사용 캐시" class="text">
+                    <button type="submit" class="enter">전액사용</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-cash__final">
+            <h3 class="challenge-cash__final__title">최종 결제금액</h3>
+            <ul class="challenge-cash__final__info">
+                <li class="fee"><span class="title">참가비</span> <span class="state">10,000 원</span></li>
+                <li ckass="cash"><span class="title">챌린지 캐시</span> <span class="state put">-2,000 원</span></li>
+                <li class="total"><span class="title">총 결제금액</span> <span class="state"><span class="number">200,000</span> 원</span></li>
+            </ul>
+        </div>
+
+        <div class="challenge-cash__bottom">
+            <button type="submit" class="big-button on">결제하기</button>
+        </div>
+
+    </div>  
+</div>
+
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

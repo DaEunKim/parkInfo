@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>라이브러리</title>
+    <link rel="stylesheet" type="text/css" href="../css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+    <div class="library">
+        
+        <!-- navigation -->
+        <div w3-include-HTML="pages/library/navigation.html"></div>
+        <!-- //navgation -->
+        
+        <!-- tab -->
+        <div w3-include-HTML="pages/library/tabmenu.html"></div>
+        <!-- //tab -->
+
+        <!-- menu item -->
+        <div w3-include-HTML="pages/library/menu_item.html"></div>
+        <!-- //menu item -->
+
+        <!-- 비밀모임 리스트 -->
+        <div class="library__panel">
+            <h2 class="library__panel__title">비밀모임</h2>
+            <div w3-include-HTML="pages/library/meeting.html"></div>
+        </div>
+        <!-- // 비밀모임 리스트 -->
+
+        <!-- 스터디그룹 리스트 -->
+        <div class="library__panel">
+            <h2 class="library__panel__title">개설한 스터디그룹</h2>
+            <div w3-include-HTML="pages/library/study_group.html"></div>
+        </div>
+        <!-- // 스터디그룹 리스트 -->
+
+        <!-- 노하우/자료 리스트 -->
+        <div class="library__panel">
+            <div w3-include-HTML="pages/library/knowhow.html"></div>
+        </div>
+        <!-- // 노하우/자료 리스트 -->
+
+        <!-- 자습 리스트 -->
+        <div class="library__panel">
+            <div w3-include-HTML="pages/library/learning.html"></div>
+        </div>
+        <!-- // 자습 리스트 -->
+
+        <!-- 클래스 리스트 -->
+        <div class="library__panel">
+            <div w3-include-HTML="pages/library/class.html"></div>
+        </div>
+        <!-- // 클래스 리스트 -->
+
+        <!-- Q&A 리스트 -->
+        <div class="library__panel">
+            <div w3-include-HTML="pages/library/qna.html"></div>
+        </div>
+        <!-- // Q&A 리스트 -->
+
+    </div>
+</div>
+
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

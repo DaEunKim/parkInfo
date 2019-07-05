@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+.#{$page-prefix}__area {
+    overflow: hidden;
+}
+
+.#{$page-prefix}__table {
+    width: 100%;
+    table-layout: fixed;
+    margin-top: -30px;
+    color: #111;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    th {
+        height: 30px;
+    }
+
+    td {
+        border-bottom: 1px solid #ebebeb;
+        font-family: "Helvetica","Apple SD Gothic Neo",Sans-serif;
+    }
+
+    .inner {
+        padding: 10px 0;
+    }
+
+    .date {
+        width: 60px;
+        text-align: right;
+        vertical-align: top;
+
+        .inner {
+            padding-right: 10px;
+        }
+    }
+    .detail {
+        vertical-align: top;
+
+        .description {
+            display: block;
+            color: #999;
+            font-size: 11px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+    }
+    .condition {
+        width: 116px;
+        text-align: right;
+
+        .inner {
+            padding-right: 10px;
+        }
+        .state {
+            display: block;
+            color: #000;
+            font-size: 15px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        .state_up {
+            color: #29b6f6;
+        }
+        .current {
+            display: block;
+            color: #999;
+            font-size: 11px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+    }
+}

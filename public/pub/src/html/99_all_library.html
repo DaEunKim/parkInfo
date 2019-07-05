@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>라이브러리 종류별 케이스</title>
+    <link rel="stylesheet" type="text/css" href="../css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+    <style>
+        .case_box {float: left; width: 320px; border: 1px solid #ff0000; }
+        .case_box .case_title { padding: 0 10px; color: #fff; font-size: 20px; background-color: #000; }
+    </style>
+</head>
+<body>
+<div id="wrap">
+
+    <div class="case_box">
+        <h1 class="case_title">라이브러리 > 포스트</h1>
+        <!-- library type -->
+        <div class="library gray">
+            <!-- post type -->
+            <div class="post-type">
+                <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+                <!-- @@import src/html/pages/post/type_image.html -->
+                <div class="post-content__imageType" style="background-image: url(https://d1onhczzmo7z1l.cloudfront.net/media/prod/5DDFD4EE_edb21d07-55b5-49ac-a2d4-a1c9d13bad38_1558230229466.png)">
+                    <span class="post-content__imageType__paging">2/5</span>
+                    <img src="https://d1onhczzmo7z1l.cloudfront.net/media/prod/5DDFD4EE_edb21d07-55b5-49ac-a2d4-a1c9d13bad38_1558230229466.png" alt="" aria-hidden="true">
+                </div>
+                <div w3-include-HTML="pages/post/toolbar.html"></div>
+                <div w3-include-HTML="pages/post/article.html"></div>
+                <div w3-include-HTML="pages/post/comment.html"></div>
+            </div>
+            <!-- //post type -->    
+        </div>
+        <!-- //library type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">모임스터디 개설/보관</h1>
+        <div class="library__panel">
+            <h2 class="library__panel__title">비밀모임, 보관한 비밀모임</h2>
+            <div w3-include-HTML="pages/library/meeting.html"></div>
+        </div>
+        <div class="library__panel">
+            <h2 class="library__panel__title">개설한 스터디그룹, 보관한 스터디그룹</h2>
+            <div w3-include-HTML="pages/library/study_group.html"></div>
+            <div class="library__list__all">
+                <a href="#" class="library__list__all__link"><span class="blind">개설한 스터디그룹</span>전체보기</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">노하우/자료 등록</h1>
+        <div w3-include-HTML="pages/library/menu_item.html"></div>
+        <div class="library__panel">
+            <h2  class="library__panel__title">내가 등록한 자료</h2>
+            <div w3-include-HTML="pages/library/knowhow.html"></div>
+            <div class="library__list__all">
+                <a href="#" class="library__list__all__link"><span class="blind">개설한 스터디그룹</span>전체보기</a>
+            </div>
+        </div>
+        <div class="library__panel">
+            <h2 class="library__panel__title">내가 등록된 자료<span class="sub_title">(원저작자)</span></h2>
+            <div w3-include-HTML="pages/library/knowhow.html"></div>
+            <div class="library__list__all">
+                <a href="#" class="library__list__all__link"><span class="blind">개설한 스터디그룹</span>전체보기</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">보관함 > 자습</h1>
+        <div class="library__panel">
+            <div w3-include-HTML="pages/library/learning.html"></div>
+        </div>
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">보관함 > 클래스</h1>
+        <div class="library__panel">
+            <div w3-include-HTML="pages/library/class.html"></div>
+        </div>
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">보관함 > Q&A</h1>
+        <div class="library__panel">
+            <div w3-include-HTML="pages/library/qna.html"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

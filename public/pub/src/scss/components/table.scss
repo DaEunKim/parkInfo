@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+
+.table_cols-0{
+    table{
+        width:100%;
+    }
+    thead{
+        th{
+            padding:8px 20px;
+            border:1px solid #bbb;
+            border-right:0;
+            border-left:0;
+            background-color:#eee;
+            color:#666;
+            font-size:13px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+    }
+    th,
+    td{
+        padding:16px 20px;
+        border-bottom:1px solid #bbb;
+        color:#666;
+        font-size:15px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        text-align:left;
+    }
+    th{
+        color:$DEFAULT_COLOR;
+    }
+}
+
+.table_rows-0{
+    .hightlight{
+        color:$BRAND_COLOR;
+    }
+    table{
+        width:100%;
+    }
+    th,
+    td{
+        padding:8px 0;
+        color:#666;
+        font-size:15px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        text-align:left;
+    }
+    th{
+        color:$DEFAULT_COLOR;
+    }
+    tfoot{
+        th,
+        td{
+            border-top:1px solid #bbb;
+        }
+        td{
+            color:$DEFAULT_COLOR;
+        }
+    }
+}

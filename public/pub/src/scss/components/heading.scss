@@ -1,0 +1,46 @@
+#wrap{
+    > .heading_tit-t1,
+    > .heading_tit-t2{
+        padding:0 20px;
+    }
+}
+
+.heading_tit-t1{
+    position:relative;
+    margin-bottom:18px;
+    &:nth-child(n+2){
+        margin-top:26px;
+    }
+    .tit-t1{
+        font-size:23px;
+        line-height:1.4em;
+        font-weight:bold;
+        .sub{
+            color:#666;
+            font-size:14px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight:normal;
+        }
+    }
+    .link{
+        position:absolute;
+        right:0;
+        bottom:0;
+        color:$BRAND_COLOR;
+        font-size:14px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+}
+.heading_tit-t2{
+    margin-bottom:18px;
+    &:nth-child(n+2){
+        margin-top:23px;
+        padding-top:23px;
+        border-top:1px solid #e1e1e1;
+    }
+    .tit-t2{
+        font-size:15px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight:bold;
+    }
+}

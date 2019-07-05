@@ -1,0 +1,375 @@
+// 모양 // 크기
+@mixin set-ico-shape-size(){
+    $shapes:(
+        'round': 0.5,
+        'rect': 0,
+        'rect-round': 0.2
+    );
+    $sizes:(
+        'xl': 40,  // 임시
+        'lg': 30,  // 임시
+        'default': 24.5,
+        'sm': 15,
+        'xs': 10  // 임시
+    );
+
+    @each $shape, $radius  in $shapes{
+        @each $size, $height in $sizes{
+            .ico-#{$shape}-#{$size}{
+                display:inline-block;
+                height:($height*1px);
+                padding:0 8px;
+                background-color:$DEFAULT_COLOR;
+                border:1px solid $DEFAULT_COLOR;
+                border-radius:($height*$radius*1px);
+                box-sizing:border-box;
+                color:#fff;
+                font-size:($height*0.73px);
+                line-height:($height*1px);
+                text-align:center;
+            }
+        }
+    }
+}
+.ico-circle-default{
+    display:inline-block;
+    width:24.5px;
+    height:24.5px;
+    background-color:$DEFAULT_COLOR;
+    border:1px solid $DEFAULT_COLOR;
+    border-radius:50%;
+    box-sizing:border-box;
+    color:#fff;
+    font-size:12px;
+    line-height:24.5px;
+    text-align:center;
+    vertical-align:middle;
+}
+@include set-ico-shape-size();
+
+// 색상
+@mixin set-ico-color(){
+    $colors:(
+        // 'key': (border-color, background-color, font-color)
+        'primary': ($BRAND_COLOR, $BRAND_COLOR, #fff),
+        'alert': ($ALERT_COLOR, $ALERT_COLOR, #fff),
+        'lighter': ($LIGHTER_COLOR, $LIGHTER_COLOR, #fff),
+        'lightest': ($LIGHTEST_COLOR, $LIGHTEST_COLOR, #fff),
+        'stronger': ($STRONGER_COLOR, $STRONGER_COLOR, #fff),
+        'white': (#fff, #fff, $DEFAULT_COLOR)
+    );
+
+    @each $color, $value  in $colors{
+        .ico-#{$color}{
+            border-color:nth($value, 1);
+            background-color:nth($value, 2);
+            color:nth($value, 3);
+        }
+        .ico-transparent-#{$color}{
+            border-color:nth($value, 1);
+            background-color:transparent;
+            color:nth($value, 1);
+        }
+        .ico-white-#{$color}{
+            border-color:nth($value, 1);
+            background-color:#fff;
+            @if $color == 'white' {
+                color:$BRAND_COLOR;
+            } @else {
+                color:nth($value, 1);
+            }
+        }
+    }
+}
+@include set-ico-color();
+
+
+
+/* 임시용 가이드 용으로 변경필요 */
+@mixin set-group-kind-icon(){
+    $kinds:(
+        'secret': $BRAND_COLOR,
+        'study': $BRAND_COLOR,
+        'small': $LIGHTEST_COLOR,
+        'freind': $ALERT_COLOR,
+
+        'primary': $BRAND_COLOR,
+        'alert': $ALERT_COLOR,
+        'default': $DEFAULT_COLOR,
+        'lighter': $LIGHTER_COLOR,
+        'lightest': $LIGHTEST_COLOR,
+        'stronger': $STRONGER_COLOR
+    );
+
+    @each $kind, $value in $kinds{
+        .ico-group-#{$kind}{
+            $height:16px;
+            display:inline-block;
+            height:$height;
+            padding:0 3px;
+            border:1px solid $value;
+            border-radius:2px;
+            box-sizing:border-box;
+            color:$value;
+            font-size:11px;
+            line-height:$height;
+        }
+    }
+}
+@include set-group-kind-icon();
+
+.ico-round-alert{
+    $height:15px;
+    display:inline-block;
+    height:$height;
+    padding:0 8px;
+    border:1px solid $ALERT_COLOR;
+    border-radius:8px;
+    background-color:$ALERT_COLOR;
+    box-sizing:border-box;
+    color:#fff;
+    font-size:11px;
+    line-height:$height;
+}
+/* //임시용 가이드 용으로 변경필요 */
+
+
+.ico-filter{
+    color:#fff;
+    font-size:14px;
+    line-height:16.5px;
+    &:before{
+        @include use_sprite($ico-filter);
+        content:'';
+        vertical-align:middle;
+    }
+}
+
+.ico-membership{
+    color:$BRAND_COLOR;
+    font-size:11px;
+    line-height:14px;
+    &:before{
+        @include use_sprite($ico-membership);
+        content:'';
+        vertical-align:middle;
+    }
+}
+
+.ico-group-open-31{
+    @include use_sprite($ico-challenge-type-group);
+}
+
+.ico-group-open-15{
+    color:#ddd;
+    font-size:14px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    &:before{
+        @include use_sprite($ico-group-open-15);
+        content:'';
+        margin-top:7px;
+        margin-right:4px;
+        vertical-align:top;
+    }
+}
+
+.ico-bookmark-9{
+    color:#ddd;
+    font-size:14px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    &.active{
+        &:before{
+            @include use_sprite($ico-bookmark-9-on);
+        }
+    }
+    &:before{
+        @include use_sprite($ico-bookmark-9-off);
+        content:'';
+        margin-top:4px;
+        margin-right:4px;
+        vertical-align:top;
+    }
+}
+
+.ico-share-12{
+    color:#ddd;
+    font-size:14px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    &:before{
+        @include use_sprite($ico-share-12);
+        content:'';
+        margin-top:3px;
+        margin-right:4px;
+        vertical-align:top;
+    }
+}
+
+.ico-flag{
+    @include clearfix();
+    display:inline-block;
+    vertical-align:middle;
+    &:before{
+        @include use_sprite($ico-flag);
+        content:'';
+        display:block;
+        float:left;
+    }
+}
+
+
+.ico-group-close-10{
+    @include clearfix();
+    display:inline-block;
+    vertical-align:middle;
+    &:before{
+        @include use_sprite($ico-group-close-10);
+        content:'';
+        display:block;
+        float:left;
+    }
+}
+
+.ico-star-xl{
+    @include clearfix();
+    display:inline-block;
+    color:$BRAND_COLOR;
+    font-size:45px;
+    font-weight:bold;
+    vertical-align:middle;
+    &:before{
+        @include use_sprite($ico-star-xl);
+        content:'';
+        display:block;
+        float:left;
+    }
+}
+
+.ico-library{
+    @include clearfix();
+    display:inline-block;
+    font-size:14px;
+    line-height:29px;
+    vertical-align:middle;
+    &-challenge{
+        &:before{
+            @include use_sprite($library-challenge);
+            content:'';
+            float:left;
+            margin-right:5px;
+            display:block;
+        }
+    }
+    &-data{
+        &:before{
+            @include use_sprite($library-knowhow);
+            content:'';
+            float:left;
+            margin-right:5px;
+            display:block;
+        }
+    }
+    &-study{
+        &:before{
+            @include use_sprite($library-study);
+            content:'';
+            float:left;
+            margin-right:5px;
+            display:block;
+        }
+    }
+    &-post{
+        &:before{
+            @include use_sprite($library-post);
+            content:'';
+            float:left;
+            margin-right:5px;
+            display:block;
+        }
+    }
+    &-class{
+        &:before{
+            @include use_sprite($library-class);
+            content:'';
+            float:left;
+            margin-right:5px;
+            display:block;
+        }
+    }
+    &-live{
+        &:before{
+            @include use_sprite($library-live);
+            content:'';
+            float:left;
+            margin-right:5px;
+            display:block;
+        }
+    }
+    &-independent{
+        &:before{
+            @include use_sprite($library-file);
+            content:'';
+            float:left;
+            margin-right:5px;
+            display:block;
+        }
+    }
+    &-right{
+        &:before{
+            @include use_sprite($library-file);
+            content:'';
+            float:left;
+            margin-right:5px;
+            display:block;
+        }
+    }
+}
+
+.ico-qna-q{
+    color:$LIGHTEST_COLOR;
+    font-size:11px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    &:before{
+        @include use_sprite($ico-qna-q);
+        content:'';
+        margin-top:7px;
+        vertical-align:top;
+    }
+}
+
+.ico-viewer{
+    color:#666;
+    font-size:12px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    &:before{
+        @include use_sprite($viewer-count);
+        content:'';
+        height:12px;
+        margin-top:4px;
+        margin-right:4px;
+        vertical-align:top;
+    }
+}
+
+.ico-challenge-info-challenger{
+    color:#ddd;
+    font-size:14px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    &:before{
+        @include use_sprite($ico-challenge-info-challenger);
+        content:'';
+        margin-top:5px;
+        vertical-align:top;
+    }
+}
+
+.ico-challenge-info-mission-post{
+    color:#ddd;
+    font-size:14px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    &:before{
+        @include use_sprite($ico-challenge-info-mission-post);
+        content:'';
+        margin-top:5px;
+        vertical-align:top;
+    }
+}

@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+$page-post-notice: 'post-notice';
+
+.#{$page-post-notice} {
+    position: relative;
+    padding-right:20px;
+    // border:1px solid #eee;
+    // border-right:0;
+    // border-left:0;
+
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    strong{}
+    .name{
+        font-weight:bold;
+        &.check:after{
+            @include use_sprite($ico-check);
+            content:'';
+            margin-top:3px;
+            // margin-left:4px;
+            vertical-align:top;
+        }
+    }
+    .interesting{
+        margin-right:2px;
+        color:$BRAND_COLOR;
+    }
+
+    &__thumbnail {
+        overflow: hidden;
+        position: absolute; top: 0; left: 0;
+        width: 26px; height: 26px;
+        border:1px solid #eee;
+        border-radius: 50%;
+
+        img {
+            vertical-align: top;
+        }
+    }
+
+    &__title{
+        &__article {}
+    }
+
+    &__thumbnail + &__description {
+        padding-left: 36px;
+    }
+
+    &__description {
+        // min-height: 60px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+
+        &__article {
+            color: #000;
+            word-break: keep-all; // 음절을 끊어준다
+        }
+
+        &__text {
+            color: #333;
+
+            b {
+                color: #28b6f6;
+                font-weight: 500;
+            }
+        }
+
+        &__time {
+            display: block;
+            color: #bbb;
+            font-size: 11px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+
+        &__hot {
+            overflow: hidden;
+            display: inline-block;
+            height: 18px;
+            padding: 0 5px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            vertical-align: top;
+            background-color: #ff850e;
+            border-radius: 2px;
+            letter-spacing: 0;
+            font-family: Tahoma, sans-serif
+        }
+    }
+    // end: description
+
+    &__question{
+        &__date{
+            color:$LIGHTEST_COLOR;
+            font-size:11px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        span{
+            &:nth-child(n+2){
+                position:relative;
+                padding-left:5px;
+                &:before{
+                    content:'';
+                    display:block;
+                    position: absolute;
+                    left:0;
+                    top:50%;
+                    width:1px;
+                    height:8px;
+                    margin-top:-4px;
+                    background-color:$LIGHTEST_COLOR;
+                }
+            }
+        }
+    }
+    // end: question
+
+    &__selected-answer{
+        &__whois{
+            display:inline;
+            color:$BRAND_COLOR;
+            font-size:13px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        &__date{
+            color:$LIGHTEST_COLOR;
+            font-size:11px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+    }
+    // end: selected-answer
+
+    &__answer{
+        &__whois{
+            display:inline;
+            font-size:13px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            strong,
+            span{
+                &:nth-child(n+2):before{
+                    content:'·';
+                    margin-right:4px;
+                }
+            }
+            strong{
+                color:$BRAND_COLOR;
+            }
+            span{
+                color:$DEFAULT_COLOR;
+            }
+        }
+        &__date{
+            color:$LIGHTEST_COLOR;
+            font-size:11px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+    }
+    // end: sanswer
+
+    &__button {
+        position: absolute;
+
+        &--stamp {
+            bottom: 0; right: 5px;
+            height: 24px;
+            padding: 0 10px;
+            color: #666;
+            font-size: 12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight: 600;
+            background-color: #f6f6f6;
+            border-radius: 12px;
+
+            &:before {
+                @include use_sprite($ico-stamp);
+
+                content: '';
+                vertical-align: middle;
+                margin: -1px 3px 1px 0;
+            }
+        }
+
+        &--function {
+            top: -5px; right: -5px;
+            padding: 5px;
+
+            span {
+                @include use_sprite($ico-function);
+
+                display: block;
+            }
+        }
+
+        &--text {
+            top: -5px;
+            right: -5px;
+            padding: 5px;
+            color:$LIGHTEST_COLOR;
+            font-size:13px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+    }
+
+    &__layer{
+        &--function{
+            display:none;
+            position:absolute;
+            right:0;
+            top:0;
+            z-index:1;
+            padding:8px;
+            background-color:#fff;
+            box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
+
+            .btn{
+                display:block;
+                width:100%;
+                max-width:280px;
+                min-width:100px;
+                padding:8px;
+                color:$DEFAULT_COLOR;
+                font-size:14px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+                text-align:left;
+                &.alert{
+                    color:$ALERT_COLOR;
+                }
+            }
+        }
+    }
+    &.active{
+        .post-notice__layer--function{
+            display:block;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+%use_sprite {
+    overflow: hidden;
+    display: inline-block;
+    color: transparent;
+    text-indent:-999px;
+    background-image: url(../images/sprite.png);
+    background-size: ($spritesheet-width / 2) ($spritesheet-height / 2);
+}
+
+@mixin use_sprite_width($imgname) {
+    width: nth($imgname, 5) / 2;
+}
+@mixin use_sprite_height($imgname) {
+    height: nth($imgname, 6) / 2;
+}
+@mixin use_sprite_position($imgname) {
+    $sprite-offset-x: nth($imgname, 3) / 2;
+    $sprite-offset-y: nth($imgname, 4) / 2;
+    background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin use_sprite($imgname) {
+    @extend %use_sprite;
+
+    @include use_sprite_width($imgname);
+    @include use_sprite_height($imgname);
+    @include use_sprite_position($imgname);
+}

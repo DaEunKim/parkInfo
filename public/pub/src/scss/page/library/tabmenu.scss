@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+$page-prefix: 'library';
+$tab-height: 50px;
+
+.#{$page-prefix}__tab {
+    background-color: #fff;
+    border-bottom: 0.5px solid #ddd;
+}
+
+.#{$page-prefix}__tab__list {
+    display: flex;
+
+    &__item {
+        flex: auto;
+        box-flex: 1;
+    }
+    &__item--select {
+        a {
+            color: #000;
+        }
+    }
+    &__item__link {
+        display: block;
+        height: $tab-height;
+        color: #aaa;
+        font-size: 16px;
+        text-align: center;
+        line-height: $tab-height;
+    }
+}

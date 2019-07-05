@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>home- master</title>
+    <link rel="stylesheet" href="/pub/src/css/conects.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+<div class="home">
+    <!-- 공통 -->
+    <header class="home__header">
+        <!-- <div class="tit-info">
+            <div class="img">
+                <div class="thumb"><img src="https://placehold.it/224x111" alt=""></div>
+                <strong>12</strong>
+            </div>
+            <div class="txt"><p>님을 위한 <strong>560,000</strong>개의 공부 노하우</p></div>
+        </div> -->
+        <nav>
+            <ul>
+                <li class="hot on"><a href=""><span class="txt">Hot</span></a></li>
+                <li class="my"><a href=""><span class="txt">My</span></a></li>
+                <li class="master"><a href=""><span class="txt">Master</span></a></li>
+            </ul>
+        </nav>
+        <!-- 관심사 -->
+        <div class="component_interestings">
+            <ul>
+                <li>
+                    <button type="button" class="btn-rect-round-xs btn-interesting active">ALL</button><!-- 활성화 시 class="active" -->
+                </li>
+                <li>
+                    <button type="button" class="btn-rect-round-xs btn-interesting">공무원·임용</button>
+                </li>
+                <li>
+                    <button type="button" class="btn-rect-round-xs btn-interesting">어학·회화</button>
+                </li>
+                <li>
+                    <button type="button" class="btn-rect-round-xs btn-interesting">직무·프로젝트</button>
+                </li>
+                <li>
+                    <button type="button" class="btn-rect-round-xs btn-interesting">어학·회화</button>
+                </li>
+                <li>
+                    <button type="button" class="btn-rect-round-xs btn-interesting">직무·프로젝트</button>
+                </li>
+            </ul>
+            <div class="add-box">
+                <button type="button" class="btn-add">더보기</button>
+            </div>
+        </div>
+        <!-- //관심사 -->
+    </header>
+    <!-- // 공통 -->
+
+    <!-- master -->
+    <div class="home__cont-box">
+        <div class="tit-box">
+            <span>최고를 팔로우하고 최고가 되어보세요.</span>
+            <div class="tit">Contents Master<a href="">전체보기</a></div>
+        </div>
+    </div>
+    <!-- @@import module -->
+    <div w3-include-HTML="module-master.html"></div>
+    <!-- // module -->
+    <!-- // master -->
+</div>
+
+<script>
+w3.includeHTML();
+</script>
+</body>
+</html>

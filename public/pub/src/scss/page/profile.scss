@@ -1,0 +1,951 @@
+.profile__user{
+    .profile__user-tit-t1{
+        display:block;
+        position:relative;
+        margin-bottom:5px;
+        padding:0 20px;
+        .tit-t1{
+            font-size:16px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight:bold;
+            .sub{
+                color:$LIGHTEST_COLOR;
+                font-weight:normal;
+            }
+        }
+    }
+    .profile__user-top{
+        position:relative;
+        .slide-box{
+            $height:216px;
+            position:relative;
+            height:$height;
+            background:#eee;
+            overflow:hidden;
+            ul{
+                position:relative;
+                height:$height;
+                li{
+                    float:left;
+                    width:100%;
+                    height:$height;
+                    img{
+                        position:relative;
+                        left:50%;
+                        top:50%;
+                        width:100%;
+                        height:100%;
+                        object-fit: cover;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+            .slide{
+                height:$height;
+                div{
+                    height:100%;
+                    img{
+                        position:relative;
+                        left:50%;
+                        top:50%;
+                        width:100%;
+                        height:100%;
+                        object-fit: cover;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+            .slick-dots{
+                position:absolute;
+                bottom:20px;
+                left:20px;
+                width:100%;
+                li{
+                    width:6px;
+                    height:6px;
+                    margin-right:4px;
+                    border-radius:50%;
+                    overflow:hidden;
+                    text-indent:-999em;
+                    background:#fff;
+                    &.slick-active{background-color:#29b6f6;}
+                }
+            }
+            .slick-arrow, .slick-prev, .slick-next{display:none !important;}
+            .pager{
+                position:absolute;
+                bottom:15px;
+                left:15px;
+                li{
+                    float:left;
+                    width:6px;
+                    height:6px;
+                    margin:0 3px;
+                    border-radius:50%;
+                    background-color:#fff;
+                    overflow:hidden;
+                    text-indent:-999em;
+                    &.on{
+                        background-color:#29b6f6;
+                    }
+                }
+            }
+            &:before{
+                position:absolute;
+                top:90px;
+                left:0;
+                width:100%;
+                content:'나를 알릴 수 있는 커버 이미지, 영상을 등록해보세요';
+                display:block;
+                font-size:12px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+                color:#999;
+                text-align:center;
+            }
+            &:after{
+                position:absolute;
+                bottom:0;
+                left:0;
+                content:'';
+                display:block;
+                width:100%;
+                height:80px;
+                // opacity: 0.04;
+                background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2));
+            }
+        }
+        .ico-viewer{
+            position:absolute;
+            top:220px;
+            left:20px;
+        }
+        .btn-write{
+            @include use_sprite($profile-edit);
+            display:inline-block;
+            position:absolute;
+            top:220px;
+            right:20px
+        }
+        .main-info{
+            position:relative;
+            top:-30px;
+            text-align:center;
+            .thumb{
+                .img{
+                    position:relative;
+                    width:60px;
+                    height:60px;
+                    margin:0 auto;
+                    border:1px solid #eee;
+                    border-radius:50%;
+                    overflow:hidden;
+                    img{
+                        position:relative;
+                        width:100%;
+                        height:100%;
+                        border-radius:50%;
+                    }
+                    &:before{
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        content:'';
+                        display:block;
+                        @include use_sprite($ic_profile_default_img);
+                    }
+                }
+                .name{
+                    margin-top:15px;
+                    font-size:24px;
+                    line-height:1.4em;
+                    font-weight:bold;
+                    color:#000;
+
+                }
+            }
+            p{
+                margin-top:18px;
+                font-size:13px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+                color: #666;
+            }
+            .follow{
+                @include clearfix();
+                margin:40px 20px 0;
+                border:1px solid #e0e0e0;
+                border-right:0;
+                border-left:0;
+                li{
+                    float:left;
+                    width:33.33%;
+                    padding:15px 0;
+                    font-size:13px;
+                    line-height:map-get($DEFAULT_FONT, 'line-height');
+                    a{color:#666;}
+                    strong{margin-left:5px;}
+                }
+            }
+
+            // 도전 중인 목표가 없습니다
+            .challenge-state {
+                margin-top: 10px;
+                margin-bottom: -8px;
+
+                p {
+                    margin: 0;
+                    color: #000;
+                    font-size: 15px;
+                    line-height:map-get($DEFAULT_FONT, 'line-height');
+
+                    &:before {
+                        @include use_sprite($ico-challenge);
+
+                        content: '';
+                        margin: -1px 3px 1px 0;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+    .profile__user-challenge{
+        .list_scroll130-x5{
+            .list{
+                padding:0 20px;
+            }
+        }
+        .nodata{
+            font-size:12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            color:#bbb;
+            padding:0 20px;
+        }
+    }
+    .tab-cont-box{
+        margin-top:30px;
+        background:#f6f6f6;
+        .tab{
+            @include clearfix();
+            background:#eee;
+            li{
+                position:relative;
+                float:left;
+                width:50%;
+                height:50px;
+                line-height:50px;
+                text-align:center;
+                color:#bbb;
+                font-size:14px;
+                font-weight:bold;
+                &>div{
+                    position:relative;
+                    display:inline-block;
+                }
+                &>a{
+                    display:block;
+                    color:$LIGHTEST_COLOR;
+                }
+                &.on{
+                    color:#333;
+                    a{
+                        color:$DEFAULT_COLOR;
+                    }
+                }
+                // 라이브러리 잠금 이미지
+                // &:first-child{
+                //     &:after{
+                //         content:'';
+                //         display:inline-block;
+                //         margin-left:5px;
+                //         @include use_sprite($my-library-off);
+                //     }
+                //     &.on{
+                //         &:after{
+                //             @include use_sprite($my-library-on);
+                //         }
+                //     }
+                // }
+            }
+            .bubble{
+                display:none;
+                position:absolute;
+                bottom:45px;
+                left:-20px;
+                width:200px;
+                padding:10px 5px;
+                border-radius:5px;
+                background:#ff8400;
+                color:#fff;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+                font-size:12px;
+                &:after{
+                    content:'';
+                    display:block;
+                    position:absolute;
+                    bottom:-12px;
+                    left:30px;
+                    width:0;
+                    height:0;
+                    border:6px solid #ff8400;
+                    border-color:#ff8400 transparent transparent;
+
+                }
+                &.on{display:block;}
+            }
+        }
+        .no-data{
+            font-size:14px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            color:#999;
+            padding:20px;
+        }
+        .post-type{
+            // margin-top:20px;
+            background:#fff;
+            &:nth-child(n+2){
+                margin-top:10px;
+            }
+        }
+    }
+}
+.profile__user-another{
+    .profile__user-top{
+        .slide-box{
+            background:#eaf8fe;
+            &:before{
+                content:'';
+            }
+        }
+        .main-info{
+            // .btn{
+            //     margin-top:20px;
+            //     a{
+            //         display:inline-block;
+            //         width: 30%;
+            //         height: 29px;
+            //         line-height: 29px;
+            //         border-radius: 6px;
+            //         border: solid 1px #999;
+            //         font-size:13px;
+            //         color:#999;
+            //     }
+            //     &.blue a{
+            //         background:#29b6f6;
+            //         color:#fff;
+            //         border:0;
+            //     }
+            // }
+            .wrap-btn{
+                margin-top:20px;
+                text-align:center;
+            }
+            .btn-follow {
+                width: 150px;
+            }
+        }
+    }
+    .tab-cont-box{background:none;}
+    .component_thumb-01 .price{
+        border-top:1px solid #f3f3f3;
+    }
+}
+.profile_tab-library{
+    @include clearfix();
+    padding-bottom:25px;
+    .post-type{
+        margin:0 -20px;
+        border-top: 1px solid #ddd;
+        border-radius: 20px 20px 0 0;
+        background:#fff;
+        &:nth-child(n+2){
+            margin-top:10px;
+        }
+    }
+    .box_rect-round-shadow{margin-top:20px;}
+    .module_feed-box{
+        box-sizing:border-box;
+        float:left;
+        width:calc(50% - 30px);
+
+        &:nth-child(odd){margin:20px 10px 0 20px;}
+        &:nth-child(even){margin:20px 20px 0 10px;}
+    }
+    .feed-box{
+        padding:40px 20px 20px;
+        > .tit{
+            position:relative;
+            margin-bottom:20px;
+            font-size:16px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight:bold;
+            color:#000;
+            a{
+                position:absolute;
+                top:0;
+                right:0;
+                color:#999;
+                font-size:13px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+            }
+        }
+        .nodata{
+            display:none;
+            font-size:12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            color:#bbb;
+        }
+        &.nodata{
+            .tit{
+                span, a{display:none;}
+            }
+            .nodata{
+                display:block;
+            }
+        }
+    }
+}
+.profile_tab-timeline{
+    padding-top:20px;
+    background-color:#f6f6f6;
+    .list_column01-10{padding-bottom:20px;}
+    .no-data{
+        font-size:14px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        color:#999;
+        padding:20px;
+    }
+    .post-type{
+        border-top: 1px solid #ddd;
+        border-radius: 10px;
+        background:#fff;
+        &:nth-child(n+2){
+            margin-top:10px;
+        }
+    }
+}
+// feed
+@mixin icon-style {
+    content:'';
+    position:absolute;
+    top:30px;
+    left:50%;
+    margin-left:-20px;
+
+}
+.module_feed-box{
+    position:relative;
+    background-color:#fff;
+    text-align:center;
+    border-radius:15px;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    a{
+        box-sizing:border-box;
+        display:block;
+        height:160px;
+        padding-top:100px;
+    }
+    strong{
+        color:#29b6f6;
+        font-size:15px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+    div{
+        color:#666;
+        font-size:13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+    &.challenge:before{
+        @include use_sprite($my-challenge);
+        @include icon-style;
+    }
+    &.knowhow:before{
+        @include use_sprite($my-knowhow);
+        @include icon-style;
+    }
+    &.study:before{
+        @include use_sprite($my-group);
+        @include icon-style;
+    }
+    &.post:before{
+        @include use_sprite($my-post);
+        @include icon-style;
+    }
+    &.data:before{
+        @include use_sprite($my-secret-file);
+        @include icon-style;
+    }
+    &.class:before{
+        @include use_sprite($my-note);
+        @include icon-style;
+    }
+    &.challenge:before{
+        @include use_sprite($my-challenge);
+        @include icon-style;
+    }
+    &.live:before{
+        @include use_sprite($my-live);
+        @include icon-style;
+    }
+    &.ticket:before{
+        @include use_sprite($my-ticket);
+        @include icon-style;
+    }
+    &.right:before{
+        @include use_sprite($my-ticket);
+        @include icon-style;
+    }
+    &.independent:before{
+        @include use_sprite($live-my);
+        @include icon-style;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 프로파일 인증-사용자
+.link_arr-full{
+    display:block;
+    position:relative;
+    height:29px;
+    padding:15px 30px 15px 20px;
+    line-height:29px;
+    &:after{
+        @include use_sprite($comm-ic-enter);
+        content:'';
+        display:block;
+        position:absolute;
+        right:15px;
+        top:50%;
+        margin-top:-8px;
+    }
+}
+
+.component_challenge-input{
+    position:relative;
+    border:1px solid #ddd;
+    border-radius:3px;
+    background-color:#eee;
+    .chk{
+        position:absolute;
+        left:10px;
+        top:14px;
+    }
+    .lbl{
+        display:block;
+        padding:8px 10px 15px 25px;
+    }
+    .tit{
+        @include ellipsis();
+        display:block;
+        font-size:14px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight:bold;
+    }
+    .desc{
+        font-size:12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+}
+.component_challenge-cont{
+    position:relative;
+    border:1px solid #ddd;
+    border-radius:3px;
+    .lbl{
+        display:block;
+        padding:8px 10px 15px;
+    }
+    .tit{
+        @include ellipsis();
+        display:block;
+        // margin-bottom:4px;
+        color:$BRAND_COLOR;
+        font-size:14px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight:bold;
+    }
+    .desc{
+        font-size:12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+}
+
+.component_profile-certification{
+    position:relative;
+    padding:60px 18px 15px;
+    border-bottom:1px solid #ddd;
+    border-radius:10px 10px 0 0;
+    background-color:#fff;
+
+    .ico-viewer{
+        position:absolute;
+        left:15px;
+        top:15px;
+    }
+    .btn-write{
+        @include use_sprite($profile-edit);
+        display:inline-block;
+        position:absolute;
+        right:15px;
+        top:10px;
+    }
+
+    .user{
+        text-align:center;
+    }
+    .name{
+        display:block;
+        margin-bottom:6px;
+        font-size:24px;
+        line-height:1.4em;
+        font-weight:bold;
+    }
+    .identity{
+        display:block;
+        color:$LIGHTER_COLOR;
+        font-size:13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+    .desc{
+        display:block;
+        color:$BRAND_COLOR;
+        font-size:12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight:bold;
+        .class{
+            @include ellipsis(120px);
+            vertical-align:top;
+        }
+    }
+
+    .wrap-btn{
+        margin:15px 0;
+        text-align:center;
+    }
+    .btn-follow{
+        width:150px;
+    }
+
+    .user-groups{
+        text-align:center;
+        dt,
+        dd{
+            display:inline;
+            color:#666;
+            font-size:13px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        dt{
+            margin-left:8px;
+        }
+        dd{
+            margin-right:8px;
+            font-weight:bold;
+        }
+    }
+
+    .component_thumb-usertype{
+        position:absolute;
+        left:50%;
+        top:-45px;
+        margin-left:-45px;
+    }
+}
+
+
+.profile_tit-t1{
+    display:block;
+    position:relative;
+    margin-bottom:5px;
+    &:nth-child(n+2){
+        margin-top:35px;
+    }
+    .tit-t1{
+        font-size:16px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight:bold;
+        .sub{
+            color:$LIGHTEST_COLOR;
+            font-weight:normal;
+        }
+        .num{
+            color:$BRAND_COLOR;
+            font-weight:bold;
+        }
+    }
+    .link-more{
+        position:absolute;
+        right:0;
+        bottom:0;
+        color:$LIGHTEST_COLOR;
+        font-size:13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+    &.timeline{
+        &:after{
+            @include use_sprite($comm-ic-enter);
+            content:'';
+            display:block;
+            position:absolute;
+            right:-2px;
+            top:50%;
+            margin-top:-8px;
+        }
+    }
+}
+.profile_visualarea{
+    $position_t:105px;
+    position:relative;
+    height:360px;
+    border-bottom:$position_t solid #fff;
+    background-color:#000;
+    background-repeat:no-repeat;
+    background-position:50%;
+    background-size:cover;
+
+    .component_profile-certification{
+        position:absolute;
+        left:20px;
+        right:20px;
+        bottom:$position_t * -1;
+        z-index:1;
+    }
+    &:after{
+        position:absolute;
+        bottom:0;
+        left:0;
+        content:'';
+        display:block;
+        width:100%;
+        height: 260px;
+        // opacity: 0.06;
+        background-image: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.3));
+    }
+}
+.profile_intro{
+    margin-top:35px;
+    padding:0 20px;
+}
+.profile_challenge{
+    margin-top:35px;
+    padding:0 20px;
+
+    .list_scroll130-x5{
+        margin:0 -20px;
+        .list{
+            padding:0 20px;
+        }
+    }
+}
+.profile_recommend-user{
+    margin-top:35px;
+    padding:20px 20px 0;
+    border-top:1px solid #ddd;
+    background-color:#fffdf2;
+
+    .recommend-user{
+        padding:15px 0;
+        border-top:1px solid #ddd;
+    }
+}
+.profile_tab-intro{
+    .wrap{
+        padding:28px 20px;
+        &:nth-child(n+2){
+            border-top:5px solid #eee;
+        }
+    }
+    .list_column01-0{
+        margin:15px -20px -28px;
+        > li{
+            border-top:1px solid #eee;
+        }
+    }
+    &.bd{border-top:5px solid #eee;}
+}
+
+.search-box{
+    padding:40px 15px 30px;
+    .tit{
+        font-size: 19px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight: bold;
+        color: #000;
+        strong {color: #29b6f6;}
+    }
+    &>div:last-child{
+        position:relative;
+        margin-top:17px;
+        padding-right:75px;
+        input{
+            box-sizing:border-box;
+            width:100%;
+            height: 33px;
+            line-height: 33px;
+            border-radius: 5px;
+            border: solid 1px #b5b5b5;
+        }
+        span{
+            box-sizing:border-box;
+            position:absolute;
+            top:0;
+            right:0;
+            width: 66px;
+            height: 33px;
+            line-height: 33px;
+            border-radius: 5px;
+            border: solid 1px #b5b5b5;
+            background-color: #fff;
+            text-align:center;
+        }
+    }
+}
+.question-list-box{
+    padding:0 15px;
+    .filter{
+        position:relative;
+        margin-bottom:11px;
+        a{
+            position:absolute;
+            top:0;
+            right:0;
+        }
+    }
+    .btn-more{
+        padding:16px 0;
+        text-align:center;
+        font-size:13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        color:#646464;
+    }
+}
+
+// 챌린지 캐시 > 나의 챌린지 캐시
+.profile__challege-cash {
+    padding: 0 20px;
+
+    .link {
+        position: relative;
+        display: block;
+        padding: 15px 20px;
+        background-color: #fff;
+        color: #666;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,.1);
+        border-radius: 10px;
+
+        &:after {
+            @include use_sprite($ic-profile-cash-chevron);
+
+            content: '';
+            position: absolute; top: 50%; right: 15px;
+            transform: translate(0, -50%);
+        }
+    }
+    .title {
+        display: block;
+        font-size: 12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight: 500;
+    }
+    .number {
+        color: #333;
+        font-size: 28px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight: 600;
+        font-family: Helvetica, "Apple SD Gothic Neo", Sans-serif;
+    }
+    .label {
+        font-size: 13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight: 600;
+    }
+}
+
+// 챌린지 캐시 > 내가 진행중인 챌린지
+.profile__my-challenge {
+    overflow: hidden;
+    padding: 20px 0;
+
+    .title {
+        padding: 0 20px 10px;
+        color: #111;
+        font-size: 16px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+}
+.profile__my-challenge__list {
+    padding: 0 15px;
+    font-size: 0;
+    white-space: nowrap;
+    vertical-align: top;
+
+    ul {
+        overflow-x:auto;
+        overflow-y:hidden;
+    }
+    li {
+        display: inline-block;
+        width: 100px;
+        margin: 0 5px;
+        vertical-align: top;
+    }
+
+    //
+    .module__challenge-info {
+        a {
+            display: block;
+        }
+    }
+
+    .chall-img {
+        position: relative;
+        height: auto;
+        box-sizing: content-box;
+        // padding-top: 100%;
+        border-radius: 5px;
+
+        img {
+            // position: absolute; top: 0; left: 50%;
+            // width: auto;
+            // height: 100%;
+            // max-width: none;
+            // transform: translate(-50%, 0);
+        }
+    }
+
+    .info-box {
+        strong {
+            font-size: 13px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        .join-box,
+        .join-box .txt {
+            padding-left: 0;
+        }
+    }
+}

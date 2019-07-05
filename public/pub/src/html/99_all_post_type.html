@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>포스트타입 종류별 케이스</title>
+    <link rel="stylesheet" type="text/css" href="../css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+    <style>
+        .case_box {float: left; width: 320px; border: 1px solid #ff0000; }
+        .case_box .case_title { padding: 0 10px; color: #fff; font-size: 20px; background-color: #000; }
+    </style>
+</head>
+<body>
+<div id="wrap">
+
+    <div class="case_box">
+        <h1 class="case_title">일반포스트-텍스트</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <div w3-include-HTML="pages/post/type_text.html"></div>
+            <div w3-include-HTML="pages/post/toolbar.html"></div>
+            <div w3-include-HTML="pages/post/article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">일반포스트-텍스트 짧은 경우</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <!-- @@import src/html/pages/post/type_text.html -->
+            <div class="post-content__textType">
+                <!-- 더보기 눌렀을 경우 post-content__textType__wrapper--open로 클래스명 변경 -->
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--open">
+                    <p>오늘은 저의 일기를 써볼께요</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__hash">
+                    <span>#커넥츠북</span><span>#커넥츠</span><span>#책추천</span><span>#공무원</span>
+                </div>
+            </div>  
+            <div w3-include-HTML="pages/post/toolbar.html"></div>
+            <div w3-include-HTML="pages/post/article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">일반포스트-텍스트 펼침 </h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <!-- @@import src/html/pages/post/type_text.html -->
+            <div class="post-content__textType">
+                <!-- 더보기 눌렀을 경우 post-content__textType__wrapper--open로 클래스명 변경 -->
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--open">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__hash">
+                    <span>#커넥츠북</span><span>#커넥츠</span><span>#책추천</span><span>#공무원</span>
+                </div>
+            </div>  
+            <div w3-include-HTML="pages/post/toolbar.html"></div>
+            <div w3-include-HTML="pages/post/article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">일반포스트-이미지가 긴 경우</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <!-- @@import src/html/pages/post/type_image.html -->
+            <div class="post-content__imageType" style="background-image: url(https://d1onhczzmo7z1l.cloudfront.net/media/prod/5DDFD4EE_edb21d07-55b5-49ac-a2d4-a1c9d13bad38_1558230229466.png)">
+                <span class="post-content__imageType__paging">2/5</span>
+                <!-- 스탬프 영역 -->
+                <div class="post-content__imageType__stamp_area" aria-hidden="true"></div>
+                <!-- //스탬프 영역 -->
+                <!-- 개발시 img태그에 height값은 제거해주세요. 테스트용입니다 -->
+                <img src="https://d1onhczzmo7z1l.cloudfront.net/media/prod/5DDFD4EE_edb21d07-55b5-49ac-a2d4-a1c9d13bad38_1558230229466.png" alt="" aria-hidden="true">
+            </div>
+            <div w3-include-HTML="pages/post/toolbar.html"></div>
+            <div w3-include-HTML="pages/post/article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">일반포스트-이미지가 짧은 경우</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <!-- @@import src/html/pages/post/type_image.html -->
+            <div class="post-content__imageType" style="background-image: url(https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg)">
+                <span class="post-content__imageType__icon">대체 텍스트 확인필요</span>
+                <!-- 개발시 img태그에 height값은 제거해주세요. 테스트용입니다 -->
+                <img src="https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg" alt="" aria-hidden="true">
+            </div>
+            <div w3-include-HTML="pages/post/toolbar.html"></div>
+            <div w3-include-HTML="pages/post/article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">일반포스트-책모듈</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <!-- @@import src/html/pages/post/type_link.html -->
+            <div class="post-content__linkType">
+                <a href="#" target="_blank" class="editor_link check_og_tags">
+                    <span class="a-img" style="background-image: url('http://s3.ap-northeast-2.amazonaws.com/libro.image/product/2010/1105/0100009617923-00.jpg')"></span>
+                    <span class="a-strong">[커넥츠북] 일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+                    <span class="a-span">http://m-book.conects.com/product/boo...</span>
+                    <span class="a-p">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+                    <span class="btn-x">삭제</span>
+                </a>
+            </div>
+            <div w3-include-HTML="pages/post/toolbar.html"></div>
+            <div w3-include-HTML="pages/post/article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">일반포스트-링크</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <!-- @@import src/html/pages/post/type_link.html -->
+            <div class="post-content__linkType post-content__linkType--wide">
+                <a href="#" target="_blank" class="editor_link check_og_tags">
+                    <span class="a-img" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg')"></span>
+                    <span class="a-strong">[커넥츠북] 일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+                    <span class="a-span">www.rokarmy_cook.com</span>
+                    <span class="a-p">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+                    <span class="btn-x">삭제</span>
+                </a>
+            </div>
+            <div w3-include-HTML="pages/post/toolbar.html"></div>
+            <div w3-include-HTML="pages/post/article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">일반포스트-자료(파일)</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <!-- @@import src/html/pages/post/type_files.html -->
+            <div class="post-content__fileType">
+                <a href="#" class="post-content__fileType__link"><span class="post-content__fileType__link__title">9월 15일 자료(2).pptx</span></a>
+                <a href="#" class="post-content__fileType__link post-content__fileType__link--docx"><span class="post-content__fileType__link__title">2018 7급 공무원 [문과,지방러,인강으로만] 1년8개 월 재수 직접 쓴! 솔직 합격수기.hwp</span></a>
+                <a href="#" class="post-content__fileType__link post-content__fileType__link--xlsx"><span class="post-content__fileType__link__title">9월 15일 자료(2).xlsx</span></a>
+                <a href="#" class="post-content__fileType__link post-content__fileType__link--pdf"><span class="post-content__fileType__link__title">9월 15일 자료(2).pdf</span></a>
+                <a href="#" class="post-content__fileType__link post-content__fileType__link--soundmsg"><span class="post-content__fileType__link__title">9월 15일 자료(2).mp3</span></a>
+            </div>
+            <div w3-include-HTML="pages/post/toolbar.html"></div>
+            <div w3-include-HTML="pages/post/article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">아티클형</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <div w3-include-HTML="pages/post/type_article.html"></div>
+            <div w3-include-HTML="pages/post/comment.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+    <div class="case_box">
+        <h1 class="case_title">챌린지형</h1>
+        <!-- post type -->
+        <div class="post-type">
+            <div class="post-type__notice" w3-include-HTML="pages/post/notice.html"></div>
+            <div w3-include-HTML="pages/post/type_challenge.html"></div>
+        </div>
+        <!-- //post type -->
+    </div>
+
+
+</div>
+
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@charset 'utf-8';
+
+// 모양 // 크기
+@mixin set-btn-shape-size(){
+    $shapes:(
+        'round': 0.5,
+        'rect': 0,
+        'rect-round': 0.1
+    );
+    $sizes:(
+        'xl': ('height':60, 'font':20),
+        'lg': ('height':53, 'font':18),
+        'default': ('height':42, 'font':14),
+        'sm': ('height':36, 'font':12),
+        'xs': ('height':26, 'font':13)
+    );
+
+    @each $shape, $radius  in $shapes{
+        @each $size, $height in $sizes{
+            .btn-#{$shape}-#{$size}{
+                display:inline-block;
+                height:map-get($height, 'height')*1px;
+                padding:0 8px;
+                background-color:$DEFAULT_COLOR;
+                border:1px solid $DEFAULT_COLOR;
+                border-radius:map-get($height, 'height')*$radius*1px;
+                box-sizing:border-box;
+                color:#fff;
+                font-size:map-get($height, 'font')*1px;
+                line-height:map-get($height, 'height')*1px;
+                // font-weight:bold;
+                text-align:center;
+            }
+        }
+    }
+}
+@include set-btn-shape-size();
+
+// 색상
+@mixin set-btn-color(){
+    $colors:(
+        // 'key': (border-color, background-color, font-color)
+        'primary': ($BRAND_COLOR, $BRAND_COLOR, #fff),
+        'alert': ($ALERT_COLOR, $ALERT_COLOR, #fff),
+        'lighter': ($LIGHTER_COLOR, $LIGHTER_COLOR, #fff),
+        'lightest': ($LIGHTEST_COLOR, $LIGHTEST_COLOR, #fff),
+        'stronger': ($STRONGER_COLOR, $STRONGER_COLOR, #fff),
+        'white': (#fff, #fff, $DEFAULT_COLOR)
+    );
+
+    @each $color, $value  in $colors{
+        .btn-#{$color}{
+            border-color:nth($value, 1);
+            background-color:nth($value, 2);
+            color:nth($value, 3);
+        }
+        .btn-transparent-#{$color}{
+            border-color:nth($value, 1);
+            background-color:transparent;
+            color:nth($value, 1);
+        }
+        .btn-white-#{$color}{
+            border-color:nth($value, 1);
+            background-color:#fff;
+            @if $color == 'white' {
+                color:$BRAND_COLOR;
+            } @else {
+                color:nth($value, 1);
+            }
+        }
+    }
+}
+@include set-btn-color();
+
+// 기능버튼
+.btn-follow{
+    border-color:$BRAND_COLOR;
+    background-color:$BRAND_COLOR;
+    color:#fff;
+    &.active{
+        border-color:$LIGHTEST_COLOR;
+        background-color:#fff;
+        color:$LIGHTEST_COLOR;
+    }
+}
+
+
+//
+.bottom-tool_wrap-btn{
+    display:block;
+    margin-top:18px;
+    text-align:center;
+
+    .link-more{
+        color:$BRAND_COLOR;
+        font-size:13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+}
+
+//
+.btn-sorting{
+    height:18px;
+    color:$LIGHTER_COLOR;
+    font-size:12px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    vertical-align:top;
+    &.active{
+        color:$DEFAULT_COLOR;
+    }
+    &:nth-child(n+2):before{
+        content:'|';
+        margin:0 4px;
+        vertical-align:top;
+    }
+    &.btn-rect-round-xs{
+        border-color:$BRAND_COLOR;
+        background-color:$BRAND_COLOR;
+        color:#fff;
+        &.active{
+            border-color:$LIGHTEST_COLOR;
+            background-color:#fff;
+            color:$LIGHTEST_COLOR;
+        }
+    }
+}

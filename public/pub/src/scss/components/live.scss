@@ -1,0 +1,79 @@
+@charset 'utf-8';
+
+.module_live{
+    display:block;
+    .thumb{
+        position:relative;
+        width:224px;
+        height:160px;
+        border:1px solid #ccc;
+        border-radius:6px;
+        background-repeat:no-repeat;
+        background-position:50%;
+        background-size:cover;
+    }
+    .ico-play{
+        display:block;
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:40px;
+        height:40px;
+        margin:-20px 0 0 -20px;
+        background:url('#{$CONECTS_WWW_HOST}/img/module/ico-play.png') no-repeat 50% 50%;
+        overflow:hidden;
+        text-indent:-999px;
+    }
+    .wrap-info{
+        margin-top:12px;
+    }
+    .tit{
+        @include ellipsis();
+        display:block;
+        overflow:hidden;
+        color:#111;
+        font-size:16px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight:bold;
+    }
+    .label-live,
+    .label-vod{
+        display:inline-block;
+        $height:15;
+        height:$height * 1px;
+        padding:0 5px;
+        border-radius:4px;
+        color:#fff;
+        font-size:11px;
+        font-weight:bold;
+        line-height:$height * 1px;
+        vertical-align:middle;
+    }
+    .label-live{
+        background-color:#999;
+        color:#fff;
+    }
+    .label-vod{
+        background-color:#376ecc;
+        color:#fff;
+    }
+    .state{
+        @include ellipsis();
+        display:block;
+        margin-top:2px;
+        color:#999;
+        font-size:12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        dt,
+        dd{
+            display:inline;
+        }
+    }
+    .writer{
+        @include ellipsis();
+        display:block;
+        color:#999;
+        font-size:12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+}

@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+$library-list: 'library__list';
+
+.#{$library-list} {
+    &__item {
+        &__link {
+            position: relative;
+            display: table;
+            width: 100%;
+            padding: 10px 0;
+            table-layout: fixed;
+            box-sizing: border-box;
+        }
+        &__thumbnail {
+            display: table-cell;
+            width: 65px;
+            vertical-align: middle;
+        }
+        &__icon {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+
+            &--camstudy {
+                @include use_sprite($ico-video-thumb);
+            }
+        }
+        &__info {
+            display: table-cell;
+            vertical-align: middle;
+            color: #666;
+            font-size: 12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        &__title {
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            color: #1e1e1e;
+            font-size: 14px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight: 600;
+
+            span[class^=ico-group] {
+                margin-right: 2px;
+                vertical-align: top;
+            }
+        }
+
+        &__description {
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        &__label {
+            color: #999;
+
+            i {
+                margin: -1px 0 1px;
+                vertical-align: middle;
+            }
+            .member i {
+                @include use_sprite($ico-joiner);
+            }
+            .like i {
+                @include use_sprite($ico-like);
+            }
+
+            .mark {
+                @include use_sprite($ico-check);
+
+                margin-right: 0;
+            }
+        }
+
+        &__price {
+            margin-top: 5px;
+            padding-top: 5px;
+            border-top: 0.5px solid #ddd;
+            color: #28b6f6;
+
+            .original_price {
+                color: #999;
+                text-decoration: line-through;
+            }
+
+            .price {
+                font-size: 14px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+                font-weight: 500;
+            }
+            .price_rate {
+                font-size: 12px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+            }
+        }
+    }
+    // end .library__list__item
+
+    &__image {
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        background-position: 50%;
+        background-size: cover;
+        border-radius: 15px;
+        vertical-align: top;
+    }
+
+    // case type
+    &--type2 {
+        .#{$library-list}__item__thumbnail {
+            text-align: right;
+        }
+    }
+    &--type3 {
+        .#{$library-list}__image {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+        }
+        .#{$library-list}__item__thumbnail {
+            width: 80px;
+        }
+        .#{$library-list}__item__title {
+            -webkit-line-clamp: 2;
+        }
+    }
+    &--type4 {
+        .#{$library-list}__item__thumbnail {
+            vertical-align: top;
+        }
+    }
+}

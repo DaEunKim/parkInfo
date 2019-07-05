@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: bold;
+    font-weight: 700;
+    src: url('#{$IMG_DIR}/test/NotoSansKR-Bold.woff2') format('woff2'),
+         url('#{$IMG_DIR}/test/NotoSansKR-Bold.woff') format('woff'),
+         url('#{$IMG_DIR}/test/NotoSansKR-Bold.otf') format('opentype');
+}

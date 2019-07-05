@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+.tab_scroll-01{
+    position:relative;
+    &.add{
+        padding-right:45px;
+    }
+    .btn-add-interesting{
+        @include use_sprite($btn-add-01);
+        position:absolute;
+        right:20px;
+        top:17px;
+        // margin-top:-7px;
+    }
+    .tab{
+        padding:0 10px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        white-space:nowrap;
+    }
+    li{
+        display:inline-block;
+        &.active{
+            a{
+                color:$DEFAULT_COLOR;
+            }
+        }
+    }
+    a{
+        display:block;
+        padding:15px 8px;
+        color:$LIGHTEST_COLOR;
+    }
+}
+.tab_scroll-02{
+    $backgoundColor:#eee;;
+    padding:0 12px;
+    background-color:$backgoundColor;
+    .tab{
+        overflow-x:auto;
+        overflow-y:hidden;
+        white-space:nowrap;
+    }
+    li{
+        display:inline-block;
+        padding:0 8px;
+        &.active{
+            a{
+                border-color:$DEFAULT_COLOR;
+                font-weight:bold;
+            }
+        }
+    }
+    a{
+        display:block;
+        padding:15px 0 13px;
+        border-bottom:2px solid $backgoundColor;
+    }
+}
+.tab_scroll-03{
+    $backgoundColor:#fff;
+    padding:0 12px;
+    background-color:$backgoundColor;
+    .tab{
+        overflow-x:auto;
+        overflow-y:hidden;
+        white-space:nowrap;
+    }
+    li{
+        display:inline-block;
+        padding:0 8px;
+        &.active{
+            a{
+                border-color:$DEFAULT_COLOR;
+                font-weight:bold;
+            }
+        }
+    }
+    a{
+        display:block;
+        padding:15px 0 13px;
+        border-bottom:2px solid $backgoundColor;
+    }
+}
+.tab_scroll-04{
+    $backgoundColor:#eee;
+    position:relative;
+    background-color:$backgoundColor;
+    .tab{
+        padding:0 10px;
+        overflow-x:auto;
+        overflow-y:hidden;
+        white-space:nowrap;
+    }
+    li{
+        display:inline-block;
+        &.active{
+            a{
+                color:$DEFAULT_COLOR;
+                font-weight:bold;
+            }
+        }
+    }
+    a{
+        display:block;
+        padding:15px 8px;
+    }
+}
+.tab_scroll-05{
+    $backgoundColor:#fff;
+    padding:0 12px;
+    border-bottom:1px solid #ddd;
+    background-color:$backgoundColor;
+    .tab{
+        overflow-x:auto;
+        overflow-y:hidden;
+        white-space:nowrap;
+    }
+    li{
+        display:inline-block;
+        padding:0 8px;
+        &.active{
+            a{
+                border-color:$BRAND_COLOR;
+                font-weight:bold;
+                color:$BRAND_COLOR;
+            }
+        }
+    }
+    a{
+        display:block;
+        padding:15px 0 13px;
+        border-bottom:2px solid $backgoundColor;
+        color:$LIGHTER_COLOR;
+    }
+}
+
+.tab_column{
+    padding:0 20px;
+    border-bottom:1px solid #ddd;
+
+    &.num02{
+        li{
+            width:50%;
+        }
+    }
+    &.num03{
+        li{
+            width:33.33%;
+        }
+    }
+    &.num04{
+        li{
+            width:25%;
+        }
+    }
+
+    .tab{
+        @include clearfix();
+    }
+    li{
+        float:left;
+        width:25%;
+        &.active{
+            a{
+                color:$DEFAULT_COLOR;
+            }
+        }
+    }
+    a{
+        display:block;
+        padding:15px 0;
+        color:#aaa;
+        font-size:16px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        text-align:center;
+    }
+}
+.tab_column-01{
+    background-color:#000;
+    &.num02{
+        li{
+            width:50%;
+        }
+    }
+    &.num03{
+        li{
+            width:33.33%;
+        }
+    }
+    &.num04{
+        li{
+            width:25%;
+        }
+    }
+
+    .tab{
+        @include clearfix();
+    }
+    li{
+        float:left;
+        width:25%;
+        &.active{
+            a{}
+        }
+
+        > a,
+        > span{
+            display:block;
+            padding:15px 0;
+            color:#ddd;
+            font-size:16px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            text-align:center;
+        }
+    }
+}
+.tab_column-01-dim{
+    background-color:rgba(0,0,0,0.5);
+    &.num02{
+        li{
+            width:50%;
+        }
+    }
+    &.num03{
+        li{
+            width:33.33%;
+        }
+    }
+    &.num04{
+        li{
+            width:25%;
+        }
+    }
+
+    .tab{
+        @include clearfix();
+    }
+    li{
+        float:left;
+        width:25%;
+        &.active{
+            a{}
+        }
+
+        > a,
+        > span{
+            display:block;
+            padding:15px 0;
+            color:#ddd;
+            font-size:16px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            text-align:center;
+        }
+    }
+}

@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+$listType-prefix: 'library__list2';
+$item-height: 150px;
+
+.#{$listType-prefix}__list__item {
+    position: relative;
+
+    & + & {
+        margin-top: 10px;
+    }
+}
+.#{$listType-prefix}__list__item__link {
+    overflow: hidden;
+    display: block;
+    height: $item-height;
+
+    &:after {
+        content: '';
+        display: table;
+    }
+}
+.#{$listType-prefix}__thumbnail {
+    float: left;
+    position: relative;
+    width: 80px;
+    height: $item-height;
+    background-color: #222;
+    background-position: 50%;
+    background-size: cover;
+
+    &:before {
+        content: '';
+        position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    & ~ .#{$listType-prefix}__info {
+        border-left: 0;
+    }
+}
+.#{$listType-prefix}__thumbnail__image {
+    position: absolute; top:50%; left: 50%;
+    width: 48px;
+    height: 48px;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.#{$listType-prefix}__thumbnail__icon{
+    position: absolute; top: 10px; right: 10px;
+
+    &--open {
+        @include use_sprite($group_secret);
+    }
+}
+.#{$listType-prefix}__info {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+
+    &__tag {
+        color: #333;
+        font-size: 12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+
+    &__title {
+        @include ellipsis;
+
+        display: block;
+        color: #333;
+        font-size: 16px;
+        font-weight: 800;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+
+    &__description {
+        @include ellipsis;
+
+        color: #666;
+        font-size: 13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+
+    &__hash {
+        overflow: hidden;
+        height: 25px;
+
+        span {
+            padding-right: 3px;
+            color: #999;
+            font-size: 12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight: 500;
+            word-break: keep-all; // 음절을 끊어준다
+        }
+    }
+
+    &__bottom {
+        position: absolute; right: 0; bottom: 0; left: 0;
+        margin: 15px;
+        color: #999;
+        font-weight: 500;
+
+        &__name {
+            font-size: 13px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+
+            .mark {
+                @include use_sprite($ico-check);
+
+                content: '';
+                margin: -2px 0 2px 2px;
+                vertical-align: middle;
+            }
+        }
+
+        &__state {
+            float: right;
+            font-size: 12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+
+            i {
+                padding-left: 2px;
+            }
+
+            &--confirm {
+                color: #28b6f6;
+            }
+            &--deny {
+                color: #ccc;
+            }
+        }
+    }
+}

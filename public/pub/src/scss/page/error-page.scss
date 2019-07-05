@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+
+.error-page{
+    padding:120px 0 0;
+    text-align:center;
+    .txt{
+        color:$LIGHTEST_COLOR;
+        font-size:16px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+    }
+    .wrap-btn{
+        margin-top:18px;
+    }
+    .btn-reload{
+        min-width:100px;
+    }
+    &:before{
+        @include use_sprite($img-error-page);
+        content:'';
+        display:block;
+        margin:0 auto;
+    }
+}

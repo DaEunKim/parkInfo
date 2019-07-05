@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+$page-prefix: 'challenge-cash';
+
+.#{$page-prefix} {
+    min-height:100vh;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+
+    &-withdraw{
+        position:relative;
+        min-height:100vh;
+        padding-bottom: 140px;
+        box-sizing: border-box;
+    }
+}
+
+@import 'challege/header';
+@import 'challege/filter';
+@import 'challege/list';
+@import 'challege/send';
+@import 'challege/payment';

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+// color
+$BRAND_COLOR: #29b6f6;
+$ALERT_COLOR: #f52a2a;
+$DEFAULT_COLOR: #333;
+$LIGHTER_COLOR: #7f7f7f;
+$LIGHTEST_COLOR: #999;
+$STRONGER_COLOR: #0078ff;
+
+// font (font-style, font-weight, font-size, line-height, font-family, 0.05)
+$DEFAULT_FONT:(
+    'font-style':'normal',
+    'font-weight':'normal',
+    'font-size':14px,
+    'line-height':1.6em,
+    'font-family':Sans-serif, //("Noto Sans KR","Malgun Gothic","맑은고딕","돋움","Dotum","Helvetica","Apple SD Gothic Neo",Sans-serif),
+    'letter-spacing':-0.05em
+);
+
+// img s3 url
+$STATIC_UPDATA: '//s3.ap-northeast-2.amazonaws.com/st.dangidata/static_conects';
+$ST-STATIC-HOST: '//static.conects.com/common';
+$CONECTS_WWW_HOST: '//s3.ap-northeast-2.amazonaws.com/st.dangidata/www_conects';
+

@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>포스트타입</title>
+    <link rel="stylesheet" type="text/css" href="../css/conects.css">
+    <link rel="stylesheet" type="text/css" href="//s3.ap-northeast-2.amazonaws.com/st.dangidata/common/js/slick/slick.css">
+    <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="//s3.ap-northeast-2.amazonaws.com/st.dangidata/common/js/slick/slick.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+
+<ul class="list_column01-10">
+    <li>
+        <div class="post-type">
+            <!-- header -->
+            <div class="post-type__notice"><!-- @@import src/html/pages/post/notice.html -->
+                <div class="post-notice">
+                    <div class="post-notice__thumbnail">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/st.c2c.gdny/attachments/prod/52d73455-2a8e-45ae-926a-a5baebbee7ba.jpg" alt="" width="26" height="26">
+                    </div>
+                    <div class="post-notice__description">
+                        <p class="post-notice__description__article">Justion님이 <b>3개월로 끝내는 g-telp</b>에 포스트를 게시했습니다.</p>
+                        <span class="post-notice__description__text"><b>공무원-6개월</b> 목표</span>
+                        <span class="post-notice__description__time">2018년12월31일 오후 5:32</span>
+                        <span class="post-notice__description__hot">HOT</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--stamp"><span>스탬프 on</span></button>
+                    <button type="button" class="post-notice__button post-notice__button--function" onclick="document.querySelector('.post-notice').classList.add('active')"><span>본문 기능</span></button>
+
+                    <div class="post-notice__layer--function">
+                        <button type="button" class="btn">수정</button>
+                        <button type="button" class="btn alert">삭제</button>
+                        <button type="button" class="btn">수정수정수정수정수정수정수정수정수정수정수정수정수정수정수정수정</button>
+                    </div>
+                </div>
+            </div>
+            <!-- //header -->
+
+            <!-- contents -->
+            <div class="post-content__textType">
+                <!-- 더보기 눌렀을 경우 post-content__textType__wrapper--open로 클래스명 변경 -->
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--close">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__hash">
+                    <a href="#">#커넥츠북</a><span>#커넥츠</span><span>#책추천</span><span>#공무원</span>
+                </div>
+                <div class="post-type__at">
+                    <a href="#">@커넥츠북</a><span>@커넥츠</span><span>@책추천</span><span>@공무원</span>
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!-- comment -->
+            <div class="post-comment">
+                <div class="post-comment__header">
+                    <button type="text" class="post-comment__header__button">댓글 18개 모두 보기</button>
+                </div>
+            </div>
+
+            <!-- http://qa-k8s-m.conects.com/pub/src/html/guide/comment.html -->
+            <div class="component_comment-list">
+                <!-- 1depth -->
+                <ul class="list">
+                    <!-- loop 1 -->
+                    <li>
+                        <div class="component_comment-conts">
+                            <div class="thumb_circle-24" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                            <div class="wrap-info">
+                                <strong class="writer">둥글게둥글게</strong>
+                                <span class="date">2018년 11월 11일</span>
+                                <div class="txt-comment">Ullamco est reprehenderit excepteur sit ipsum in aliqua cillum dolore sunt consequat veniam sunt.</div>
+                                <div class="utils">
+                                    <button type="button" class="btn-comment-del">삭제</button>
+                                    <button type="button" class="btn-comment-modify">수정</button>
+                                    <button type="button" class="btn-comment-reply">답글달기</button>
+                                    <button type="button" class="btn-comment-like">좋아요</button><!-- 활성화 시 class="active" -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 수정/답글 입력 시? / 현재 앱은 페이지 이동 -->
+                        <div class="component_comment-write active"><!-- 입력 시 class="active" -->
+                            <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                            <div class="inputbox">
+                                <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                                <button type="button" class="btn-submit-input">입력완료</button>
+                            </div>
+                        </div>
+                        <!-- //수정/답글 입력 시? -->
+
+                        <!-- 2depth -->
+                        <ul class="list">
+                            <!-- loop 2 -->
+                            <li>
+                                <div class="component_comment-conts">
+                                    <div class="thumb_circle-24" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                    <div class="wrap-info">
+                                        <strong class="writer">둥글게둥글게</strong>
+                                        <span class="date">2018년 11월 11일</span>
+                                        <div class="txt-comment">Ullamco est reprehenderit excepteur sit ipsum in aliqua cillum dolore sunt consequat veniam sunt.</div>
+                                        <div class="utils">
+                                            <button type="button" class="btn-comment-del">삭제</button>
+                                            <button type="button" class="btn-comment-modify">수정</button>
+                                            <button type="button" class="btn-comment-reply">답글달기</button>
+                                            <button type="button" class="btn-comment-like">좋아요</button><!-- 활성화 시 class="active" -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 수정/답글 입력 시? / 현재 앱은 페이지 이동 -->
+                                <div class="component_comment-write active"><!-- 입력 시 class="active" -->
+                                    <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                    <div class="inputbox">
+                                        <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                                        <button type="button" class="btn-submit-input">입력완료</button>
+                                    </div>
+                                </div>
+                                <!-- //수정/답글 입력 시? -->
+                            </li>
+                            <!-- //loop 2 -->
+                            <li>
+                                <div class="component_comment-conts">
+                                    <div class="thumb_circle-24" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                    <div class="wrap-info">
+                                        <strong class="writer">둥글게둥글게</strong>
+                                        <span class="date">2018년 11월 11일</span>
+                                        <div class="txt-comment">Ullamco est reprehenderit excepteur sit ipsum in aliqua cillum dolore sunt consequat veniam sunt.</div>
+                                        <div class="utils">
+                                            <button type="button" class="btn-comment-del">삭제</button>
+                                            <button type="button" class="btn-comment-modify">수정</button>
+                                            <button type="button" class="btn-comment-reply">답글달기</button>
+                                            <button type="button" class="btn-comment-like">좋아요</button><!-- 활성화 시 class="active" -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- //2depth -->
+                    </li>
+                    <!-- //loop 1 -->
+                    <li>
+                        <div class="component_comment-conts">
+                            <div class="thumb_circle-24" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                            <div class="wrap-info">
+                                <strong class="writer">둥글게둥글게</strong>
+                                <span class="date">2018년 11월 11일</span>
+                                <div class="txt-comment">Ullamco est reprehenderit excepteur sit ipsum in aliqua cillum dolore sunt consequat veniam sunt.</div>
+                                <div class="utils">
+                                    <button type="button" class="btn-comment-del">삭제</button>
+                                    <button type="button" class="btn-comment-modify">수정</button>
+                                    <button type="button" class="btn-comment-reply">답글달기</button>
+                                    <button type="button" class="btn-comment-like">좋아요</button><!-- 활성화 시 class="active" -->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- //1depth -->
+            </div>
+            <div class="component_comment-write"><!-- 입력 시 class="active" -->
+                <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                <div class="inputbox">
+                    <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                    <button type="button" class="btn-submit-input">입력완료</button>
+                </div>
+            </div>
+            <!-- //http://qa-k8s-m.conects.com/pub/src/html/guide/comment.html -->
+            <!-- //comment -->
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- header -->
+            <div class="post-type__notice"><!-- @@import src/html/pages/post/notice.html -->
+                <div class="post-notice">
+                    <div class="post-notice__thumbnail">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/st.c2c.gdny/attachments/prod/52d73455-2a8e-45ae-926a-a5baebbee7ba.jpg" alt="" width="26" height="26">
+                    </div>
+                    <div class="post-notice__description">
+                        <p class="post-notice__description__article">Justion님이 <b>3개월로 끝내는 g-telp</b>에 포스트를 게시했습니다.</p>
+                        <span class="post-notice__description__text"><b>공무원-6개월</b> 목표</span>
+                        <span class="post-notice__description__time">2018년12월31일 오후 5:32</span>
+                        <span class="post-notice__description__hot">HOT</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--stamp"><span>스탬프 on</span></button>
+                    <button type="text" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <!-- //header -->
+
+            <!-- contents -->
+            <div class="post-content__imageType" style="background-image: url(https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg)">
+                <span class="post-content__imageType__icon">대체 텍스트 확인필요</span>
+                <!-- 개발시 img태그에 height값은 제거해주세요. 테스트용입니다 -->
+                <img src="https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg" alt="" aria-hidden="true">
+            </div>
+            <div class="post-content__textType">
+                <!-- 더보기 눌렀을 경우 post-content__textType__wrapper--open로 클래스명 변경 -->
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--close">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__hash">
+                    <a href="#">#커넥츠북</a><span>#커넥츠</span><span>#책추천</span><span>#공무원</span>
+                </div>
+            </div>
+
+            <div class="post-type__toolbar">
+                <button type="image" class="post-type__toolbar__like">좋아요</button>
+                <button type="image" class="post-type__toolbar__share"><span>공유</span></button>
+                <button type="image" class="post-type__toolbar__bookmark post-type__toolbar__bookmark--off"><span>북마크</span></button>
+                <span class="post-type__toolbar__count">33</span>
+                <div class="post-type__toolbar__info">
+                    좋아요 1.5k
+                </div>
+                <div class="post-type__toolbar__info">
+                    오늘도 기상미션(4회차)
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!-- comment -->
+            <div class="post-comment">
+                <div class="post-comment__header">
+                    <button type="text" class="post-comment__header__button">댓글 18개 모두 보기</button>
+                </div>
+            </div>
+            <div class="component_comment-list"></div>
+            <!-- 1depth 입력폼 -->
+            <div class="component_comment-write"><!-- 입력 시 class="active" -->
+                <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                <div class="inputbox">
+                    <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                    <button type="button" class="btn-submit-input">입력완료</button>
+                </div>
+            </div>
+            <!-- //1depth 입력폼 -->
+            <!-- //comment -->
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- header -->
+            <div class="post-type__notice"><!-- @@import src/html/pages/post/notice.html -->
+                <div class="post-notice">
+                    <div class="post-notice__thumbnail">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/st.c2c.gdny/attachments/prod/52d73455-2a8e-45ae-926a-a5baebbee7ba.jpg" alt="" width="26" height="26">
+                    </div>
+                    <div class="post-notice__description">
+                        <p class="post-notice__description__article">Justion님이 <b>3개월로 끝내는 g-telp</b>에 포스트를 게시했습니다.</p>
+                        <span class="post-notice__description__text"><b>공무원-6개월</b> 목표</span>
+                        <span class="post-notice__description__time">2018년12월31일 오후 5:32</span>
+                        <span class="post-notice__description__hot">HOT</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--stamp"><span>스탬프 on</span></button>
+                    <button type="text" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <!-- //header -->
+
+            <!-- contents -->
+            <div class="post-content__imageType" style="background-image: url(https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg)">
+                <div class="wrap-mov">
+                    <video controls="" class="mov">
+                        <source src="http://pmp.engdangi.com/engdangipmp/FLV/2017/170423_ysy_800k.mp4" type="video/mp4">
+                        <source src="" type="video/ogg">
+                    </video>
+                </div>
+            </div>
+            <div class="post-content__textType">
+                <!-- 더보기 눌렀을 경우 post-content__textType__wrapper--open로 클래스명 변경 -->
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--close">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__hash">
+                    <a href="#">#커넥츠북</a><span>#커넥츠</span><span>#책추천</span><span>#공무원</span>
+                </div>
+            </div>
+
+            <div class="post-type__toolbar">
+                <button type="image" class="post-type__toolbar__like">좋아요</button>
+                <button type="image" class="post-type__toolbar__share"><span>공유</span></button>
+                <button type="image" class="post-type__toolbar__bookmark post-type__toolbar__bookmark--off"><span>북마크</span></button>
+                <span class="post-type__toolbar__count">33</span>
+                <div class="post-type__toolbar__info">
+                    좋아요 1.5k
+                </div>
+                <div class="post-type__toolbar__info">
+                    오늘도 기상미션(4회차)
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!-- comment -->
+            <div class="post-comment">
+                <div class="post-comment__header">
+                    <button type="text" class="post-comment__header__button">댓글 18개 모두 보기</button>
+                </div>
+            </div>
+            <div class="component_comment-list"></div>
+            <!-- 1depth 입력폼 -->
+            <div class="component_comment-write"><!-- 입력 시 class="active" -->
+                <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                <div class="inputbox">
+                    <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                    <button type="button" class="btn-submit-input">입력완료</button>
+                </div>
+            </div>
+            <!-- //1depth 입력폼 -->
+            <!-- //comment -->
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- header -->
+            <div class="post-type__notice"><!-- @@import src/html/pages/post/notice.html -->
+                <div class="post-notice">
+                    <div class="post-notice__thumbnail">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/st.c2c.gdny/attachments/prod/52d73455-2a8e-45ae-926a-a5baebbee7ba.jpg" alt="" width="26" height="26">
+                    </div>
+                    <div class="post-notice__description">
+                        <p class="post-notice__description__article">Justion님이 <b>3개월로 끝내는 g-telp</b>에 포스트를 게시했습니다.</p>
+                        <span class="post-notice__description__text"><b>공무원-6개월</b> 목표</span>
+                        <span class="post-notice__description__time">2018년12월31일 오후 5:32</span>
+                        <span class="post-notice__description__hot">HOT</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--stamp"><span>스탬프 on</span></button>
+                    <button type="text" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <!-- //header -->
+
+            <!-- contents -->
+            <div class="post-content__imageType">
+                <span class="post-content__imageType__paging">2/5</span>
+                <!-- 스탬프 영역 -->
+                <div class="post-content__imageType__stamp_area" aria-hidden="true"></div>
+                <!-- //스탬프 영역 -->
+                <!-- 개발시 img태그에 height값은 제거해주세요. 테스트용입니다 -->
+                <div class="carousel">
+                    <div>
+                        <img src="https://d1onhczzmo7z1l.cloudfront.net/media/prod/5DDFD4EE_edb21d07-55b5-49ac-a2d4-a1c9d13bad38_1558230229466.png" alt="" aria-hidden="true">
+                    </div>
+                    <div>
+                        <img src="https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/9e1f0d63359344e14f735049c9d73b4c.jpg" alt="" aria-hidden="true">
+                    </div>
+                    <div>
+                        <img src="https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg" alt="" aria-hidden="true">
+                    </div>
+                </div>
+            </div>
+            <script>
+            $(function(){
+                $('.carousel').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                    var i = (currentSlide ? currentSlide : 0) + 1;
+                    $('.post-content__imageType__paging').text(i + '/' + slick.slideCount);
+                });
+                $('.carousel').slick({
+                    arrows: false,
+                });
+            })
+            </script>
+
+
+            <div class="post-content__textType">
+                <!-- 더보기 눌렀을 경우 post-content__textType__wrapper--open로 클래스명 변경 -->
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--close">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__hash">
+                    <a href="#">#커넥츠북</a><span>#커넥츠</span><span>#책추천</span><span>#공무원</span>
+                </div>
+            </div>
+
+            <div class="post-type__toolbar">
+                <button type="image" class="post-type__toolbar__like">좋아요</button>
+                <button type="image" class="post-type__toolbar__share"><span>공유</span></button>
+                <button type="image" class="post-type__toolbar__bookmark post-type__toolbar__bookmark--off"><span>북마크</span></button>
+                <span class="post-type__toolbar__count">33</span>
+                <div class="post-type__toolbar__info">
+                    좋아요 1.5k
+                </div>
+                <div class="post-type__toolbar__info">
+                    오늘도 기상미션(4회차)
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!-- comment -->
+            <div class="post-comment">
+                <div class="post-comment__header">
+                    <button type="text" class="post-comment__header__button">댓글 18개 모두 보기</button>
+                </div>
+            </div>
+            <div class="component_comment-list"></div>
+            <!-- 1depth 입력폼 -->
+            <div class="component_comment-write"><!-- 입력 시 class="active" -->
+                <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                <div class="inputbox">
+                    <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                    <button type="button" class="btn-submit-input">입력완료</button>
+                </div>
+            </div>
+            <!-- //1depth 입력폼 -->
+            <!-- //comment -->
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- header -->
+            <div class="post-type__notice"><!-- @@import src/html/pages/post/notice.html -->
+                <div class="post-notice">
+                    <div class="post-notice__thumbnail">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/st.c2c.gdny/attachments/prod/52d73455-2a8e-45ae-926a-a5baebbee7ba.jpg" alt="" width="26" height="26">
+                    </div>
+                    <div class="post-notice__description">
+                        <p class="post-notice__description__article">Justion님이 <b>3개월로 끝내는 g-telp</b>에 포스트를 게시했습니다.</p>
+                        <span class="post-notice__description__text"><b>공무원-6개월</b> 목표</span>
+                        <span class="post-notice__description__time">2018년12월31일 오후 5:32</span>
+                        <span class="post-notice__description__hot">HOT</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--stamp"><span>스탬프 on</span></button>
+                    <button type="text" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <!-- //header -->
+
+            <!-- contents -->
+            <div class="post-content__textType">
+                <!-- 더보기 눌렀을 경우 post-content__textType__wrapper--open로 클래스명 변경 -->
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--close">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__hash">
+                    <a href="#">#커넥츠북</a><span>#커넥츠</span><span>#책추천</span><span>#공무원</span>
+                </div>
+            </div>
+
+            <div class="post-type__toolbar">
+                <button type="image" class="post-type__toolbar__like">좋아요</button>
+                <button type="image" class="post-type__toolbar__share"><span>공유</span></button>
+                <button type="image" class="post-type__toolbar__bookmark post-type__toolbar__bookmark--off"><span>북마크</span></button>
+                <span class="post-type__toolbar__count">33</span>
+                <div class="post-type__toolbar__info">
+                    좋아요 1.5k
+                </div>
+                <div class="post-type__toolbar__info">
+                    오늘도 기상미션(4회차)
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!-- comment -->
+            <div class="post-comment">
+                <div class="post-comment__header">
+                    <button type="text" class="post-comment__header__button">댓글 18개 모두 보기</button>
+                </div>
+            </div>
+            <div class="component_comment-list"></div>
+            <!-- 1depth 입력폼 -->
+            <div class="component_comment-write"><!-- 입력 시 class="active" -->
+                <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                <div class="inputbox">
+                    <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                    <button type="button" class="btn-submit-input">입력완료</button>
+                </div>
+            </div>
+            <!-- //1depth 입력폼 -->
+            <!-- //comment -->
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- header -->
+            <div class="post-type__notice"><!-- @@import src/html/pages/post/notice.html -->
+                <div class="post-notice">
+                    <div class="post-notice__thumbnail">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/st.c2c.gdny/attachments/prod/52d73455-2a8e-45ae-926a-a5baebbee7ba.jpg" alt="" width="26" height="26">
+                    </div>
+                    <div class="post-notice__description">
+                        <p class="post-notice__description__article">Justion님이 <b>3개월로 끝내는 g-telp</b>에 포스트를 게시했습니다.</p>
+                        <span class="post-notice__description__text"><b>공무원-6개월</b> 목표</span>
+                        <span class="post-notice__description__time">2018년12월31일 오후 5:32</span>
+                        <span class="post-notice__description__hot">HOT</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--stamp"><span>스탬프 on</span></button>
+                    <button type="text" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <!-- //header -->
+
+            <!-- contents -->
+            <div class="post-content__articleType">
+                <div class="post-content__articleType__cover">
+                    <!-- 등록된 이미지가 없으면 <img> 태그를 삭제해주세요 -->
+                    <img src="https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/9e1f0d63359344e14f735049c9d73b4c.jpg" alt="" class="post-content__articleType__cover__image" aria-hidden="true">
+                    <div class="post-content__articleType__cover__wrap">
+                        <b class="post-content__articleType__cover__title">매일매일 들어도<br>유익한 소식 Season 1</b>
+                        <p class="post-content__articleType__cover__description">공무원 시험 관련된 실시간 소식!</p>
+                        <i class="post-content__articleType__cover__date">2019.02.16</i>
+                    </div>
+                </div>
+                <!-- 더보기 눌렀을 경우 post-content__articleType__text--open로 클래스명 변경 -->
+                <div class="post-content__articleType__text post-content__articleType__text--close">
+                    <a href="#" class="post-content__articleType__text__link">
+                        <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                        <span class="post-content__articleType__text__more">전문보기</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="post-type__toolbar">
+                <button type="image" class="post-type__toolbar__bookmark post-type__toolbar__bookmark--off"><span>북마크</span></button>
+            </div>
+            <!-- //contents -->
+
+            <!-- comment -->
+            <div class="post-comment">
+                <div class="post-comment__header">
+                    <span class="post-comment__header__count">공감글 1개</span>
+                </div>
+            </div>
+            <div class="component_comment-list"></div>
+            <!-- 1depth 입력폼 -->
+            <div class="component_comment-write"><!-- 입력 시 class="active" -->
+                <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                <div class="inputbox">
+                    <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                    <button type="button" class="btn-submit-input">입력완료</button>
+                </div>
+            </div>
+            <!-- //1depth 입력폼 -->
+            <!-- //comment -->
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type qna">
+            <div class="post-type__notice">
+                <div class="post-notice">
+                    <div class="post-notice__question">
+                        <span class="ico-qna-q"> 34925</span>
+                        <span class="post-notice__question__date">2일전</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <div class="post-content__titleType">
+                <div class="post-content__titleType__wrapper">
+                    <strong class="post-content__titleType__title">공시생 2년 차인데, 이번 여름까지 반쪽 모의고사로<br>계속 훈련하는 게 맞는 방법일까요?</strong>
+                </div>
+            </div>
+            <div class="post-content__textType">
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--close">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__at">
+                    <a href="#">@커넥츠북</a><span>@커넥츠</span><span>@책추천</span><span>@공무원</span>
+                </div>
+            </div>
+            <div class="post-type__toolbar">
+                <div class="post-type__toolbar__selected-answer">
+                    <div class="component_thumb-usertype"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                        <div class="thumb_circle-24" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                    </div>
+                    <div class="wrap-info">
+                        <span class="name">차영진</span> 마스터님이 해결!
+                    </div>
+                </div>
+
+                <span class="post-type__toolbar__answer">
+                    <span class="ico">답변</span>
+                    <span class="txt">12</span>
+                </span>
+                <button type="button" class="post-type__toolbar__metoo post-type__toolbar__metoo--off"><span class="ico"></span><span class="txt">저도 궁금해요 12</span></button>
+                <button type="image" class="post-type__toolbar__bookmark post-type__toolbar__bookmark--on"><span>북마크</span></button>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="post-type qna">
+            <div class="post-type__notice">
+                <div class="post-notice">
+                    <div class="post-notice__question">
+                        <span class="ico-qna-q"> 34925</span>
+                        <span class="post-notice__question__date">2일전</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <div class="post-content__titleType">
+                <div class="post-content__titleType__wrapper">
+                    <strong class="post-content__titleType__title">공시생 2년 차인데, 이번 여름까지 반쪽 모의고사로<br>계속 훈련하는 게 맞는 방법일까요?</strong>
+                </div>
+            </div>
+            <div class="post-content__textType">
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--close">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__at">
+                    <a href="#">@커넥츠북</a><span>@커넥츠</span><span>@책추천</span><span>@공무원</span>
+                </div>
+            </div>
+            <div class="post-type__toolbar">
+                <button type="button" class="post-type__toolbar__write"><span>답변달기</span></button>&gt;
+
+                <span class="post-type__toolbar__answer">
+                    <span class="ico">답변</span>
+                    <span class="txt">12</span>
+                </span>
+                <button type="button" class="post-type__toolbar__metoo post-type__toolbar__metoo--off"><span class="ico"></span><span class="txt">저도 궁금해요 12</span></button>
+                <button type="image" class="post-type__toolbar__bookmark post-type__toolbar__bookmark--on"><span>북마크</span></button>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="post-type qna">
+            <div class="post-type__notice">
+                <div class="post-notice">
+                    <div class="post-notice__question">
+                        <span class="ico-qna-q"> 34925</span>
+                        <span class="post-notice__question__date">2일전</span>
+                    </div>
+                    <button type="text" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <div class="post-content__titleType">
+                <div class="post-content__titleType__wrapper">
+                    <strong class="post-content__titleType__title">공시생 2년 차인데, 이번 여름까지 반쪽 모의고사로<br>계속 훈련하는 게 맞는 방법일까요?</strong>
+                </div>
+            </div>
+            <div class="post-content__textType">
+                <div class="post-content__textType__wrapper post-content__textType__wrapper--close">
+                    <p>오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요.  오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 오늘은 저의 일기를 써볼께요 오늘은 정말 열심히 일을 한것같아요. 주말계획도 세웠어요 명절을 앞두고 제가 맡은 일을 마무리하고, 공부도 하고 보고싶었던 친구들도 만날계획이랍니다. 정말 너무 오랜만에 만나는 친구와 후배라서 설레이고 두근두근해요.... 아하 그리고 이제 텍스트만 있는 컨텐츠의 경우 8자 더보기로 바뀌었습니다... 콘텐츠를 더 보여주고싶다는 의견때문인데요, 콘텐츠 8자정도면 많이 보여주기때문에 좋은점도 있을 것 같아요.</p>
+                    <span class="post-content__textType__more">더 보기</span>
+                </div>
+                <div class="post-type__at">
+                    <a href="#">@커넥츠북</a><span>@커넥츠</span><span>@책추천</span><span>@공무원</span>
+                </div>
+            </div>
+            <div class="post-type__toolbar">
+                <div class="post-type__toolbar__selected-answer">
+                    <div class="component_thumb-usertype"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                        <div class="thumb_circle-24" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                    </div>
+                    <div class="wrap-info">
+                        <span class="name">차영진</span> 마스터님이 해결!
+                    </div>
+                </div>
+
+                <span class="post-type__toolbar__answer">
+                    <span class="ico">답변</span>
+                    <span class="txt">12</span>
+                </span>
+                <button type="button" class="post-type__toolbar__metoo post-type__toolbar__metoo--off"><span class="ico"></span><span class="txt">저도 궁금해요 12</span></button>
+                <button type="image" class="post-type__toolbar__bookmark post-type__toolbar__bookmark--on"><span>북마크</span></button>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- title -->
+            <div class="post-type__notice">
+                <div class="post-notice">
+                    <div class="post-notice__thumbnail">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/st.c2c.gdny/attachments/prod/52d73455-2a8e-45ae-926a-a5baebbee7ba.jpg" alt="" width="26" height="26">
+                    </div>
+                    <div class="post-notice__description">
+                        <p class="post-notice__description__article">Justion님이 <b>3개월로 끝내는 g-telp</b>에 포스트를 게시했습니다.</p>
+                        <span class="post-notice__description__text"><b>공무원-6개월</b> 목표</span>
+                        <span class="post-notice__description__time">2018년12월31일 오후 5:32</span>
+                        <span class="post-notice__description__hot">HOT</span>
+                    </div>
+                    <button type="button" class="post-notice__button post-notice__button--stamp"><span>스탬프 on</span></button>
+                    <button type="button" class="post-notice__button post-notice__button--function"><span>본문 기능</span></button>
+                </div>
+            </div>
+            <!-- //title -->
+            <!-- contents -->
+            <div class="post-content__challengeType__wrapper">
+                <ul class="post-content__challengeType__list">
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/86E138E8_8960677c-c82f-4301-9991-a42f1fadb681_1553869043355.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지1</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/259965cb66fbfb94ea89d0068f791132.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지2</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/codms7517_IMG_7850_1551695379196.jpeg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지3</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/9e1f0d63359344e14f735049c9d73b4c.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지4</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://s3.ap-northeast-2.amazonaws.com/st.conects/myconects/img/interest_banner/345_208.png');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지5</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/85e50b8c927e2e7d51af0ad4bc6b605c.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지6</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/86E138E8_8960677c-c82f-4301-9991-a42f1fadb681_1553869043355.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지7</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <div class="text-box">
+                                <div>하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/9e1f0d63359344e14f735049c9d73b4c.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지8</span>
+                        </div>
+                    </li>
+                    <li class="more">
+                        <div class="inner">
+                            <a href="#" class="link">
+                                <b class="number">+35</b>
+                                <span class="blind">개 이미지 더보기</span>
+                                <span class="image" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="post-content__challengeType__content">
+                <p class="description">안지영님이 챌린지를 성공해서 상금을 획득하셨습니다!<br>탕수육부엉부엉님께 맞는 챌린지에 도전해서 목표도 이루고 상금도 받아보시겠어요?</p>
+                <a href="#" class="link">챌린지 도전하기</a>
+            </div>
+            <!-- //contents -->
+            <!-- comment -->
+            <div class="post-comment">
+                <div class="post-comment__header">
+                    <button type="text" class="post-comment__header__button">댓글 18개 모두 보기</button>
+                </div>
+            </div>
+            <div class="component_comment-list"></div>
+            <!-- 1depth 입력폼 -->
+            <div class="component_comment-write"><!-- 입력 시 class="active" -->
+                <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                <div class="inputbox">
+                    <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                    <button type="button" class="btn-submit-input">입력완료</button>
+                </div>
+            </div>
+            <!-- //1depth 입력폼 -->
+            <!-- //comment -->
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- title -->
+            <div class="post-type__notice">
+                <div class="post-notice">
+                    <div class="post-notice__title">
+                        <p class="post-notice__title__article"><b>직무·스타트업에서 가장 많이 봤어요</b></p>
+                    </div>
+                    <a href="#" class="post-notice__button post-notice__button--text"><span>전체보기</span></a>
+                </div>
+            </div>
+            <!-- //title -->
+            <!-- contents -->
+
+            <!-- <div class="wrap-carousel"></div> --><!-- 캐러셀 이용 시 사용 -->
+            <div class="list_scroll320-x10"><!-- 캐러셀 이용 안하면  class="post-content__articleType"만 이용하세요  -->
+                <ul class="list">
+                    <li>
+                        <div class="post-content__articleType">
+                            <div class="post-content__articleType__cover">
+                                <!-- 등록된 이미지가 없으면 <img> 태그를 삭제해주세요 -->
+                                <img src="https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/9e1f0d63359344e14f735049c9d73b4c.jpg" alt="" class="post-content__articleType__cover__image" aria-hidden="true">
+                                <div class="post-content__articleType__cover__wrap">
+                                    <b class="post-content__articleType__cover__title">매일매일 들어도<br>유익한 소식 Season 1</b>
+                                    <p class="post-content__articleType__cover__description">공무원 시험 관련된 실시간 소식!</p>
+
+                                    <div class="post-type__user">
+                                        <div class="post-type__user__nowhow">
+                                            <div class="component_thumb-usertype"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                                                <div class="thumb_circle-50" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                            </div>
+                                            <div class="wrap-info">
+                                                <span class="name">차영진</span>
+                                                <p class="class">수학분야의 Master 입니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <i class="post-content__articleType__cover__date">2019.02.16</i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="post-content__articleType">
+                            <div class="post-content__articleType__cover">
+                                <!-- 등록된 이미지가 없으면 <img> 태그를 삭제해주세요 -->
+                                <img src="https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/9e1f0d63359344e14f735049c9d73b4c.jpg" alt="" class="post-content__articleType__cover__image" aria-hidden="true">
+                                <div class="post-content__articleType__cover__wrap">
+                                    <b class="post-content__articleType__cover__title">매일매일 들어도<br>유익한 소식 Season 1</b>
+                                    <p class="post-content__articleType__cover__description">공무원 시험 관련된 실시간 소식!</p>
+
+                                    <div class="post-type__user">
+                                        <div class="post-type__user__nowhow">
+                                            <div class="component_thumb-usertype"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                                                <div class="thumb_circle-50" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                            </div>
+                                            <div class="wrap-info">
+                                                <span class="name">차영진</span>
+                                                <p class="class">수학분야의 Master 입니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <i class="post-content__articleType__cover__date">2019.02.16</i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- //contents -->
+
+            <div class="post-type__toolbar"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- title -->
+            <div class="post-type__notice">
+                <div class="post-notice">
+                    <div class="post-notice__title">
+                        <p class="post-notice__title__article"><b>직무·스타트업에서 가장 많이 봤어요</b></p>
+                    </div>
+                    <a href="#" class="post-notice__button post-notice__button--text"><span>전체보기</span></a>
+                </div>
+            </div>
+            <!-- //title -->
+
+            <!-- contents -->
+            <div class="post-content__challengeType__wrapper">
+                <ul class="post-content__challengeType__list">
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/86E138E8_8960677c-c82f-4301-9991-a42f1fadb681_1553869043355.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지1</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/259965cb66fbfb94ea89d0068f791132.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지2</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/codms7517_IMG_7850_1551695379196.jpeg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지3</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/9e1f0d63359344e14f735049c9d73b4c.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지4</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://s3.ap-northeast-2.amazonaws.com/st.conects/myconects/img/interest_banner/345_208.png');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지5</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/85e50b8c927e2e7d51af0ad4bc6b605c.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지6</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/86E138E8_8960677c-c82f-4301-9991-a42f1fadb681_1553869043355.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지7</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <div class="text-box">
+                                <div>하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7하루에 물 3리터 마시기 챌린지 성공 이미지7</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="image" aria-hidden="true" style="background-image: url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/temp/9e1f0d63359344e14f735049c9d73b4c.jpg');"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            <span class="text">하루에 물 3리터 마시기 챌린지 성공 이미지8</span>
+                        </div>
+                    </li>
+                    <li class="more">
+                        <div class="inner">
+                            <a href="#" class="link">
+                                <b class="number">+35</b>
+                                <span class="blind">개 이미지 더보기</span>
+                                <span class="image" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAAH6Nf8rAAAACXBIWXMAABYlAAAWJQFJUiTwAAAE7WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNS0zMFQxNDo1OToyNiswOTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjRjYzNiYTM4LTQ2OTEtNDlhNi1iNjM2LWNiZTA0MjMxYjcxMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NGNjM2JhMzgtNDY5MS00OWE2LWI2MzYtY2JlMDQyMzFiNzEwIiBzdEV2dDp3aGVuPSIyMDE5LTA1LTMwVDE0OjU5OjI2KzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MDEW0gAAADRJREFUGJVj/P//PwMDAwMDEwMM/P//H8JjhMmhcOAKmTCkkAEThghJKikUxGoR0boHmUIAsoQVDLxw/ZcAAAAASUVORK5CYII=" alt=""></span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //contents -->
+
+            <!-- comment -->
+            <div class="post-comment">
+                <div class="post-comment__header">
+                    <button type="text" class="post-comment__header__button">댓글 18개 모두 보기</button>
+                </div>
+            </div>
+            <div class="component_comment-list"></div>
+            <!-- 1depth 입력폼 -->
+            <div class="component_comment-write"><!-- 입력 시 class="active" -->
+                <div class="thumb_circle-28" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                <div class="inputbox">
+                    <input type="text" placeholder="댓글을 입력해주세요." class="input-txt">
+                    <button type="button" class="btn-submit-input">입력완료</button>
+                </div>
+            </div>
+            <!-- //1depth 입력폼 -->
+            <!-- //comment -->
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type">
+            <!-- title -->
+            <div class="post-type__notice">
+                <div class="post-notice">
+                    <div class="post-notice__title">
+                        <p class="post-notice__title__article"><b>🤐 실시간 대나무숲</b></p>
+                    </div>
+                    <a href="#" class="post-notice__button post-notice__button--text"><span>전체보기</span></a>
+                </div>
+            </div>
+            <!-- //title -->
+
+            <!-- contents -->
+            <div class="post-content__anonymous">
+                <div class="post-content__anonymous__wrapper">
+                    <ul class="post-content__anonymous__list">
+                        <li>
+                            <a href="#" class="post-content__anonymous__conts">
+                                <p class="paragraph">Magna ullamco amet consequat consequat excepteur dolor.Magna ullamco amet consequat consequat excepteur dolor.</p>
+                                <em class="writer">writer</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="post-content__anonymous__conts">
+                                <p class="paragraph">Magna ullamco amet consequat consequat excepteur dolor.Magna ullamco amet consequat consequat excepteur dolor.</p>
+                                <em class="writer">writer</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="post-content__anonymous__conts">
+                                <p class="paragraph">Magna ullamco amet consequat consequat excepteur dolor.Magna ullamco amet consequat consequat excepteur dolor.</p>
+                                <em class="writer">writer</em>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <div class="post-type__toolbar"></div>
+        </div>
+    </li>
+
+    <li>
+        <div class="post-type excellent">
+            <!-- title -->
+            <div class="post-type__notice">
+                <div class="post-notice">
+                    <div class="post-notice__title">
+                        <p class="post-notice__title__article"><b>우수 활동자</b></p>
+                    </div>
+                </div>
+            </div>
+            <!-- //title -->
+
+            <div class="list_scroll60-x20">
+                <ul class="list">
+                    <li>
+                        <div class="component_userfollowing-col">
+                            <a href="#" class="component_userlink-col">
+                                <div class="component_thumb-usertype teacher"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                                    <div class="thumb_circle-55" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                </div>
+                                <div class="wrap-info">
+                                    <strong class="name">Velit dolore deserunt duis nisi minim irure dolore.</strong>
+                                    <span class="desc">In sint ipsum nostrud ullamco veniam mollit amet commodo.</span>
+                                </div>
+                            </a>
+                            <button type="button" class="btn-round-xs btn-follow">팔로우</button><!-- 활성화 시 class="active" -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="component_userfollowing-col">
+                            <a href="#" class="component_userlink-col">
+                                <div class="component_thumb-usertype"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                                    <div class="thumb_circle-55" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                </div>
+                                <div class="wrap-info">
+                                    <strong class="name">Velit dolore deserunt duis nisi minim irure dolore.</strong>
+                                    <span class="desc">In sint ipsum nostrud ullamco veniam mollit amet commodo.</span>
+                                </div>
+                            </a>
+                            <button type="button" class="btn-round-xs btn-follow">팔로우</button><!-- 활성화 시 class="active" -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="component_userfollowing-col">
+                            <a href="#" class="component_userlink-col">
+                                <div class="component_thumb-usertype teacher"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                                    <div class="thumb_circle-55" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                </div>
+                                <div class="wrap-info">
+                                    <strong class="name">Velit dolore deserunt duis nisi minim irure dolore.</strong>
+                                    <span class="desc">In sint ipsum nostrud ullamco veniam mollit amet commodo.</span>
+                                </div>
+                            </a>
+                            <button type="button" class="btn-round-xs btn-follow">팔로우</button><!-- 활성화 시 class="active" -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="component_userfollowing-col">
+                            <a href="#" class="component_userlink-col">
+                                <div class="component_thumb-usertype teacher"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                                    <div class="thumb_circle-55" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                </div>
+                                <div class="wrap-info">
+                                    <strong class="name">Velit dolore deserunt duis nisi minim irure dolore.</strong>
+                                    <span class="desc">In sint ipsum nostrud ullamco veniam mollit amet commodo.</span>
+                                </div>
+                            </a>
+                            <button type="button" class="btn-round-xs btn-follow">팔로우</button><!-- 활성화 시 class="active" -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="component_userfollowing-col">
+                            <a href="#" class="component_userlink-col">
+                                <div class="component_thumb-usertype"><!-- 강사: class="teacher", 셀럽: class="celebrity", 합격선배: class="metnor" -->
+                                    <div class="thumb_circle-55" style="background-image:url('https://d1onhczzmo7z1l.cloudfront.net/attachments/prod/freerole99_81348d33-e595-48c7-9e1e-1c2f796fbf9f_1551455765152.jpeg');"></div>
+                                </div>
+                                <div class="wrap-info">
+                                    <strong class="name">Velit dolore deserunt duis nisi minim irure dolore.</strong>
+                                    <span class="desc">In sint ipsum nostrud ullamco veniam mollit amet commodo.</span>
+                                </div>
+                            </a>
+                            <button type="button" class="btn-round-xs btn-follow">팔로우</button><!-- 활성화 시 class="active" -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="post-type__toolbar"></div>
+        </div>
+    </li>
+</ul>
+
+
+</div>
+
+</body>
+</html>

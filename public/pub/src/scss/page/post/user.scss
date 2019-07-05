@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+$page-post-user: #{$page-prefix}#{'__user'};
+
+.#{$page-post-user} {
+    &__answer-follow{
+        position:relative;
+        padding:20px 15px;
+        padding-right:85px;
+        border-top:1px solid #ddd;
+
+        .btn-follow{
+            position:absolute;
+            right:15px;
+            top:50%;
+            margin-top:-18px;
+            min-width:60px;
+        }
+        .component_thumb-usertype{
+            display:inline-block;
+            margin-right:4px;
+            vertical-align:middle;
+        }
+        .wrap-info{
+            display:inline-block;
+            vertical-align:middle;
+        }
+        .name{
+            display:inline;
+            font-size:15px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight:600;
+        }
+        .class{
+            display:inline;
+            color:#666;
+            font-size:12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        .infos{
+            .txt{
+                color:$LIGHTEST_COLOR;
+                font-size:11px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+                vertical-align:top;
+                &:nth-child(n+2):before{
+                    content:'·';
+                    margin-right:4px;
+                }
+            }
+        }
+    }
+    // end: answer-follow
+
+    &__nowhow{
+        position:relative;
+
+        .component_thumb-usertype{
+            display:inline-block;
+            margin-right:4px;
+            vertical-align:middle;
+        }
+        .wrap-info{
+            display:inline-block;
+            vertical-align:middle;
+        }
+        .name{
+            display:block;
+            color: #fff;
+            font-size:17px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight:bold;
+        }
+        .class{
+            display:block;
+            color:#fff;
+            font-size:12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        .infos{
+            .txt{
+                color:$LIGHTEST_COLOR;
+                font-size:11px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+                vertical-align:top;
+                &:nth-child(n+2):before{
+                    content:'·';
+                    margin-right:4px;
+                }
+            }
+        }
+    }
+    //
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>챌린지 결제하기</title>
+    <link rel="stylesheet" type="text/css" href="../css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+    <div class="challenge-cash">
+
+        <div class="challenge-cash__payment">
+            <h3 class="challenge-cash__payment__title">출금 신청할 챌린지 캐시</h3>
+            <div class="challenge-cash__payment__my">
+                <div class="inner type1">
+                    <strong class="title">보유 개시</strong>
+                    <span class="cash">5,000 캐시</span>
+                </div>
+                <div class="inner type1">
+                    <strong class="title">보유 개시</strong>
+                    <span class="cash">5,000 캐시</span>
+                </div>
+                <div class="inner type2">
+                    <strong class="title">출금신청</strong>
+                    <input type="text" value="2,000 캐시" title="출금신청" class="text">
+                    <button type="submit" class="enter">전액사용</button>
+
+                    <p class="info">이벤트 캐시는 출금이 불가능합니다.<br>출금은 10,000캐시 이상부터 1,000원 단위로 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-cash__final">
+            <h3 class="challenge-cash__final__title">최종 결제금액</h3>
+            <ul class="challenge-cash__final__info">
+                <li class="fee"><span class="title">참가비</span> <span class="state">10,000 원</span></li>
+                <li ckass="cash"><span class="title">챌린지 캐시</span> <span class="state put">-2,000 원</span></li>
+                <li class="total"><span class="title">총 결제금액</span> <span class="state"><span class="number">200,000</span> 원</span></li>
+            </ul>
+        </div>
+
+        <div class="challenge-cash__bottom">
+            <button type="submit" class="big-button on">결제하기</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

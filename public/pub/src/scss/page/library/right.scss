@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.component_right{
+    display:block;
+    padding:18px;
+    background-color:#f4f4f4;
+    font-size:15px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    .txt{
+        &:before{
+            @include use_sprite($secret-ticket-my);
+            content:'';
+            margin-right:4px;
+        }
+    }
+    .count{
+        float:right;
+        color:$BRAND_COLOR;
+        font-size:16px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        font-weight:bold;
+    }
+}

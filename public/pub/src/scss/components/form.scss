@@ -1,0 +1,49 @@
+.inpt-txt{
+    height:44px;
+    padding:0 12px;
+    border:1px solid #bbb;
+    box-sizing:border-box;
+    font-size:16px;
+    appearance:none;
+}
+.inpt-slct{
+    height:44px;
+    padding:0 30px 0 12px;
+    border:1px solid #bbb;
+    background:url('../img/ico-settings-account-info-bank-caret.png') no-repeat right 50%;
+    background-size:28px 4px;
+    box-sizing:border-box;
+    color:$LIGHTEST_COLOR;
+    font-size:16px;
+    appearance:none;
+}
+.inpt-slct-0{
+    height:35px;
+    padding:0 30px 0 15px;
+    border:1px solid $BRAND_COLOR;
+    border-radius:18px;
+    background:url('../img/ico-settings-secret-file-picker-chevron.png') no-repeat right 50%;
+    background-size:25px 15px;
+    box-sizing:border-box;
+    color:$BRAND_COLOR;
+    font-size:14px;
+    appearance:none;
+}
+.inpt-slct-1{
+    $height:map-get($DEFAULT_FONT, 'line-height');
+    height:$height;
+    padding:0 10px 0 5px;
+    background:url('../img/filter-anker.png') no-repeat right $height*0.35;
+    background-size:7.5px 4px;
+    color:$LIGHTEST_COLOR;
+    font-size:12px;
+    line-height:$height;
+    appearance:none;
+}
+.inpt-chk{
+    @include use_sprite($btn-check-off);
+    appearance:none;
+    &:checked{
+        @include use_sprite($btn-check-on);
+    }
+}

@@ -1,0 +1,176 @@
+.notice{
+    box-sizing:border-box;
+    width:320px;
+    margin:0 auto;
+    border:1px solid #333;
+    .tab{
+        li{
+            float:left;
+            width:50%;
+            text-align:center;
+            a{
+                display:block;
+                width:100%;
+                height:50px;
+                line-height:50px;
+                font-size:17px;
+                color:#000;
+                font-weight:bold;
+            }
+        }
+    }
+    // slide 영역
+    .notice__ban-box{
+        position:relative;
+        width:100%;
+        height:144px;
+        overflow:hidden;
+        .num-box{
+            position:absolute;
+            bottom:15px;
+            right:15px;
+            width: 44px;
+            height: 20px;
+            line-height: 20px;
+            opacity: 0.5;
+            border-radius: 10px;
+            background-color: #000000;
+            color:#fff;
+            text-align:center;
+        }
+    }
+    .content-box{
+        padding:0 20px;
+        .notice__list-box{
+            .new-notice{
+                padding:15px 0;
+                font-size:16px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+                font-weight:bold;
+                color:#000;
+                strong{
+                    padding-left:5px;
+                    color:#29b6f6;
+                }
+            }
+            .module__basic-list{
+                border-top:1px solid #ccc;
+            }
+        }
+    }
+}
+
+// feed
+.module__basic-list{
+    position:relative;
+    padding:15px 0 15px 61px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+    .thumb{
+        position:absolute;
+        top:15px;
+        left:0;
+        width:48px;
+        height:48px;
+        border-radius:50%;
+        overflow:hidden;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .txt{
+        font-size:13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        color:#000;
+    }
+    .time{
+        font-size:12px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        color:#999;
+    }
+}
+
+.module__noti-num-list{
+    position:relative;
+    padding:17px 45px 17px 61px;
+    .thumb{
+        position:absolute;
+        top:15px;
+        left:0;
+        width:55px;
+        height:55px;
+        border-radius:50%;
+        overflow:hidden;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .thumb-group{
+        position:absolute;
+        top:15px;
+        left:0;
+        width:55px;
+        height:55px;
+        img{
+            width:100%;
+            height:100%;
+        }
+        &:after{
+            position:absolute;
+            top:50%;
+            left:-11px;
+            margin-top:-5px;
+            content:'';
+            display:block;
+            width:5px;
+            height:5px;
+            border-radius:50%;
+            background-color:#17d25d;
+        }
+    }
+    .cont{
+        .subject{
+            margin-bottom:8px;
+            font-size:15px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight:bold;
+            color:#010101;
+            strong{color:#bbb;}
+        }
+        .con-txt{
+            font-size:12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            color:#999;
+            word-wrap: break-word;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            span{
+                font-weight:bold;
+                padding-right:5px;
+            }
+        }
+    }
+    .time-box{
+        position:absolute;
+        top:20px;
+        right:0;
+        strong{
+            display:block;
+            width: 25px;
+            height: 25px;
+            margin:5px auto 0;
+            line-height: 25px;
+            border-radius: 48%;
+            border: solid 1px #eeeeee;
+            background-color: #f52a2a;
+            font-size:10px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            color:#fff;
+            text-align:center;
+        }
+    }
+}

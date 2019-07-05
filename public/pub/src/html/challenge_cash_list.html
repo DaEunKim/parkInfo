@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>나의 챌린지 캐시</title>
+    <link rel="stylesheet" type="text/css" href="../css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+    <div class="challenge-cash">
+        <!-- header -->
+        <div w3-include-HTML="pages/challenge/header.html"></div>
+        <!-- // header -->
+        <!-- list -->
+        <div class="challenge-cash__content">
+            <!-- filter -->
+            <div w3-include-HTML="pages/challenge/filter.html"></div>
+            <!-- // filter -->
+            <div w3-include-HTML="pages/challenge/list.html"></div>
+        </div>    
+        <!-- //list -->
+    </div>
+</div>
+
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>

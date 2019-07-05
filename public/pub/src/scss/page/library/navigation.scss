@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+$page-prefix: 'library';
+$nav-height: 56px;
+
+.#{$page-prefix}__navigation {
+    overflow: hidden;
+    position: relative;
+    height: $nav-height;
+    padding: 0 56px;
+    background-color: #fff;
+    line-height: $nav-height;
+
+    &__button {
+        position: absolute; top: 0; left: 0;
+        width: 56px;
+        height: 100%;
+
+        &--text {
+            @include use_sprite($nav-back);
+
+            vertical-align: top;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: $nav-height;
+
+        &--center {
+            text-align: center;
+        }
+    }
+}

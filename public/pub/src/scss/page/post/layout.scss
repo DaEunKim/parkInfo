@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+$page-prefix: 'post-type';
+
+.#{$page-prefix}__notice {
+    padding: 15px;
+}
+
+.#{$page-prefix}__hash {
+    a,
+    span {
+        padding-right: 3px;
+        color: #5a76a0;
+        font-size: 14px;
+        word-break: keep-all;
+    }
+}
+
+.#{$page-prefix}__at {
+    margin-top:28px;
+
+    a,
+    span {
+        $height:26px;
+        display:inline-block;
+        height:$height;
+        margin:4px 4px 0 0;
+        padding:0 8px;
+        border-radius:13px;
+        background-color:#f0f0f0;
+        color:#666;
+        font-size:11px;
+        line-height:$height;
+        text-align:center;
+    }
+}
+
+.post-type__user + .post-content__textType{
+    padding-top:0;
+    border-top:0;
+}
+.post-content__textType + .post-type__toolbar,
+.post-content__articleType + .post-type__toolbar{
+    // margin-top:30px;
+    .post-type.qna &{
+        margin-top:0;
+    }
+}
+
+.post-type{
+    background-color:#fff;
+    /* re */
+    .post-type__notice{
+        border-bottom:1px solid #eee;
+    }
+    .list_scroll60-x20,
+    .post-content__fileType,
+    .post-content__anonymous{
+        position:relative;
+        z-index:1;
+        margin:-1px 0;
+        border:1px solid #fff;
+        border-right:0;
+        border-left:0;
+    }
+    .post-content__linkType{
+        margin-top:-1px;
+        border-top:1px solid #fff;
+    }
+    .post-type__toolbar{
+        margin-top:20px;
+        border-top:1px solid #eee;
+    }
+    &.excellent .post-type__toolbar,
+    .post-content__anonymous + .post-type__toolbar,
+    .post-content__imageType + .post-type__toolbar{
+        margin-top:0;
+        border-top:0;
+    }
+    .post-content__fileType + .post-type__toolbar{
+        margin-top:0;
+    }
+    /* //re */
+    .wrap-carousel{
+        padding:0 20px;
+    }
+    .list_scroll320-x10{
+        padding:0 20px;
+    }
+}
+.post-type.qna{
+    /* re */
+    .post-type__notice{
+        border-bottom:0;
+    }
+    .post-type__toolbar{
+        margin-top:0;
+    }
+    /* //re */
+    .post-content__textType{
+        border:0;
+    }
+}
+.post-type.knowhow{
+    padding-bottom:20px;
+    .post-type__notice{
+        border-bottom:0;
+    }
+    .list_scroll320-x10{
+        padding:0 20px;
+    }
+}

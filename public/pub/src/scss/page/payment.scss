@@ -1,0 +1,255 @@
+@charset 'UTF-8';
+
+.payment_account-info{
+    padding:20px;
+    .wrap-tit-t1{
+        margin-bottom:10px;
+        &:nth-child(n+2){
+            margin-top:30px;
+        }
+        .tit-t1{
+            font-size:16px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+            font-weight:normal;
+        }
+        .sub{
+            font-size:12px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+
+        & + .wrap-input{
+            margin-top:0;
+        }
+    }
+    .wrap-input{
+        margin-top:8px;
+        .inpt-txt{
+            width:100%;
+        }
+        .inpt-slct{
+            width:100%;
+        }
+    }
+    .wrap-input-file{
+        position:relative;
+        height:180px;
+        border:1px solid #bbb;
+        .wrap{
+            display:table;
+            width:100%;
+            height:100%;
+            > .inner{
+                display:table-cell;
+                width:100%;
+                height:100%;
+                text-align:center;
+                vertical-align:middle;
+            }
+            .add{
+                @include use_sprite($ico-certi-add-ic);
+            }
+            .tit{
+                display:block;
+                margin:12px 0;
+                color:$BRAND_COLOR;
+                font-size:12px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+            }
+            .description{
+                color:$LIGHTEST_COLOR;
+                font-size:11px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+            }
+        }
+        .btn-inpt-file{
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            opacity:0;
+        }
+    }
+    .input-info{
+        @include clearfix();
+        margin-top:4px;
+        color:$LIGHTEST_COLOR;
+        font-size:11px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        dt{
+            float:left;
+            margin-right:4px;
+            font-weight:bold;
+        }
+        dd{
+            overflow:hidden;
+        }
+    }
+    .wrap-btn{
+        margin-top:30px;
+    }
+    .btn-confirm{
+        width:100%;
+    }
+    .payment_account-info-terms{
+        margin-top:30px;
+    }
+}
+.payment_account-info-terms{
+    .wrap-lbl{
+        @include clearfix();
+        &:nth-child(n+2){
+            margin-top:18px;
+        }
+        .inpt-chk{
+            float:left;
+            margin-right:4px;
+        }
+        .lbl{
+            display:block;
+            overflow:hidden;
+            color:#666;
+            font-size:10px;
+            line-height:1.8em;
+        }
+    }
+}
+.payment_account-calculate{
+    padding:20px 0;
+    .tab_column{
+        margin-bottom:25px;
+    }
+}
+.payment_account-calculate-header{
+    margin-bottom:20px;
+    text-align:center;
+    .inpt-slct-0{
+        margin-bottom:23px;
+    }
+    .total-payment{
+        dt,
+        dd{
+            display:inline;
+            font-size:20px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+    }
+}
+.payment_account-description{
+    margin-bottom:8px;
+    padding:0 20px;
+    color:#999;
+    font-size:12px;
+    line-height:map-get($DEFAULT_FONT, 'line-height');
+}
+.payment_account-calculate-detail{
+    padding:20px 0;
+    .wrap-tit-t1{
+        margin-bottom:20px;
+        padding:8px 20px;
+        border:1px solid #bbb;
+        border-right:0;
+        border-left:0;
+        background-color:#eee;
+        color:#666;
+        font-size:13px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        &:nth-child(n+2){
+            margin-top:20px
+        }
+    }
+    .total-info{
+        margin-bottom:20px;
+        padding:0 20px;
+        .date{
+            display:block;
+            margin-bottom:2px;
+            font-size:18px;
+            line-height:map-get($DEFAULT_FONT, 'line-height');
+        }
+        .total{
+            dt,
+            dd{
+                display:inline;
+                font-size:20px;
+                line-height:map-get($DEFAULT_FONT, 'line-height');
+            }
+        }
+    }
+    .table_rows-0{
+        margin:0 20px;
+    }
+}
+.payment_payment-list{
+    padding:10px 0;
+    background-color:#eee;
+    .payment_info{
+        display:block;
+        padding:10px 20px;
+        border:1px solid #bbb;
+        border-right:0;
+        border-left:0;
+        background-color:#fff;
+    }
+}
+.payment_payment-detail{
+    padding:20px;
+    .wrap-tit-t1{
+        margin-bottom:10px;
+        font-size:18px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        &:nth-child(n+2){
+            margin-top:20px;
+            padding-top:20px;
+            border-top:1px solid #bbb;
+        }
+    }
+}
+.payment_membership-info{
+    padding:20px;
+    .wrap-tit-t1{
+        margin-bottom:10px;
+        font-size:18px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        &:nth-child(n+2){
+            margin-top:20px;
+        }
+        .tit-t1{
+            display:block;
+            font-weight:normal;
+        }
+        .tit-t2{
+            display:block;
+            margin:16px 0 55px;
+            font-size:26px;
+            line-height:1.4em;
+            font-weight:bold;
+        }
+    }
+}
+.payment_membership-complete{
+    padding:35px 20px 55px;
+    .membership-complete-txt{
+        font-size:18px;
+        line-height:map-get($DEFAULT_FONT, 'line-height');
+        text-align:center;
+        &:after{
+            content:'';
+            display:block;
+            width:330px;
+            height:210px;
+            margin:48px auto 0;
+            background:url('../img/img-membership-buy-fin.png') no-repeat left top;
+            background-size:330px 210px;
+        }
+    }
+    .wrap-btn{
+        position:fixed;
+        left:20px;
+        right:20px;
+        bottom:0;
+    }
+    .btn-complete{
+        width:100%;
+    }
+}

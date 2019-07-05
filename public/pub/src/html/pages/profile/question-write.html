@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>conects_app</title>
+    <link rel="stylesheet" href="/pub/src/css/conects.css">
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+
+<div class="question-board">
+<!-- 질문하기 -->
+<div class="question-write">
+    <div class="tit-info"><strong>정재현</strong> 마스터에게 보내는 질문입니다</div>
+
+    <form action="" class="add-select"><!-- add-select 클래스 제거 시 select 영역 display:none 상태 -->
+        <div class="select">
+            <select>
+                <option value="">과목을 선택해주세요</option>
+            </select>
+            <select>
+                <option value="">유형을 선택해주세요</option>
+            </select>
+        </div>
+        <div><input placeholder="제목"></div>
+        <div><textarea placeholder="내용입력"></textarea>
+        <div class="btn-box">
+            <div class="check"><label><input type="checkbox">[개인정보 수집 및 활용 동의 안내]</label></div>
+            <button>글 남기기</button>
+        </div>
+    </form>
+</div>
+<!-- // 질문하기 -->
+</div>
+
+<script>
+    w3.includeHTML();
+</script>
+</body>
+</html>
