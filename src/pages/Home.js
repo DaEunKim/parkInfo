@@ -1,17 +1,31 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Component, setState, useState, useEffect } from "react";
-import useAxios2 from "../hooks/useAxios2";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { async } from "q";
+import calculRound from "../components/calculRound";
 
-// const PhotosEndPoint = "https://jsonplaceholder.typicode.com/photos";
-// const ServiceKey =
-//   "hOvnmYcLNUIcmKU7ZqAYimjJP8jeE%2FBUq1%2Bt%2B2ZquMGCntSn9WSOWKZ1Vh18uUhgE3gh73VWXLjOvWuK0nILRw%3D%3D";
-// const Url = `http://api.data.go.kr/openapi/cty-park-info-std`;
 const cityList = [
   { id: 1, value: "Seoul" },
-  { id: 2, value: "London" },
-  { id: 3, value: "Busan" }
+  { id: 2, value: "Busan" },
+  { id: 3, value: "Wonju" },
+  { id: 4, value: "Sogcho" },
+  { id: 5, value: "Ansan" },
+  { id: 6, value: "Incheon" },
+  { id: 7, value: "Jeonju" },
+  { id: 8, value: "Masan" },
+  { id: 9, value: "Jeju" },
+  { id: 10, value: "London" }
+];
+const cityListKR = [
+  { id: 1, value: "서울" },
+  { id: 2, value: "부산" },
+  { id: 3, value: "원주" },
+  { id: 4, value: "속초" },
+  { id: 5, value: "안산" },
+  { id: 6, value: "인천" },
+  { id: 7, value: "젼주" },
+  { id: 8, value: "마산" },
+  { id: 9, value: "제주" },
+  { id: 10, value: "런던" }
 ];
 const APPID = `bf433117441b83694e383606086227c9`;
 export default function Home() {
@@ -39,14 +53,13 @@ export default function Home() {
     fetchData();
   }, [weatherApi]);
 
-  console.log(data);
-
   if (!data) {
     return <></>;
   }
-
+  console.log(data);
   return (
     <>
+      {isError && <>error</>}
       {isLoading ? (
         <>loading...</>
       ) : (
@@ -55,16 +68,35 @@ export default function Home() {
           value={cityName}
           onChange={e => setCityName(e.target.value)}
         >
-          {cityList.map(city => (
+          {cityListKR.map(city => (
             <option key={city.id} value={city.id}>
               {city.value}
             </option>
           ))}
         </select>
       )}
+      <br />
+      <br />
 
-      <div>현재 위치 : {data.name}</div>
-      <div>현재 온도 : {data.main && data.main.temp}</div>
+      <div>{`위치 : ${data.name} / ${data.sys && data.sys.country}`}</div>
+      <br />
+      <div>
+        {`현재 기온 : ${data.main && calculRound(data.main.temp - 273.15)}°C`}
+      </div>
+      <div>{`날씨 상태 : ${data.weather && data.weather[0].description}`}</div>
+      <div>{`풍속 : ${data.wind && data.wind.speed}m/s`}</div>
+      <div>{`구름 : ${data.clouds && data.clouds.all}%`}</div>
+      <div>{`현재 습도 : ${data.main && data.main.humidity}%`}</div>
+      <div>{`기압 : ${data.main && data.main.pressure}hPa`}</div>
+      <br />
+      <div>
+        {`최고 기온 : ${data.main &&
+          calculRound(data.main.temp_max - 273.15)}°C`}
+      </div>
+      <div>
+        {`최소 기온 : ${data.main &&
+          calculRound(data.main.temp_min - 273.15)}°C`}
+      </div>
     </>
   );
 }
