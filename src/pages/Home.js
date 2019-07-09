@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import calculRound from "../components/calculRound";
+import useAxios from "../hooks/useAxios";
 
 const cityList = [
   { id: 1, value: "Seoul" },
@@ -38,6 +40,9 @@ export default function Home() {
 
   const weatherApi = `http://api.openweathermap.org/data/2.5/weather?q=${CityNameAPI}&APPID=${APPID}`;
 
+  const data2 = useAxios(weatherApi);
+
+  console.log("data2 : ", data2);
   useEffect(() => {
     const fetchData = async () => {
       setIsError(false);
@@ -56,9 +61,10 @@ export default function Home() {
   if (!data) {
     return <></>;
   }
-  console.log(data);
+  // console.log(data);
   return (
     <>
+      <p>도시를 고르시오</p>
       {isError && <>error</>}
       {isLoading ? (
         <>loading...</>

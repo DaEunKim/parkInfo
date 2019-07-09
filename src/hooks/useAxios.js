@@ -1,17 +1,26 @@
 /* eslint-disable react/react-in-jsx-scope */
-import React, { Component, setState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import axios from "axios";
 
-export default class useAxios extends Component(url) {
-  state = { data: [] };
-  componentDidMount() {
-    axios.get(url).then(res => {
-      const datatata = res.data;
-      this.setState({ datatata });
-    });
-  }
-  render() {
-    return { url };
-  }
+export default function useAxios({ API }) {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsError(false);
+      setIsLoading(true);
+      try {
+        const result = await axios(API);
+        setData(result.data);
+      } catch (error) {
+        setIsError(true);
+      }
+      setIsLoading(false);
+    };
+    fetchData();
+  }, [API]);
+
+  return { data, isLoading, isError };
 }
