@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import calculRound from "../components/calculRound";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import React, { useState } from "react";
 import "react-tabs/style/react-tabs.css";
 import SwipeableViews from "react-swipeable-views";
-import queryString from "query-string";
+// import queryString from "query-string";
+import classNames from "classnames";
+import "./Home.css";
+import { HomeTab1, HomeTab2, HomeTab3 } from "../view";
+import useAxios2 from "../hooks/useAxios2";
 
 const cityList = [
   { id: 1, value: "Seoul" },
@@ -17,7 +18,9 @@ const cityList = [
   { id: 7, value: "Jeonju" },
   { id: 8, value: "Masan" },
   { id: 9, value: "Jeju" },
-  { id: 10, value: "London" }
+  { id: 10, value: "London" },
+  { id: 11, value: "Tokyo" },
+  { id: 12, value: "Osaka-shi" }
 ];
 const cityListKR = [
   { id: 1, value: "서울" },
@@ -29,114 +32,85 @@ const cityListKR = [
   { id: 7, value: "젼주" },
   { id: 8, value: "마산" },
   { id: 9, value: "제주" },
-  { id: 10, value: "런던" }
+  { id: 10, value: "런던" },
+  { id: 11, value: "동경" },
+  { id: 12, value: "오사카" }
 ];
-const APPID = `bf433117441b83694e383606086227c9`;
-export default function Home({ location: { search }, history }) {
-  const [cityName, setCityName] = useState(1);
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const query = queryString.parse(search);
+function TabFunc({ Props }) {
+  const { opts, stat } = Props;
 
-  const defaultTabIndex = query.tab_index ? parseInt(query.tab_index, 10) : 0;
-
-  const [tabInfo, setTabInfo] = useState(defaultTabIndex || 0);
-  const { tabIndex, setTabIndex } = { tabInfo, setTabInfo };
+  const { tabIndex, setTabIndex } = stat;
 
   const handleChangeIndex = index => {
-    setTabInfo(index);
+    setTabIndex(index);
   };
+
+  return (
+    <>
+      <div className="tab_scroll">
+        <ul className="tab">
+          {opts.map((opt, index) => (
+            <li
+              key={index}
+              className={classNames("li", { active: tabIndex === index })}
+            >
+              <a
+                key={`index_${index}`}
+                type="button"
+                onClick={e => {
+                  setTabIndex(index);
+                  e.preventDefault();
+                }}
+              >
+                {opt}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <SwipeableViews index={tabIndex} onChangeIndex={handleChangeIndex}>
+        {tabIndex === 0 && <HomeTab1 Props={{ ...Props }} />}
+        {tabIndex === 1 && <HomeTab2 Props={{ ...Props }} />}
+        {tabIndex === 2 && <HomeTab3 Props={{ ...Props }} />}
+      </SwipeableViews>
+    </>
+  );
+}
+const APPID = `bf433117441b83694e383606086227c9`;
+
+export default function Home({ location: { search }, history }) {
+  const [cityName, setCityName] = useState(1);
+
+  // const query = queryString.parse(search);
+  // const defaultTabIndex = query.tab_index ? parseInt(query.tab_index, 10) : 0;
+  const defaultTabIndex = 0;
+  const [tabIndex, setTabIndex] = useState(defaultTabIndex || 0);
+
   const CityNameAPI = cityName === 1 ? "Seoul" : cityList[cityName - 1].value;
 
   const weatherApi = `http://api.openweathermap.org/data/2.5/weather?q=${CityNameAPI}&APPID=${APPID}`;
-
-  // const data2 = useAxios(weatherApi);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsError(false);
-      setIsLoading(true);
-      try {
-        const result = await axios(weatherApi);
-        setData(result.data);
-      } catch (error) {
-        setIsError(true);
-      }
-      setIsLoading(false);
-    };
-    fetchData();
-  }, [weatherApi]);
-
+  const { data, isLoading, isError } = useAxios2({
+    url: `${weatherApi}`
+  });
   if (!data) {
     return <></>;
   }
+  if (isError) {
+    return <>error</>;
+  }
+  if (isLoading) {
+    return <>loading...</>;
+  }
+  const opts = ["지역별 날씨", "지도", "게시판"];
 
-  const opts = ["지역별 날씨", "지도", "Title 3"];
-  return (
-    <>
-      <Tabs>
-        <TabList>
-          {opts.map((opt, index) => (
-            <Tab>{opt}</Tab>
-          ))}
-        </TabList>
-
-        <SwipeableViews index={tabIndex} onChangeIndex={handleChangeIndex}>
-          <ul>
-            <TabPanel>
-              <h2>도시를 고르시오</h2>
-              {isError && <>error</>}
-              {isLoading ? (
-                <>loading...</>
-              ) : (
-                <select
-                  name="city"
-                  value={cityName}
-                  onChange={e => setCityName(e.target.value)}
-                >
-                  {cityListKR.map(city => (
-                    <option key={city.id} value={city.id}>
-                      {city.value}
-                    </option>
-                  ))}
-                </select>
-              )}
-              <br />
-              <br />
-              <div>{`위치 : ${data.name} / ${data.sys &&
-                data.sys.country}`}</div>
-              <div>
-                {`현재 기온 : ${data.main &&
-                  calculRound(data.main.temp - 273.15)}°C`}
-              </div>
-              <div>{`날씨 상태 : ${data.weather &&
-                data.weather[0].description}`}</div>
-              <div>{`풍속 : ${data.wind && data.wind.speed}m/s`}</div>
-              <div>{`구름 : ${data.clouds && data.clouds.all}%`}</div>
-              <div>{`현재 습도 : ${data.main && data.main.humidity}%`}</div>
-              <div>{`기압 : ${data.main && data.main.pressure}hPa`}</div>
-              <br />
-              <div>
-                {`최고 기온 : ${data.main &&
-                  calculRound(data.main.temp_max - 273.15)}°C`}
-              </div>
-              <div>
-                {`최소 기온 : ${data.main &&
-                  calculRound(data.main.temp_min - 273.15)}°C`}
-              </div>
-            </TabPanel>
-
-            <TabPanel>
-              <h2>Any content 2</h2>
-            </TabPanel>
-
-            <TabPanel>
-              <h2>Any content 3</h2>
-            </TabPanel>
-          </ul>
-        </SwipeableViews>
-      </Tabs>
-    </>
-  );
+  const Props = {
+    opts,
+    stat: { tabIndex, setTabIndex },
+    cityName,
+    setCityName,
+    data,
+    cityListKR
+  };
+  return <>{TabFunc({ Props })}</>;
 }

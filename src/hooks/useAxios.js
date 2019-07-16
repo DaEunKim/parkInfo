@@ -1,18 +1,18 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { useState, useEffect } from "react";
-
 import axios from "axios";
 
-export default function useAxios({ API }) {
+export default function useAxios({ url, method }) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       setIsError(false);
       setIsLoading(true);
       try {
-        const result = await axios(API);
+        const result = await axios({ url, method });
+
         setData(result.data);
       } catch (error) {
         setIsError(true);
@@ -20,7 +20,7 @@ export default function useAxios({ API }) {
       setIsLoading(false);
     };
     fetchData();
-  }, [API]);
+  }, [url]);
 
   return { data, isLoading, isError };
 }

@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import { Home, Board } from "./pages";
 // const Home = lazy(() => import("pages/Home"));
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route key="switch/home" path="/home" component={Home} />
+        <Route key="switch/board" path="/board" component={Board} />
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
