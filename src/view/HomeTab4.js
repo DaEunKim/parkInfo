@@ -23,7 +23,6 @@ export default function HomeTab4({ Props }) {
     return <>error</>;
   }
 
-  console.log(data);
   const { content, success } = data;
   if (success) {
     return (

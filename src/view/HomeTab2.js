@@ -62,6 +62,15 @@ export default function HomeTab2() {
   const [newTodo, postNewTodo] = postTodoEndpoint();
 
   function createTodo() {
+    if (!title) {
+      return alert("제목을 입력하세요.");
+    }
+    if (!creator) {
+      return alert("작성자를 입력하세요.");
+    }
+    if (!text) {
+      return alert("내용을 입력하세요.");
+    }
     postNewTodo({
       title,
       creator,
@@ -105,8 +114,8 @@ export default function HomeTab2() {
       <div className="new-todo">
         {(newTodo.pending && "Creating...") ||
           (newTodo.complete &&
-            `작성완료!,  title : ${newTodo.data.post.title} 
-            || creator :  ${newTodo.data.post.creator}`)}
+            `작성완료!,  title : ${newTodo.data.post.title}, 
+            creator :  ${newTodo.data.post.creator}`)}
       </div>
     </div>
   );
