@@ -1,118 +1,91 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+// 게시판
+import React from "react";
+import useAxios from "../hooks/useAxios";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
-function useAsyncEndpoint(fn) {
-  const [res, setRes] = useState({
-    data: null,
-    complete: false,
-    pending: false,
-    error: false
-  });
-  const [req, setReq] = useState();
+import { HomeTab4 } from ".";
 
-  useEffect(() => {
-    if (!req) return;
+function List({ getListPost }) {
+  const { data, isLoading, isError } = getListPost;
 
-    setRes({
-      data: null,
-      pending: true,
-      error: false,
-      complete: false
-    });
-    axios(req)
-      .then(res =>
-        setRes({
-          data: res.data,
-          pending: false,
-          error: false,
-          complete: true
-        })
-      )
-      .catch(() =>
-        setRes({
-          data: null,
-          pending: false,
-          error: true,
-          complete: true
-        })
-      );
-  }, [req]);
-
-  return [res, (...args) => setReq(fn(...args))];
-}
-
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-const todosApi = `${proxyUrl}http://lunahc92.tplinkdns.com/api/posts/create`;
-
-// const todosApi = "https://jsonplaceholder.typicode.com/todos";
-
-function postTodoEndpoint() {
-  /* eslint-disable react-hooks/rules-of-hooks */
-  return useAsyncEndpoint(data => ({
-    url: todosApi,
-    method: "POST",
-    data
-  }));
-}
-
-export default function Board() {
-  const [title, setTitle] = useState("");
-  const [text, setText] = useState("");
-  const [creator, setCreator] = useState("");
-  const [newTodo, postNewTodo] = postTodoEndpoint();
-
-  function createTodo() {
-    postNewTodo({
-      title,
-      creator,
-      text,
-      userId: 1
-    });
+  if (isLoading) {
+    return <>loading...</>;
+  }
+  if (!data) {
+    return <>null</>;
   }
 
+  if (isError) {
+    return <>error</>;
+  }
+  const { posts } = data;
+  if (!posts) {
+    return <></>;
+  }
+  if (posts.length < 1) return <></>;
+
   return (
-    <div>
-      <h1>게시판</h1>
-      <label>
-        Title:{" "}
-        <input
-          placeholder="제목"
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Creator:
-        <input
-          placeholder="작성자"
-          value={creator}
-          onChange={e => setCreator(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Text:{" "}
-        <input
-          placeholder="내용"
-          value={text}
-          onChange={e => setText(e.target.value)}
-        />
-      </label>
-      <br />
-      <button onClick={createTodo}>save</button>
-      <br />
-      <div className="new-todo">
-        {(newTodo.pending && "Creating...") ||
-          (newTodo.complete &&
-            `작성완료!,  title : ${newTodo.data.post.title} 
-            || creator :  ${newTodo.data.post.creator}`)}
-      </div>
-    </div>
+    <>
+      <button
+        onClick={e => {
+          e.preventDefault();
+        }}
+      >
+        글쓰기
+      </button>
+
+      {posts.map((post, index) => {
+        const { createTime, creator, id, likeCount, title, viewCount } = post;
+
+        return (
+          <>
+            <ul key={`${id}_ul3`}>
+              <li key={`${id}_li3`}>
+                {`<${index + 1}>`}
+                <div>
+                  <div>{`Time : ${createTime}`}</div>
+                  <div>{`creator : ${creator}`}</div>
+                  <div>{`title : ${title}`}</div>
+                  <div>{`viewCount : ${viewCount}`}</div>
+                  <div>{`likeCount : ${likeCount}`}</div>
+                </div>
+              </li>
+            </ul>
+          </>
+        );
+      })}
+    </>
   );
 }
-// import React from "react";
+export default function Board() {
+  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
-// export default function Board({ location: { search }, history }) {
-//   return <>ddd</>;
-// }
+  const ListPostUrl = `${proxyUrl}http://lunahc92.tplinkdns.com/api/posts/list`;
+  const getListPost = useAxios({
+    url: `${ListPostUrl}`,
+    method: "get"
+  });
+
+  const { data, isLoading, isError } = getListPost;
+
+  if (isLoading) {
+    return <>loading...</>;
+  }
+  if (!data) {
+    return <>null</>;
+  }
+
+  if (isError) {
+    return <>error</>;
+  }
+
+  const { posts } = data;
+  const Props = { posts };
+
+  return (
+    <>
+      {<List getListPost={getListPost} />}
+      {/* <HomeTab4 Props={Props} /> */}
+    </>
+  );
+}

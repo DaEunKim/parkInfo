@@ -3,10 +3,10 @@ import React from "react";
 import useAxios from "../hooks/useAxios";
 
 export default function HomeTab4({ Props }) {
-  //   const { tabIndex } = Props;
-
+  const tmp = Props;
+  //   console.log(tmp);
   const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-  const id = "469ce1ec-01ff-49c5-a36c-905a698e440e";
+  const id = "77dc912c-7341-4052-a050-c0ca85e8d5f9";
   const ReadPostUrl = `${proxyUrl}http://lunahc92.tplinkdns.com/api/posts/read/${id}`;
   const getReadPost = useAxios({
     url: `${ReadPostUrl}`,

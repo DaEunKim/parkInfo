@@ -114,7 +114,7 @@ export default function HomeTab2() {
       <div className="new-todo">
         {(newTodo.pending && "Creating...") ||
           (newTodo.complete &&
-            `작성완료!,  title : ${newTodo.data.post.title}, 
+            `작성완료!  title : ${newTodo.data.post.title}, 
             creator :  ${newTodo.data.post.creator}`)}
       </div>
     </div>
