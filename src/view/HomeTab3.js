@@ -44,39 +44,42 @@ function List({ getListPost }) {
 export default function HomeTab3({ Props }) {
   const { tabIndex } = Props;
   const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-  const getUrl = `${proxyUrl}http://lunahc92.tplinkdns.com/api/posts`;
-  const getData = useAxios({
-    url: `${getUrl}`,
-    method: "get"
-  });
+  //   const getUrl = `${proxyUrl}http://lunahc92.tplinkdns.com/api/posts`;
+  //   const getData = useAxios({
+  //     url: `${getUrl}`,
+  //     method: "get"
+  //   });
 
   const ListPostUrl = `${proxyUrl}http://lunahc92.tplinkdns.com/api/posts/list`;
   const getListPost = useAxios({
     url: `${ListPostUrl}`,
     method: "get"
   });
+  console.log(getListPost);
 
-  const { data, isLoading, isError } = getData;
-  if (!data) {
-    return <></>;
-  }
-  if (isLoading) {
-    return <>loading...!!</>;
-  }
-  if (isError) {
-    return <>error</>;
-  }
+  //   const { data, isLoading, isError } = getData;
+  //   if (!data) {
+  //     return <></>;
+  //   }
+  //   if (isLoading) {
+  //     return <>loading...!!</>;
+  //   }
+  //   if (isError) {
+  //     return <>error</>;
+  //   }
 
   return (
     <>
       {<List getListPost={getListPost} />}
-      <ul key={`${tabIndex}_ul3`}>
+      {/* <br /> */}
+
+      {/* <ul key={`${tabIndex}_ul3`}>
         <li key={`${tabIndex}_li3`}>
           <div>{data.name}</div>
           <div>{data.남자친구}</div>
           <div>{data.사랑해유}</div>
         </li>
-      </ul>
+      </ul> */}
     </>
   );
 }
