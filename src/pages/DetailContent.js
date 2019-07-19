@@ -27,11 +27,8 @@ export default function DetailContent({ location: { search } }) {
   if (success) {
     return (
       <>
-        <ul>
-          <li>
-            <div>{content.text}</div>
-          </li>
-        </ul>
+        <h2>상세 내용</h2>
+        <div>{content.text}</div>
       </>
     );
   }

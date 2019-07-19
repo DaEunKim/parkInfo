@@ -1,3 +1,31 @@
+.li {
+  display: inline-block;
+  padding: 0 8px;
+}
+.li :active {
+  background-color: beige;
+  color: red;
+  font-weight: bold;
+}
+.li :hover {
+  background-color: beige;
+  color: red;
+  font-weight: bold;
+}
+
+.tab {
+  padding: 0 10px;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.tab_scroll {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding: 0 12px;
+}
+
 .App {
   text-align: center;
 }

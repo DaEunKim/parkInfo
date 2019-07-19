@@ -58,8 +58,8 @@ export default function Home({ location: { search }, history }) {
   const defaultTabIndex = 0;
   const [tabIndex, setTabIndex] = useState(defaultTabIndex || 0);
 
-  const opts = ["Upper List Post", "Create Post", "List Post", "Read Post"];
-
+  // const opts = ["Upper List Post", "Create Post", "List Post", "Read Post"];
+  const opts = ["List Post"];
   const Props = {
     opts,
     stat: { tabIndex, setTabIndex },

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Main, Home, Board, DetailContent } from "./pages";
@@ -7,9 +7,9 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <div>
+        <div className="tab_scroll">
           <nav>
-            <ul>
+            <ul className="tab">
               <li>
                 <Link to="/">main</Link>
               </li>
