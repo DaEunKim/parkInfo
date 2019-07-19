@@ -1,9 +1,6 @@
-// 게시판
 import React from "react";
 import useAxios from "../hooks/useAxios";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-
-import { DetailContent } from "../pages";
+import { Link } from "react-router-dom";
 
 function List({ getListPost }) {
   const { data, isLoading, isError } = getListPost;
@@ -50,15 +47,7 @@ function List({ getListPost }) {
                     <div>{`viewCount : ${viewCount}`}</div>
                     <div>{`likeCount : ${likeCount}`}</div>
                   </div>
-                  <div>
-                    <Switch>
-                      <Route
-                        key="switch/detail"
-                        path="/detailcontent"
-                        component={DetailContent}
-                      />
-                    </Switch>
-                  </div>
+                  <div />
                 </li>
               </ul>
             </Link>
@@ -89,9 +78,6 @@ export default function ListPost() {
   if (isError) {
     return <>error</>;
   }
-
-  const { posts } = data;
-  const Props = { posts };
 
   return <>{<List getListPost={getListPost} />}</>;
 }

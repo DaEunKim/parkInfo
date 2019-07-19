@@ -1,11 +1,9 @@
-// 게시판
 import React from "react";
 import useAxios from "../hooks/useAxios";
 import queryString from "query-string";
 
 export default function DetailContent({ location: { search } }) {
   const query = queryString.parse(search);
-
   const { id } = query;
   const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
