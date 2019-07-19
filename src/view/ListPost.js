@@ -2,9 +2,8 @@
 import React from "react";
 import useAxios from "../hooks/useAxios";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import { Board } from "../pages";
 
-import { HomeTab4 } from ".";
+import { DetailContent } from "../pages";
 
 function List({ getListPost }) {
   const { data, isLoading, isError } = getListPost;
@@ -30,6 +29,7 @@ function List({ getListPost }) {
       <button
         onClick={e => {
           e.preventDefault();
+          window.location = "./board";
         }}
       >
         글쓰기
@@ -40,17 +40,28 @@ function List({ getListPost }) {
 
         return (
           <>
-            <ul key={`${id}_ul3`}>
-              <li key={`${id}_li3`}>
-                <div>
-                  <div>{`Time : ${createTime}`}</div>
-                  <div>{`creator : ${creator}`}</div>
-                  <div>{`title : ${title}`}</div>
-                  <div>{`viewCount : ${viewCount}`}</div>
-                  <div>{`likeCount : ${likeCount}`}</div>
-                </div>
-              </li>
-            </ul>
+            <Link to={`/detailcontent?id=${id}`}>
+              <ul key={`${id}_ul3`}>
+                <li key={`${id}_li3`}>
+                  <div>
+                    <div>{`Time : ${createTime}`}</div>
+                    <div>{`creator : ${creator}`}</div>
+                    <div>{`title : ${title}`}</div>
+                    <div>{`viewCount : ${viewCount}`}</div>
+                    <div>{`likeCount : ${likeCount}`}</div>
+                  </div>
+                  <div>
+                    <Switch>
+                      <Route
+                        key="switch/detail"
+                        path="/detailcontent"
+                        component={DetailContent}
+                      />
+                    </Switch>
+                  </div>
+                </li>
+              </ul>
+            </Link>
           </>
         );
       })}
@@ -82,10 +93,5 @@ export default function ListPost() {
   const { posts } = data;
   const Props = { posts };
 
-  return (
-    <>
-      {<List getListPost={getListPost} />}
-      {/* <HomeTab4 Props={Props} /> */}
-    </>
-  );
+  return <>{<List getListPost={getListPost} />}</>;
 }

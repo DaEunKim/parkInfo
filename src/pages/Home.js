@@ -42,9 +42,9 @@ function TabFunc({ Props }) {
 
       <SwipeableViews index={tabIndex} onChangeIndex={handleChangeIndex}>
         {tabIndex === 0 && <ListPost />}
-        {tabIndex === 1 && <HomeTab2 Props={{ ...Props }} />}
-        {tabIndex === 2 && <HomeTab3 Props={{ ...Props }} />}
-        {tabIndex === 3 && <HomeTab4 Props={{ ...Props }} />}
+        {/* {tabIndex === 1 && <HomeTab2 Props={{ ...Props }} />} */}
+        {/* {tabIndex === 2 && <HomeTab3 Props={{ ...Props }} />} */}
+        {/* {tabIndex === 3 && <HomeTab4 Props={{ ...Props }} />} */}
       </SwipeableViews>
     </>
   );

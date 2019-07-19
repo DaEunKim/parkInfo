@@ -1,14 +1,14 @@
 // 게시판
 import React from "react";
 import useAxios from "../hooks/useAxios";
+import queryString from "query-string";
 
-export default function HomeTab4({ posts }) {
-  //   const tmp = post;
-  //   console.log(tmp);
-  const { post } = posts;
-  console.log(post);
+export default function DetailContent({ location: { search } }) {
+  const query = queryString.parse(search);
+
+  const { id } = query;
   const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-  const id = "77dc912c-7341-4052-a050-c0ca85e8d5f9";
+
   const ReadPostUrl = `${proxyUrl}http://lunahc92.tplinkdns.com/api/posts/read/${id}`;
   const getReadPost = useAxios({
     url: `${ReadPostUrl}`,
