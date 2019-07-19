@@ -7,8 +7,8 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <div className="tab_scroll">
-          <nav>
+        <div>
+          <nav className="tab_scroll">
             <ul className="tab">
               <li>
                 <Link to="/">main</Link>
@@ -23,7 +23,7 @@ function App() {
           </nav>
           <Route key="switch/main" exact path="/" component={Main} />
           <Route key="switch/home" exact path="/home" component={Home} />
-          <Route key="switch/board" path="/board" component={Board} />
+          <Route key="switch/board" exact path="/board" component={Board} />
           <Route
             key="switch/detailcontent"
             path="/detailcontent"
