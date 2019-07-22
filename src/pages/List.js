@@ -3,11 +3,12 @@ import useAxios from "../hooks/useAxios";
 import queryString from "query-string";
 import "./List.css";
 import { ListPost } from "../view";
+
 export default function List({ location: { search } }) {
   return (
     <>
       <section>
-        <header>Post List</header>
+        <header>List</header>
         <article>
           <nav>
             <button
@@ -25,7 +26,7 @@ export default function List({ location: { search } }) {
       </section>
 
       <footer>
-        <p>Footer</p>
+        <p>개발자 김다은</p>
       </footer>
     </>
   );
