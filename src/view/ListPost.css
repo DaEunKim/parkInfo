@@ -1,0 +1,14 @@
+.like {
+  color: black;
+  font-size: 12px;
+}
+.like :active {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+.like :hover {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import { Main, Home, Board, DetailContent } from "./pages";
+import { Main, Home, Board, DetailContent, List } from "./pages";
 
 function App() {
   return (
@@ -14,6 +14,9 @@ function App() {
                 <Link to="/">main</Link>
               </li>
               <li>
+                <Link to="/list">list</Link>
+              </li>
+              <li>
                 <Link to="/home">home</Link>
               </li>
               <li>
@@ -23,6 +26,7 @@ function App() {
           </nav>
           <Route key="switch/main" exact path="/" component={Main} />
           <Route key="switch/home" exact path="/home" component={Home} />
+          <Route key="switch/list" exact path="/list" component={List} />
           <Route key="switch/board" exact path="/board" component={Board} />
           <Route
             key="switch/detailcontent"
