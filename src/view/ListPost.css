@@ -1,4 +1,4 @@
-.like {
+/* .like {
   color: black;
   font-size: 12px;
 }
@@ -10,5 +10,65 @@
 .like :hover {
   color: red;
   font-size: 12px;
+  font-weight: bold;
+} */
+.board-list {
+  color: #282424;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 40px;
+  text-align: center;
+  /* margin: 200px; */
+}
+
+.post-button {
+  float: right;
+}
+.post-box {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 90%;
+  margin: 20px;
+}
+
+.post-title {
+  font-size: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+  margin: 10px;
+}
+
+.post-bottom {
+  border-top: 1px solid grey;
+  display: grid;
+  grid-template-columns: 80px 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.post-bottom-item-icon {
+  margin-right: 8px;
+}
+
+.post-bottom-item {
+  margin: 5px;
+}
+
+.no-image {
+  margin: 10px;
+  text-align: center;
+}
+.like {
+  border-radius: 50px;
+  color: #0b0a0a;
+  background: rgba(240, 156, 198, 0.995);
+  font-size: 1.1em;
+  font-family: "Montserrat", sans-serif;
+  height: 25px;
+  width: 60px;
+  float: right;
+}
+.like :active {
+  box-shadow: 3px 3px 22px 4px rgba(0, 0, 0, 0.1);
   font-weight: bold;
 }

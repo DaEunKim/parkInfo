@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, setState } from "react";
 import useAxios from "../hooks/useAxios";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
@@ -16,26 +18,17 @@ function DeleteFunc(id) {
     .catch(err => err);
 }
 
-function likeClick(e, id, isLikeChecked, setLike) {
+function likeClick(e, liked, setLike) {
   e.preventDefault();
-
-  if (isLikeChecked) {
-    setLike(false);
+  if (liked) {
+    return setLike(false);
   }
-
   return setLike(true);
 }
 
-function List({ getListPost }) {
+function List({ getListPost }, onChange, like, setLike) {
   const { data, isLoading, isError } = getListPost;
-  const [like, setLike] = useState(0);
-
-  const onChange = useCallback(
-    (e, id, isLikeChecked) => {
-      likeClick(e, id, isLikeChecked, setLike);
-    },
-    [like]
-  );
+  const [likecount, setLikecount] = useState(0);
   if (isLoading) {
     return <>loading...</>;
   }
@@ -52,62 +45,89 @@ function List({ getListPost }) {
     return <></>;
   }
   if (posts.length < 1) return <></>;
+  let buttonText = like ? "Unlike" : "Like";
+  const state = {
+    viewIcon:
+      "https://png.pngtree.com/element_origin_min_pic/17/09/29/955b938f7a6dffad4141dafdaf9679d2.jpg",
+    likeIcon:
+      "https://is1-ssl.mzstatic.com/image/thumb/Purple49/v4/46/57/3f/46573f1e-c430-92d4-1f5d-16ccf43f7b15/source/200x200bb.jpg"
+  };
 
-  return (
-    <>
-      {posts.map((post, index) => {
-        const { createTime, creator, id, likeCount, title, viewCount } = post;
+  return posts.map((post, index) => {
+    const { createTime, creator, id, likeCount, title, viewCount } = post;
 
-        return (
-          <>
-            <ul key={`${id}_ul3`}>
-              <li key={`${id}_li3`}>
-                <div>
-                  {`<${index + 1}>`}
-                  <button
-                    type="submit"
-                    onClick={e => {
-                      e.preventDefault();
-                      DeleteFunc(id);
-                    }}
-                  >
-                    삭제 X
-                  </button>
-                </div>
-                <Link to={`/detailcontent?id=${id}`}>
-                  <div>
-                    <div>{`Time : ${createTime}`}</div>
-                    <div>{`creator : ${creator}`}</div>
-                    <div>{`title : ${title}`}</div>
-                    <div>{`viewCount : ${viewCount}`}</div>
-                    <div>{`likeCount : ${likeCount}`}</div>
-                  </div>
-                </Link>
+    return (
+      <>
+        <div className="post-box">
+          <h4 className="post-title">
+            {`${index + 1}. ${title}`}
+            <button
+              className="post-button"
+              type="submit"
+              onClick={e => {
+                e.preventDefault();
+                DeleteFunc(id);
+              }}
+            >
+              삭제 X
+            </button>
+          </h4>
+          <Link to={`/detailcontent?id=${id}`} className="board-list">
+            <div>{`${createTime}`}</div>
+            <div>{`${creator}`}</div>
+          </Link>
+          <div className="post-bottom">
+            <div className="post-bottom-item">
+              <img
+                className="post-bottom-item-icon"
+                width="20px"
+                src={state.viewIcon}
+              />
+              {viewCount}
+            </div>
 
-                <a
-                  href="#"
-                  className={classNames("like", { active: like === true })}
-                  onClick={e => {
-                    e.preventDefault();
-                    onChange(e, id, likeCount);
-                  }}
-                >
-                  좋아용
-                </a>
-              </li>
-            </ul>
-          </>
-        );
-      })}
-    </>
-  );
+            <div className="post-bottom-item">
+              <img
+                className="post-bottom-item-icon"
+                width="20px"
+                src={state.likeIcon}
+                onClick={() => {
+                  setLikecount(likecount + 1);
+                }}
+              />
+              {likecount}
+              <br />
+              {`server : ${likeCount}`}
+            </div>
+            <button
+              className={classNames("like", { active: like })}
+              onClick={e => {
+                e.preventDefault();
+                onChange(e, like);
+              }}
+            >
+              {buttonText}
+            </button>
+          </div>
+        </div>
+      </>
+    );
+  });
 }
 export default function ListPost() {
   const ListPostUrl = `${PROXY_URL}${HANUL_API}/api/posts/list`;
+  const [like, setLike] = useState(-1);
+
   const getListPost = useAxios({
     url: `${ListPostUrl}`,
     method: "get"
   });
+  const onChange = useCallback(
+    (e, liked) => {
+      likeClick(e, liked, setLike);
+    },
+    [like]
+  );
 
-  return <>{<List getListPost={getListPost} />}</>;
+  return <>{List({ getListPost }, onChange, like, setLike)}</>;
 }
