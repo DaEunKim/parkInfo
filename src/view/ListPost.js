@@ -11,13 +11,9 @@ import axios from "axios";
 
 function DeleteFunc(id) {
   const ListDeleteUrl = `${PROXY_URL}${HANUL_API}/api/posts/delete/${id}`;
-  return axios({ url: ListDeleteUrl, method: "delete" });
-  // console.log(data);
-  // return fetch(ListDeleteUrl, {
-  //   method: "DELETE"
-  // })
-  //   .then(res => res)
-  //   .catch(err => err);
+  axios.delete(ListDeleteUrl).then(res => {
+    window.location.reload();
+  });
 }
 function LikeState({ id, liked }) {
   const likeUrl = `${PROXY_URL}${HANUL_API}/api/posts/like/${id}`;
