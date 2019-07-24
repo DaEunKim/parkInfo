@@ -19,25 +19,24 @@ function DeleteFunc(id) {
   //   .then(res => res)
   //   .catch(err => err);
 }
-function LikeState({ id }) {
+function LikeState({ id, liked }) {
   const likeUrl = `${PROXY_URL}${HANUL_API}/api/posts/like/${id}`;
-  const getlikeState = useAxios({
-    url: likeUrl,
-    method: "get"
+  axios.get(likeUrl).then(res => {
+    if (liked) {
+      res.data.success = false;
+    }
+    res.data.success = true;
   });
-
-  console.log(getlikeState);
 }
 function List({ post, index }) {
   const [like, setLike] = useState(0);
-
   const onChange = useCallback(
     (e, id, liked) => {
       e.preventDefault();
-      // LikeState({ id });
+
+      LikeState({ id, liked });
       if (liked) {
         post.likeCount -= 1;
-
         return setLike(false);
       }
       post.likeCount += 1;
@@ -109,6 +108,8 @@ export default function ListPost() {
     url: `${ListPostUrl}`,
     method: "get"
   });
+
+  //id마다 like 여부 검사. like 여부에 따라 보여지는 icon 달라야함.
 
   const { data, isLoading, isError } = getListPost;
   if (isLoading) return <>loading...</>;
