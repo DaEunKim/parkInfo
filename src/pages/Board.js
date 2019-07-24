@@ -121,7 +121,7 @@ export default function Board() {
       <button
         onClick={e => {
           e.preventDefault();
-          window.location = "./home";
+          window.location = "./";
         }}
       >
         글 목록으로 가기
