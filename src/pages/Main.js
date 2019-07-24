@@ -4,7 +4,7 @@ import "react-tabs/style/react-tabs.css";
 
 import "./Home.css";
 import { HomeTab1 } from "../view";
-import useAxios2 from "../hooks/useAxios2";
+import useAxios from "../hooks/useAxios";
 
 const cityList = [
   { id: 1, value: "Seoul" },
@@ -48,8 +48,9 @@ export default function Main({ location: { search }, history }) {
   const CityNameAPI = cityName === 1 ? "Seoul" : cityList[cityName - 1].value;
 
   const weatherApi = `http://api.openweathermap.org/data/2.5/weather?q=${CityNameAPI}&APPID=${APPID}`;
-  const { data, isLoading, isError } = useAxios2({
-    url: `${weatherApi}`
+  const { data, isLoading, isError } = useAxios({
+    url: `${weatherApi}`,
+    method: "get"
   });
   if (!data) {
     return <></>;

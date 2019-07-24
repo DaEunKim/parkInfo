@@ -19,15 +19,25 @@ function DeleteFunc(id) {
   //   .then(res => res)
   //   .catch(err => err);
 }
+function LikeState({ id }) {
+  const likeUrl = `${PROXY_URL}${HANUL_API}/api/posts/like/${id}`;
+  const getlikeState = useAxios({
+    url: likeUrl,
+    method: "get"
+  });
+
+  console.log(getlikeState);
+}
 function List({ post, index }) {
   const [like, setLike] = useState(0);
 
   const onChange = useCallback(
-    (e, liked) => {
+    (e, id, liked) => {
       e.preventDefault();
-
+      // LikeState({ id });
       if (liked) {
         post.likeCount -= 1;
+
         return setLike(false);
       }
       post.likeCount += 1;
@@ -44,7 +54,7 @@ function List({ post, index }) {
     unlikeIcon:
       "https://i0.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Like-Icon.png?w=623"
   };
-  let buttonText = like ? "Unlike" : "Like";
+
   return (
     <div className="post-box">
       <h4 className="post-title">
@@ -82,7 +92,7 @@ function List({ post, index }) {
             src={like ? state.likeIcon : state.unlikeIcon}
             onClick={e => {
               e.preventDefault();
-              onChange(e, like);
+              onChange(e, post.id, like);
             }}
           />
           {post.likeCount}
@@ -99,6 +109,7 @@ export default function ListPost() {
     url: `${ListPostUrl}`,
     method: "get"
   });
+
   const { data, isLoading, isError } = getListPost;
   if (isLoading) return <>loading...</>;
   if (!data) return <>null</>;
@@ -111,6 +122,10 @@ export default function ListPost() {
   if (posts.length < 1) return <></>;
 
   return posts.map((post, index) => {
-    return <List post={post} index={index} />;
+    return (
+      <>
+        <List post={post} index={index} />
+      </>
+    );
   });
 }

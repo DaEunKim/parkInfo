@@ -12,7 +12,6 @@ export default function useAxios({ url, method }) {
       setIsLoading(true);
       try {
         const result = await axios({ url, method });
-
         setData(result.data);
       } catch (error) {
         setIsError(true);
