@@ -24,9 +24,9 @@ function App() {
               </li>
             </ul>
           </nav> */}
-          <Route key="switch/main" exact path="/" component={Main} />
+          <Route key="switch/main" exact path="/main" component={Main} />
           <Route key="switch/home" exact path="/home" component={Home} />
-          <Route key="switch/list" exact path="/list" component={List} />
+          <Route key="switch/list" exact path="/" component={List} />
           <Route key="switch/board" exact path="/board" component={Board} />
           <Route
             key="switch/detailcontent"
