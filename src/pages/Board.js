@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
+import "./style-narrower.css";
 
 function useAsyncEndpoint(fn) {
   const [res, setRes] = useState({
@@ -80,52 +82,57 @@ export default function Board() {
   }
 
   return (
-    <div>
-      <h1>게시판</h1>
-      <label>
-        Title:{" "}
-        <input
-          placeholder="제목"
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Creator:
-        <input
-          placeholder="작성자"
-          value={creator}
-          onChange={e => setCreator(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Text:{" "}
-        <input
-          placeholder="내용"
-          value={text}
-          onChange={e => setText(e.target.value)}
-        />
-      </label>
-      <br />
-      <button onClick={createTodo}>save</button>
-      <br />
-      <div className="new-todo">
-        {(newTodo.pending && "Creating...") ||
-          (newTodo.complete &&
-            `작성완료!  title : ${newTodo.data.post.title}, 
+    <>
+      <div className="writing-board-whole">
+        <h1 className="titleBar">게시판</h1>
+        <label>
+          Title
+          <input
+            placeholder="제목"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Creator
+          <input
+            placeholder="작성자"
+            value={creator}
+            onChange={e => setCreator(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Text
+          <input
+            placeholder="내용"
+            value={text}
+            onChange={e => setText(e.target.value)}
+          />
+        </label>
+        <br />
+        <button className="save-button" onClick={createTodo}>
+          save
+        </button>
+        <br />
+        <div className="new-todo">
+          {(newTodo.pending && "Creating...") ||
+            (newTodo.complete &&
+              `작성완료!  title : ${newTodo.data.post.title}, 
             creator :  ${newTodo.data.post.creator}`)}
+        </div>
+        <br />
+        <button
+          className="back-button"
+          onClick={e => {
+            e.preventDefault();
+            window.location = "./";
+          }}
+        >
+          글 목록으로 가기
+        </button>
       </div>
-      <br />
-      <button
-        onClick={e => {
-          e.preventDefault();
-          window.location = "./";
-        }}
-      >
-        글 목록으로 가기
-      </button>
-    </div>
+    </>
   );
 }

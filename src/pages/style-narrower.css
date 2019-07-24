@@ -1,0 +1,39 @@
+.writing-board-whole {
+  background-color: #d84780;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+input {
+  color: #555555;
+  border: none;
+  display: block;
+  outline: 0;
+  padding: 1em 1em;
+  text-decoration: none;
+  width: 95%;
+  height: 50px;
+  text-align: center;
+  border-radius: 6px;
+  border-color: #d84780;
+}
+.save-button {
+  color: white;
+  font-size: 2em;
+  background-color: #d84780;
+  border-radius: 30px;
+  border-color: aqua;
+  text-align: center;
+}
+.back-button {
+  color: white;
+  font-size: 1.1em;
+  width: 50%;
+  height: 40px;
+  background-color: #d84780;
+  border-radius: 15px;
+  border-color: aqua;
+
+  text-align: center;
+}
