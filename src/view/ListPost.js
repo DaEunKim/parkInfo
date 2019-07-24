@@ -7,14 +7,17 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { HANUL_API, PROXY_URL } from "../CONSTANTS/url";
 import "./ListPost.css";
+import axios from "axios";
 
 function DeleteFunc(id) {
   const ListDeleteUrl = `${PROXY_URL}${HANUL_API}/api/posts/delete/${id}`;
-  return fetch(ListDeleteUrl, {
-    method: "DELETE"
-  })
-    .then(res => res)
-    .catch(err => err);
+  return axios({ url: ListDeleteUrl, method: "delete" });
+  // console.log(data);
+  // return fetch(ListDeleteUrl, {
+  //   method: "DELETE"
+  // })
+  //   .then(res => res)
+  //   .catch(err => err);
 }
 function List({ post, index }) {
   const [like, setLike] = useState(0);
@@ -22,35 +25,28 @@ function List({ post, index }) {
   const onChange = useCallback(
     (e, liked) => {
       e.preventDefault();
+
       if (liked) {
+        post.likeCount -= 1;
         return setLike(false);
       }
+      post.likeCount += 1;
       return setLike(true);
     },
     [like]
   );
 
-  const [likecount, setLikecount] = useState(0);
   const state = {
     viewIcon:
       "https://png.pngtree.com/element_origin_min_pic/17/09/29/955b938f7a6dffad4141dafdaf9679d2.jpg",
     likeIcon:
-      "https://is1-ssl.mzstatic.com/image/thumb/Purple49/v4/46/57/3f/46573f1e-c430-92d4-1f5d-16ccf43f7b15/source/200x200bb.jpg"
+      "https://is1-ssl.mzstatic.com/image/thumb/Purple49/v4/46/57/3f/46573f1e-c430-92d4-1f5d-16ccf43f7b15/source/200x200bb.jpg",
+    unlikeIcon:
+      "https://i0.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Like-Icon.png?w=623"
   };
   let buttonText = like ? "Unlike" : "Like";
   return (
     <div className="post-box">
-      <button
-        key={post.id}
-        value={post.id}
-        className={classNames("like", { active: like })}
-        onClick={e => {
-          e.preventDefault();
-          onChange(e, like);
-        }}
-      >
-        {buttonText}
-      </button>
       <h4 className="post-title">
         <> {`${index + 1}. ${post.title}`}</>
         <button
@@ -83,15 +79,14 @@ function List({ post, index }) {
             key={`likeimg_${index}`}
             className="post-bottom-item-icon"
             width="20px"
-            src={state.likeIcon}
+            src={like ? state.likeIcon : state.unlikeIcon}
             onClick={e => {
               e.preventDefault();
-              setLikecount(likecount + 1);
+              onChange(e, like);
             }}
           />
-          {likecount}
+          {post.likeCount}
         </div>
-        <div className="post-bottom-item">{`server : ${post.likeCount}`}</div>
       </div>
     </div>
   );
