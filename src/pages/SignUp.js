@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import "./style-narrower.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { HANUL_API, PROXY_URL } from "../CONSTANTS/url";
 import useAxios from "../hooks/useAxios";
 
