@@ -5,6 +5,11 @@
   padding: 1em;
 }
 
+.titleBar {
+  padding: 1em;
+  border-bottom: 2px solid white;
+}
+
 input {
   color: #555555;
   border: none;

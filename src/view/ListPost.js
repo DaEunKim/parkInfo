@@ -65,7 +65,12 @@ function List({ post, index }) {
           삭제 X
         </button>
       </h4>
-      <Link to={`/detailcontent?id=${post.id}`} className="board-list">
+      <Link
+        to={`/detailcontent?id=${post.id}&time=${post.createTime}&creator=${
+          post.creator
+        }&title=${post.title}`}
+        className="board-list"
+      >
         <div>{post.createTime}</div>
         <div>{post.creator}</div>
       </Link>

@@ -1,85 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { Helmet } from "react-helmet";
+import { HANUL_API, PROXY_URL } from "../CONSTANTS/url";
 import "./style-narrower.css";
 
-function useAsyncEndpoint(fn) {
-  const [res, setRes] = useState({
-    data: null,
-    complete: false,
-    pending: false,
-    error: false
-  });
-  const [req, setReq] = useState();
-
-  useEffect(() => {
-    if (!req) return;
-
-    setRes({
-      data: null,
-      pending: true,
-      error: false,
-      complete: false
-    });
-    axios(req)
-      .then(res =>
-        setRes({
-          data: res.data,
-          pending: false,
-          error: false,
-          complete: true
-        })
-      )
-      .catch(() =>
-        setRes({
-          data: null,
-          pending: false,
-          error: true,
-          complete: true
-        })
-      );
-  }, [req]);
-
-  return [res, (...args) => setReq(fn(...args))];
-}
-
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-const todosApi = `${proxyUrl}http://lunahc92.tplinkdns.com/api/posts/create`;
-
-// const todosApi = "https://jsonplaceholder.typicode.com/todos";
-
-function postTodoEndpoint() {
-  /* eslint-disable react-hooks/rules-of-hooks */
-  return useAsyncEndpoint(data => ({
-    url: todosApi,
-    method: "POST",
-    data
-  }));
-}
-
 export default function Board() {
+  const createPostUrl = `${PROXY_URL}${HANUL_API}/api/posts/create`;
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [creator, setCreator] = useState("");
-  const [newTodo, postNewTodo] = postTodoEndpoint();
+  const [checkRes, setCheckRes] = useState();
 
-  function createTodo() {
+  const handleSubmit = event => {
+    event.preventDefault();
     if (!title) {
-      return alert("제목을 입력하세요.");
+      return alert("제목을 입력하세요");
     }
     if (!creator) {
-      return alert("작성자를 입력하세요.");
+      return alert("작성자를 입력하세요");
     }
     if (!text) {
-      return alert("내용을 입력하세요.");
+      return alert("내용을 입력하세요");
     }
-    postNewTodo({
+    const data = {
       title,
       creator,
       text,
       userId: 1
+    };
+
+    axios.post(createPostUrl, data).then(res => {
+      if (res) {
+        setCheckRes(res);
+      }
     });
-  }
+  };
 
   return (
     <>
@@ -112,16 +66,11 @@ export default function Board() {
           />
         </label>
         <br />
-        <button className="save-button" onClick={createTodo}>
+        <button className="save-button" onClick={handleSubmit}>
           save
         </button>
         <br />
-        <div className="new-todo">
-          {(newTodo.pending && "Creating...") ||
-            (newTodo.complete &&
-              `작성완료!  title : ${newTodo.data.post.title}, 
-            creator :  ${newTodo.data.post.creator}`)}
-        </div>
+        <div className="new-todo">{checkRes && "작성완료!"}</div>
         <br />
         <button
           className="back-button"
