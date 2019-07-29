@@ -7,20 +7,20 @@
 
 .titleBar {
   padding: 1em;
-  border-bottom: 2px solid white;
+  text-align: center;
+  border-bottom: 2px solid black;
 }
 
 input {
   color: #555555;
-  border: none;
+  /* border: none; */
   display: block;
   outline: 0;
   padding: 1em 1em;
   text-decoration: none;
   width: 95%;
   height: 50px;
-  text-align: center;
-  border-radius: 6px;
+  border-radius: 10px;
   border-color: #d84780;
 }
 .save-button {
