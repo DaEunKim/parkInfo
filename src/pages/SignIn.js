@@ -9,53 +9,84 @@ import useAxios from "../hooks/useAxios";
 import { HANUL_API, PROXY_URL } from "../CONSTANTS/url";
 import { Link } from "react-router-dom";
 
+function LoginInfo(userid) {
+  const SignInUrl =
+    userid && `${PROXY_URL}${HANUL_API}:5100/api/users/read/${userid}`;
+  const getSignIn = useAxios({ url: `${SignInUrl}`, method: "get" });
+
+  const { data, isError, isLoading } = getSignIn;
+  console.log(data);
+  if (!data) {
+    return <></>;
+  }
+}
 export default function SignIn({ location: { search } }) {
   const query = queryString.parse(search);
   console.log(query);
-  //   const SignInUrl = `${PROXY_URL}${HANUL_API}:5100/api/users/read/${id}`;
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
+  if (!query) {
+    query = "";
+  }
+  const { userid } = query;
+  const [inputId, setInputId] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
+
   const handleSubmit = event => {
     event.preventDefault();
-    if (!id) {
+    if (!inputId) {
       return alert("아이디를 입력하세요");
     }
-    if (!password) {
+    if (!inputPassword) {
       return alert("비번을 입력하세요");
     }
-
-    const data = {
-      id,
-      password
-    };
   };
 
+  //   if (isError) {
+  //     return <>error</>;
+  //   }
+  //   if (isLoading) {
+  //     return <>loading...</>;
+  //   }
+  if (userid === inputId) {
+    LoginInfo(userid);
+    alert("성공");
+  }
   return (
     <>
       <div className="writing-board-whole">
         <h1 className="titleBar">로그인</h1>
-        <input
-          value={id}
-          placeholder="id"
-          onChange={e => setId(e.target.value)}
-        />
+        <div className="line-wrapper">
+          <div className="input-title">user id</div>
+          <input
+            value={inputId}
+            placeholder="id"
+            onChange={e => {
+              e.preventDefault();
+              setInputId(e.target.value);
+            }}
+          />
+        </div>
+        <div className="line-wrapper">
+          <div className="input-title">password</div>
+          <input
+            value={inputPassword}
+            placeholder="password"
+            type="password"
+            onChange={e => {
+              e.preventDefault();
+              setInputPassword(e.target.value);
+            }}
+          />
+        </div>
 
-        <br />
-        <input
-          value={password}
-          placeholder="password"
-          onChange={e => setPassword(e.target.value)}
-        />
-        <br />
         <button className="save-button" onClick={handleSubmit}>
-          로그인
+          <Link to={`/signin?userid=${inputId}`}>로그인</Link>
         </button>
-        <br />
-        <br />
-        <div>회원이 아니신가요?</div>
-        <Link to="/signup">
-          <div>회원가입 하러가기</div>
-        </Link>
+
+        <div className="description">
+          <div>회원이 아니신가요?</div>
+
+          <Link to="/signup">회원가입 하러가기</Link>
+        </div>
       </div>
     </>
   );

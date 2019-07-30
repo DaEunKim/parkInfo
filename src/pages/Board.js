@@ -39,33 +39,32 @@ export default function Board() {
     <>
       <div className="writing-board-whole">
         <h1 className="titleBar">게시판</h1>
-        <label>
-          Title
+        <div className="line-wrapper">
+          <div className="input-title">Title</div>
+
           <input
             placeholder="제목"
             value={title}
             onChange={e => setTitle(e.target.value)}
           />
-        </label>
-        <br />
-        <label>
-          Creator
+        </div>
+        <div className="line-wrapper">
+          <div className="input-title">Creator</div>
+
           <input
             placeholder="작성자"
             value={creator}
             onChange={e => setCreator(e.target.value)}
           />
-        </label>
-        <br />
-        <label>
-          Text
+        </div>
+        <div className="line-wrapper">
+          <div className="input-title">Text</div>
           <input
             placeholder="내용"
             value={text}
             onChange={e => setText(e.target.value)}
           />
-        </label>
-        <br />
+        </div>
         <button className="save-button" onClick={handleSubmit}>
           save
         </button>
