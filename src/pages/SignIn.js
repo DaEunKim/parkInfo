@@ -8,6 +8,7 @@ import queryString from "query-string";
 import useAxios from "../hooks/useAxios";
 import { HANUL_API, PROXY_URL } from "../CONSTANTS/url";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function LoginInfo(userid) {
   const SignInUrl =
@@ -15,41 +16,62 @@ function LoginInfo(userid) {
   const getSignIn = useAxios({ url: `${SignInUrl}`, method: "get" });
 
   const { data, isError, isLoading } = getSignIn;
-  console.log(data);
+
   if (!data) {
     return <></>;
   }
 }
+// 로그인은 api users login 에
+// post로 id:~ password:~
+
 export default function SignIn({ location: { search } }) {
-  const query = queryString.parse(search);
-  console.log(query);
-  if (!query) {
-    query = "";
-  }
-  const { userid } = query;
   const [inputId, setInputId] = useState("");
   const [inputPassword, setInputPassword] = useState("");
+  const [checkRes, setCheckRes] = useState();
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    if (!inputId) {
-      return alert("아이디를 입력하세요");
-    }
-    if (!inputPassword) {
-      return alert("비번을 입력하세요");
-    }
+  //   const SignInUrl =userid && `${PROXY_URL}${HANUL_API}:5100/api/users/read/${userid}`;
+  //   const getSignIn = useAxios({ url: `${SignInUrl}`, method: "get" });
+
+  const LoginCheckUrl = `${PROXY_URL}${HANUL_API}:5100/api/users/login`;
+  const handleSubmit = e => {
+    e.preventDefault();
+    const data = {
+      inputId,
+      inputPassword
+    };
+    axios.post(LoginCheckUrl, data).then(res => {
+      if (res.data.success === true) {
+        // 페이지 이동
+        return <Link to="/" />;
+      }
+      if (res) {
+        console.log(res.data.success);
+        setCheckRes(res);
+      }
+    });
   };
 
-  //   if (isError) {
-  //     return <>error</>;
+  //   const { data, isError, isLoading } = getSignIn;
+
+  //   if (!data) {
+  //     return <></>;
   //   }
-  //   if (isLoading) {
-  //     return <>loading...</>;
+
+  //   const handleSubmit = event => {
+  //     event.preventDefault();
+  //     if (!inputId) {
+  //       return alert("아이디를 입력하세요");
+  //     }
+  //     if (!inputPassword) {
+  //       return alert("비번을 입력하세요");
+  //     }
+  //   };
+
+  //   if (inputId === data.user && data.user.id) {
+  //     if (inputPassword === data.user.password) {
+  //       alert("ok ~~");
+  //     }
   //   }
-  if (userid === inputId) {
-    LoginInfo(userid);
-    alert("성공");
-  }
   return (
     <>
       <div className="writing-board-whole">
@@ -79,7 +101,7 @@ export default function SignIn({ location: { search } }) {
         </div>
 
         <button className="save-button" onClick={handleSubmit}>
-          <Link to={`/signin?userid=${inputId}`}>로그인</Link>
+          로그인
         </button>
 
         <div className="description">
