@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./style-narrower.css";
 import axios from "axios";
 import { HANUL_API, PROXY_URL } from "../CONSTANTS/url";
-import useAxios from "../hooks/useAxios";
 
 function checkedID(id) {
   const SignInUrl = `${PROXY_URL}${HANUL_API}:5100/api/users/read/${id}`;
@@ -30,10 +29,6 @@ export default function SignUp({ location: { search } }) {
   const [email, setEmail] = useState("");
   const [checkRes, setCheckRes] = useState();
 
-  //   const checkedID = 0;
-  //   if (getSignIn.data.success) {
-  //     checkedID = getSignIn.data.user.id;
-  //   }
   const handleSubmit = event => {
     event.preventDefault();
     if (!id) {
@@ -62,8 +57,6 @@ export default function SignUp({ location: { search } }) {
         if (res.data.success) {
           console.log(res);
           setCheckRes(res.data);
-
-          // window.location = "./signin";
         }
       })
       .catch(err => {
@@ -81,6 +74,7 @@ export default function SignUp({ location: { search } }) {
           onChange={e => setId(e.target.value)}
         />
         <button
+          className="sub-button"
           onClick={e => {
             e.preventDefault();
             checkedID(id);
@@ -110,7 +104,13 @@ export default function SignUp({ location: { search } }) {
         <button className="save-button" onClick={handleSubmit}>
           가입하기
         </button>
-        <div>{checkRes && "가입완료!"}</div>
+        <div className="description">{checkRes && "가입완료!"}</div>
+        <button
+          className="back-button"
+          onClick={e => (window.location = "./signin")}
+        >
+          로그인하기
+        </button>
       </div>
     </>
   );

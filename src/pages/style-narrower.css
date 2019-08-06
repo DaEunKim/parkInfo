@@ -10,7 +10,6 @@
   border: none;
   top: 0%;
   transform: translate(-50%, 0%);
-
   padding: 1rem;
   background-color: #d84780;
   color: white;
@@ -23,7 +22,6 @@
   user-select: none;
   padding-top: 1rem;
   padding-bottom: 1rem;
-
   text-align: center;
   border-bottom: 1px solid black;
 }
@@ -99,4 +97,10 @@ input {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.sub-button {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 1em;
+  color: white;
 }
