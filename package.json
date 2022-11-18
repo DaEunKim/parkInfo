@@ -15,13 +15,13 @@
     "react-infinite-scroller": "^1.2.4",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-swipe": "^6.0.4",
     "react-swipe-views": "0.0.12",
     "react-swipeable-tabs": "^2.2.0",
     "react-swipeable-views": "^0.13.3",
     "react-tabs": "^3.0.0",
-    "react-xml-parser": "^1.1.2",
+    "react-xml-parser": "^1.1.8",
     "swipe-js-iso": "^2.1.5"
   },
   "scripts": {
