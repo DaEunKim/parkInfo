@@ -21,7 +21,7 @@
     "react-swipeable-tabs": "^2.2.0",
     "react-swipeable-views": "^0.13.3",
     "react-tabs": "^3.0.0",
-    "react-xml-parser": "^1.1.2",
+    "react-xml-parser": "^1.1.8",
     "swipe-js-iso": "^2.1.5"
   },
   "scripts": {
